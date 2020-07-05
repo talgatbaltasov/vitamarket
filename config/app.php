@@ -174,8 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\ComposerServiceProvider::class,
-        Unisharp\Ckeditor\ServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class
     ],
 
     /*
