@@ -107,10 +107,10 @@
                                     </li>
                                 @endforeach
                                 <li class="menu-item-has-children">
-                                    <a href="about.html">Доставка</a>
+                                    <a href="/payments-delivery">Доставка и оплата</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="contact.html"> Контакты</a> 
+                                    <a href="/contacts"> Контакты</a> 
                                 </li>
                             </ul>
                         </div>
