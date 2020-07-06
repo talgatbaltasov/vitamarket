@@ -534,7 +534,7 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="call-support">
-                                <p>Call Support: <a href="tel:(+800)123456789">(+800) 123 456 789</a></p>
+                                <p>Наш телефон: <a href="tel:+77001030110">+7 (700) 103-01-10</a></p>
                             </div>
                         </div>
                     </div>
