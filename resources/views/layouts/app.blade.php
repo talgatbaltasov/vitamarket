@@ -58,24 +58,6 @@
                         <div class="welcome-text">
                            <p>Free Delivery: Take advantage of our time to save event</p>
                        </div>
-                        <div class="language_currency text-center">
-                            <ul>
-                                <li class="currency"><a href="#"> USD <i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown_currency">
-                                        <li><a href="#">EUR</a></li>
-                                        <li><a href="#">GPB</a></li>
-                                        <li><a href="#">RUP</a></li>
-                                    </ul>
-                                </li>
-                                <li class="language"><a href="#"> English <i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown_language">
-                                        <li><a href="#">French</a></li>
-                                        <li><a href="#">Spanish</a></li>
-                                        <li><a href="#">Russian</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
                         <div class="search_container">
                            <form action="#">
                                <div class="hover_category">
@@ -105,7 +87,7 @@
                             </form>
                         </div>
                         <div class="call-support">
-                            <p>Call Support: <a href="tel:(+800)123456789">(+800) 123 456 789</a></p>
+                            <p>Наш телефон: <a href="tel:+77001030110">+7 (700) 103-01-10</a></p>
                         </div>
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
