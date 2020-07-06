@@ -190,29 +190,9 @@
             <div class="header_top">
                 <div class="container">
                     <div class="row align-items-center">
-                       <div class="col-lg-7 col-md-7">
-                           <div class="welcome-text">
-                               <p>Free Delivery: Take advantage of our time to save event</p>
-                           </div>
-                       </div>
-                        <div class="col-lg-5 col-md-5">
-                            <div class="language_currency text-right">
-                                <ul>
-                                    <li class="currency"><a href="#"> USD <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown_currency">
-                                            <li><a href="#">EUR</a></li>
-                                            <li><a href="#">GPB</a></li>
-                                            <li><a href="#">RUP</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="language"><a href="#"> English <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown_language">
-                                            <li><a href="#">French</a></li>
-                                            <li><a href="#">Spanish</a></li>
-                                            <li><a href="#">Russian</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                        <div class="col-lg-7 col-md-7">
+                            <div class="welcome-text">
+                                <p>Free Delivery: Take advantage of our time to save event</p>
                             </div>
                         </div>
                     </div>
