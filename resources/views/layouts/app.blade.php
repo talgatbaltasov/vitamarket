@@ -92,84 +92,31 @@
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
                                 <li class="menu-item-has-children active">
-                                    <a href="#">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home 1</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                        <li><a href="index-3.html">Home 3</a></li>
-                                        <li><a href="index-4.html">Home 4</a></li>
-                                    </ul>
+                                    <a href="/">Главная</a>
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Shop</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Shop Layouts</a>
+                                @foreach($categories as $category)
+                                    <li class="menu-item-has-children">
+                                        <a href="/c/{{$category->slug}}">{{$category->name}}</a>
+                                        @if($category->children->count() > 0)
                                             <ul class="sub-menu">
-                                                <li><a href="shop.html">shop</a></li>
-                                                <li><a href="shop-fullwidth.html">Full Width</a></li>
-                                                <li><a href="shop-fullwidth-list.html">Full Width list</a></li>
-                                                <li><a href="shop-right-sidebar.html">Right Sidebar </a></li>
-                                                <li><a href="shop-right-sidebar-list.html"> Right Sidebar list</a></li>
-                                                <li><a href="shop-list.html">List View</a></li>
+                                                @foreach($category->children as $child)
+                                                    <li><a href="/c/{{$child->slug}}">{{$child->name}}</a></li>
+                                                @endforeach
                                             </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">other Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="cart.html">cart</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="my-account.html">my account</a></li>
-                                                <li><a href="404.html">Error 404</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Product Types</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="product-details.html">product details</a></li>
-                                                <li><a href="product-sidebar.html">product sidebar</a></li>
-                                                <li><a href="product-grouped.html">product grouped</a></li>
-                                                <li><a href="variable-product.html">product variable</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                        @endif
+                                    </li>
+                                @endforeach
+                                <li class="menu-item-has-children">
+                                    <a href="about.html">Доставка</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">blog</a></li>
-                                        <li><a href="blog-details.html">blog details</a></li>
-                                        <li><a href="blog-fullwidth.html">blog fullwidth</a></li>
-                                        <li><a href="blog-sidebar.html">blog sidebar</a></li>
-                                    </ul>
-
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">pages </a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="services.html">services</a></li>
-                                        <li><a href="faq.html">Frequently Questions</a></li>
-                                        <li><a href="contact.html">contact</a></li>
-                                        <li><a href="login.html">login</a></li>
-                                        <li><a href="404.html">Error 404</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="my-account.html">my account</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="about.html">about Us</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="contact.html"> Contact Us</a> 
+                                    <a href="contact.html"> Контакты</a> 
                                 </li>
                             </ul>
                         </div>
 
                         <div class="offcanvas_footer">
-                            <span><a href="#"><i class="fa fa-envelope-o"></i> info@yourdomain.com</a></span>
+                            <span><a href="#"><i class="fa fa-envelope-o"></i> dulat-serikov@mail.ru</a></span>
                             <ul>
                                 <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -193,6 +140,26 @@
                         <div class="col-lg-7 col-md-7">
                             <div class="welcome-text">
                                 <p>Free Delivery: Take advantage of our time to save event</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5">
+                            <div class="language_currency text-right">
+                                <ul>
+                                    <li class="currency"><a href="#"> USD <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown_currency">
+                                            <li><a href="#">EUR</a></li>
+                                            <li><a href="#">GPB</a></li>
+                                            <li><a href="#">RUP</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="language"><a href="#"> English <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown_language">
+                                            <li><a href="#">French</a></li>
+                                            <li><a href="#">Spanish</a></li>
+                                            <li><a href="#">Russian</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
