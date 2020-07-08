@@ -369,7 +369,7 @@
         </div><!-- /.container -->
     </section><!-- /.flat-imagebox style2 -->
 
-    <section class="flat-imagebox style3" style="display: none;">
+    {{-- <section class="flat-imagebox style3" style="display: none;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -538,7 +538,7 @@
                 </div><!-- /.col-md-12 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
-    </section><!-- /.flat-imagebox style3 -->
+    </section><!-- /.flat-imagebox style3 --> --}}
 
     <section class="flat-imagebox style4">
         <div class="container">
