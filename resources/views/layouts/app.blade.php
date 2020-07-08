@@ -169,7 +169,7 @@
                                 </div>
                                 <div class="header_account_area">
                                     <div class="header_account-list top_links">
-                                       <a href="#"><i class="icon-users"></i></a>
+                                        <a href="#"><i class="icon-message"></i></a>
                                         <ul class="dropdown_links">
                                             <li><a href="checkout.html">Checkout </a></li>
                                             <li><a href="my-account.html">My Account </a></li>
