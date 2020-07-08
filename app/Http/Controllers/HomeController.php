@@ -15,11 +15,11 @@ class HomeController extends Controller
         $categories = Category::orderBy('order')->get();
         $bottom_categories = Category::where('parent_id', 6)->orderBy('order')->get();
         // search tips
-        $products = Product::where('status', 1)->take(6)->get();
+        $products = Product::where('status_id', 1)->take(6)->get();
 
-        $new_products = Product::where('status', 1)->orderBy('id', 'desc')->take(4)->get();
-        $sale_products = Product::where('status', 1)->orderBy('id', 'desc')->skip(4)->take(4)->get();
-        $most_viewed = Product::where('status', 1)->inRandomOrder()->take(30)->get();
+        $new_products = Product::where('status_id', 1)->orderBy('id', 'desc')->take(4)->get();
+        $sale_products = Product::where('status_id', 1)->orderBy('id', 'desc')->skip(4)->take(4)->get();
+        $most_viewed = Product::where('status_id', 1)->inRandomOrder()->take(30)->get();
         return view('home.home', compact('bottom_categories', 'categories', 'products', 'new_products', 'sale_products', 'most_viewed'));
     }
 
@@ -73,7 +73,7 @@ class HomeController extends Controller
     public function blog()
     {
         $bestsellers = Product::inRandomOrder()->take(5)->get();
-        $articles = Article::where('status', 1)->orderBy('id', 'desc')->paginate(5);
+        $articles = Article::where('status_id', 1)->orderBy('id', 'desc')->paginate(5);
         return view('blog.index', compact('bestsellers', 'articles'));
     }
 
