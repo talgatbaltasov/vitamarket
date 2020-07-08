@@ -178,7 +178,7 @@
                                         </ul>
                                     </div>
                                     <div class="header_account-list header_wishlist">
-                                        <a href="wishlist.html"><i class="icon-heart"></i></a>
+                                        <a href="wishlist.html"><i class="icon-instagram"></i></a>
                                     </div>
                                     <div class="header_account-list  mini_cart_wrapper">
                                        <a href="javascript:void(0)"><i class="icon-shopping-bag"></i><span class="item_count">2</span></a>
