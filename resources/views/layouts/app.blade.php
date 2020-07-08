@@ -169,7 +169,7 @@
                                 </div>
                                 <div class="header_account_area">
                                     <div class="header_account-list top_links">
-                                        <a href="https://wa.me/77001030110?text={{urlencode('Здравствуйте. Я заинтересован в покупке с вашего интернет-магазина')}}" target="_blank"><i class="icon-message"></i></a>
+                                        <a href="https://wa.me/77001030110?text={{urlencode('Здравствуйте. Я заинтересован в покупке с вашего интернет-магазина')}}" target="_blank"><i class="icon-message-circle"></i></a>
                                     </div>
                                     <div class="header_account-list header_wishlist">
                                         <a href="https://instagram.com/vitamarket.almaty" target="_blank"><i class="icon-instagram"></i></a>
