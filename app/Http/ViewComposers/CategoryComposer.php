@@ -22,8 +22,8 @@ class CategoryComposer
     public function __construct(Request $request)
     {
         $this->categories = Category::whereNull('parent_id')->orderBy('order')->get();
-        $this->products = Product::where('status', 1)->inRandomOrder()->take(6)->get();
-        $this->brands = Brand::where('status', 1)->get();
+        $this->products = Product::where('status_id', 1)->inRandomOrder()->take(6)->get();
+        $this->brands = Brand::where('status_id', 1)->get();
         $cart = $request->session()->get('cart');
         $this->cart = $cart;
     }
