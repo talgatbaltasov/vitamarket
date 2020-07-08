@@ -4218,7 +4218,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .shipping_content h3 {
   font-size: 14px;
   line-height: 16px;
-  text-transform: capitalize;
   font-family: "Lora", serif;
   font-weight: 700;
   margin-bottom: 7px;
