@@ -360,8 +360,8 @@
                             <img src="/assets/img/about/shipping1.png" alt="">
                         </div>
                         <div class="shipping_content">
-                            <h3>Free Delivery</h3>
-                            <p>Free shipping around the world for all <br> orders over $120</p>
+                            <h3>Бесплатная доставка</h3>
+                            <p>Бесплатная доставка при заказе <br> свыше 10000 тг.</p>
                         </div>
                     </div>
                 </div>
@@ -371,8 +371,8 @@
                             <img src="/assets/img/about/shipping2.png" alt="">
                         </div>
                         <div class="shipping_content">
-                            <h3>Safe Payment</h3>
-                            <p>With our payment gateway, don’t worry <br> about your information</p>
+                            <h3>Оплата</h3>
+                            <p>Оплата через Каспи или наличными<br></p>
                         </div>
                     </div>
                 </div>
@@ -382,9 +382,8 @@
                             <img src="/assets/img/about/shipping3.png" alt="">
                         </div>
                         <div class="shipping_content">
-                            <h3>Friendly Services</h3>
-                            <p>You have 30-day return guarantee for <br> every single order</p>
-
+                            <h3>Акции и скидки</h3>
+                            <p>Регулярно проводим акции и скидки<br></p>
                         </div>
                     </div>
                 </div>
