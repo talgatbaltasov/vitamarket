@@ -828,7 +828,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_title">
-                       <h2>Today Deals</h2>
+                       <h2>Акции и скидки</h2>
                     </div>
                 </div>
             </div> 
@@ -1035,7 +1035,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_title">
-                       <h2>What Our Customers Says ?</h2>
+                       <h2>Отзывы</h2>
                     </div>
                 </div>
             </div>
@@ -1106,7 +1106,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_title">
-                       <h2>Our Latest Posts</h2>
+                       <h2>Статьи</h2>
                     </div>
                 </div>
             </div>
@@ -1197,37 +1197,6 @@
         </div>
     </section>
     <!--blog area end-->
-    
-    <!--newsletter area start-->
-    <div class="newsletter_area_start">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section_title">
-                       <h2>Get <span>20% Off</span> Your Next Order</h2>
-                    </div>
-                    <div class="newsletter_container">
-                         <div class="subscribe_form">
-                            <form id="mc-form" class="mc-form footer-newsletter" >
-                                <input id="mc-email" type="email" autocomplete="off" placeholder="Enter you email" />
-                                <button id="mc-submit">Subscribe</button>
-                                <div class="email_icon">
-                                    <i class="icon-mail"></i>
-                                </div>
-                            </form>
-                            <!-- mailchimp-alerts Start -->
-                            <div class="mailchimp-alerts text-centre">
-                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                                <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                                <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                            </div><!-- mailchimp-alerts end -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--newsletter area end-->
 
     <!--footer area start-->
     <footer class="footer_widgets">
@@ -1236,11 +1205,11 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-sm-6">
                         <div class="widgets_container contact_us">
-                            <h3>Opening Time</h3>
-                            <p><span>Mon - Fri:</span> 8AM - 10PM</p>
-                            <p><span>Sat:</span> 9AM-8PM</p>
-                            <p><span>Suns:</span> 14hPM-18hPM</p>
-                            <p><b>We Work All The Holidays</b></p>
+                            <h3>Время работы</h3>
+                            <p><span>Понедельник - Пятница:</span> 09:00 - 18:00</p>
+                            <p><span>Суббота:</span> 09:00 - 14:00</p>
+                            <p><span>Воскресенье:</span> 09:00 - 14:00</p>
+                            <p><b>Работаем без выходных и праздников</b></p>
                         </div>          
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6">
