@@ -3242,7 +3242,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0;
-  text-transform: capitalize;
   position: relative;
   font-family: "Lora", serif;
   padding-bottom: 22px;
