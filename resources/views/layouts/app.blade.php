@@ -169,16 +169,10 @@
                                 </div>
                                 <div class="header_account_area">
                                     <div class="header_account-list top_links">
-                                        <a href="#"><i class="icon-message"></i></a>
-                                        <ul class="dropdown_links">
-                                            <li><a href="checkout.html">Checkout </a></li>
-                                            <li><a href="my-account.html">My Account </a></li>
-                                            <li><a href="cart.html">Shopping Cart</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
-                                        </ul>
+                                        <a href="https://wa.me/77001030110?text={{urlencode('Здравствуйте. Я заинтересован в покупке с вашего интернет-магазина')}}" target="_blank"><i class="icon-message"></i></a>
                                     </div>
                                     <div class="header_account-list header_wishlist">
-                                        <a href="wishlist.html"><i class="icon-instagram"></i></a>
+                                        <a href="https://instagram.com/vitamarket.almaty" target="_blank"><i class="icon-instagram"></i></a>
                                     </div>
                                     <div class="header_account-list  mini_cart_wrapper">
                                        <a href="javascript:void(0)"><i class="icon-shopping-bag"></i><span class="item_count">2</span></a>
