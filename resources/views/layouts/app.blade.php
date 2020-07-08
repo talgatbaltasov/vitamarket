@@ -401,9 +401,9 @@
                         <div class="banner_thumb">
                             <a href="shop.html"><img src="/assets/img/bg/banner1.jpg" alt=""></a> 
                             <div class="banner_content">
-                                <h3>Big Sale Products</h3>
+                                <h3>Товары со скидкой</h3>
                                 <h2>Plants <br> For Interior</h2>
-                                <a href="shop.html">Shop Now</a>
+                                <a href="shop.html">Посмотреть</a>
                             </div>
                         </div>
                     </figure>
@@ -413,9 +413,9 @@
                         <div class="banner_thumb">
                             <a href="shop.html"><img src="/assets/img/bg/banner2.jpg" alt=""></a> 
                             <div class="banner_content">
-                                <h3>Top Products</h3>
+                                <h3>Популярные товары</h3>
                                 <h2>Plants <br> For Healthy</h2>
-                                <a href="shop.html">Shop Now</a>
+                                <a href="shop.html">Посмотреть</a>
                             </div>
                         </div>
                     </figure>
