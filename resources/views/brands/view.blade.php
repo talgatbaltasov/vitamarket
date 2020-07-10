@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Товары '.$brand->title.' → купить в Алматы и Астане в интернет-магазине "Лайтстор" | цены, отзывы, доставка')
-@section('description', '★ Лайтстор ★ '.$brand->title.' - удобный выбор в интернет-магазине ➤ Круглосуточно 24/7 ☎ +7 707 897 02 47')
+@section('title', 'Товары '.$brand->title.' → купить в Алматы и Астане в интернет-магазине "Vitamarket" | цены, отзывы, доставка')
+@section('description', '★ Vitamarket ★ '.$brand->title.' - удобный выбор в интернет-магазине ➤ Круглосуточно 24/7 ☎ +7 700 103 01 10')
 
 @section('content')
 <section class="flat-breadcrumb">

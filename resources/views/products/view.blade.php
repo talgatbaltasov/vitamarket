@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', (($product->category->parent) ? $product->category->parent->name.' ' : '').$product->category->name.' '.$product->title.' → купить в Алматы и Казахстане в "Лайтстор" | цены и отзывы')
-@section('description', '★ Лайтстор ★ Доставка '.$product->title.' по Алматы и регионам Казахстана ➤ Круглосуточно 24/7 ☎ +7 707 897 02 47')
+@section('title', (($product->category->parent) ? $product->category->parent->name.' ' : '').$product->category->name.' '.$product->title.' → купить в Алматы и Казахстане в "Vitamarket" | цены и отзывы')
+@section('description', '★ Vitamarket ★ Доставка '.$product->title.' по Алматы и регионам Казахстана ➤ Круглосуточно 24/7 ☎ +7 700 103 01 10')
 
 @section('content')
     <section class="flat-breadcrumb">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Контакты')
-@section('description', '★ Интернет-магазин Лайтстор ★ Широкий выбор товаров ✔ Удобная оплата ✔ Продукция с гарантией и доставкой в интернет-магазине электроники ➤ Круглосуточно 24/7 ☎ +7 707 897 02 47')
+@section('description', '★ Интернет-магазин Vitamarket ★ Широкий выбор товаров ✔ Удобная оплата ✔ Продукция с гарантией и доставкой в интернет-магазине витамин и БАД ➤ Круглосуточно 24/7 ☎ +7 700 103 01 10')
 
 @section('content')
     <section class="flat-breadcrumb">
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="flat-map" class="pdmap">
-                        <div class="flat-maps" data-address="Тимирязева 42 к3. ТЦ Атакент mall" data-height="444" data-images="/images/icons/map.png" data-name="Карта Лайтстор"></div>
+                        <div class="flat-maps" data-address="Тимирязева 42 к3. ТЦ Атакент mall" data-height="444" data-images="/images/icons/map.png" data-name="Карта Vitamarket"></div>
                         <div class="gm-map">
                             <div class="map"></div>
                         </div>
