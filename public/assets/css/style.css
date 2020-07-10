@@ -1017,7 +1017,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 767px) {
   .logo img {
-    max-width: 120px;
+    max-width: 160px;
   }
 }
 @media only screen and (max-width: 575px) {
