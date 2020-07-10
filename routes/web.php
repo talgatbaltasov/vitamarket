@@ -52,6 +52,8 @@ Route::get('/brands/{slug}', 'BrandController@show');
 Route::middleware(['auth'])->prefix('admins')->group(function(){
     Route::get('/', 'Admin\AdminController@index');
 
+    Route::resource('/products', 'Admin\ProductController');
+
     Route::prefix('articles')->group(function(){
         Route::get('/', 'Admin\ArticleController@index');
         Route::get('/create', 'Admin\ArticleController@create');
