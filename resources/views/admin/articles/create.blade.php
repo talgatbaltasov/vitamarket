@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form action="/admins/articles/store" enctype="multipart/form-data" method="post">
+            <form action="/admin/articles/store" enctype="multipart/form-data" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="title">Название</label>

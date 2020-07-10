@@ -49,7 +49,7 @@ Route::get('/brands', 'BrandController@index');
 Route::get('/brands/{slug}', 'BrandController@show');
 
 
-Route::middleware(['auth'])->prefix('admins')->group(function(){
+Route::middleware(['auth'])->prefix('admin')->group(function(){
     Route::get('/', 'Admin\AdminController@index');
 
     Route::resource('/products', 'Admin\ProductController');

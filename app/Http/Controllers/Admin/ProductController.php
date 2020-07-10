@@ -39,7 +39,7 @@ class ProductController extends Controller
         }
         $product->save();
 
-        return redirect('/admins/products');
+        return redirect('/admin/products');
     }
 
     public function edit(Product $product)
@@ -66,12 +66,12 @@ class ProductController extends Controller
         }
         $product->save();
 
-        return redirect('/admins/products');
+        return redirect('/admin/products');
     }
 
     public function delete(Product $product)
     {
         $product->delete();
-        return redirect('/admins/products');
+        return redirect('/admin/products');
     }
 }

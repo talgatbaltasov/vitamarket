@@ -37,7 +37,7 @@ class ArticleController extends Controller
         }
         $article->save();
 
-        return redirect('/admins/articles');
+        return redirect('/admin/articles');
     }
 
     public function edit(Article $article)
@@ -64,12 +64,12 @@ class ArticleController extends Controller
         }
         $article->save();
 
-        return redirect('/admins/articles');
+        return redirect('/admin/articles');
     }
 
     public function delete(Article $article)
     {
         $article->delete();
-        return redirect('/admins/articles');
+        return redirect('/admin/articles');
     }
 }

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <a href="/admins/articles/create" class="btn btn-primary">Добавить</a>
+            <a href="/admin/articles/create" class="btn btn-primary">Добавить</a>
         </div>
         <div class="col-md-12">
             <table class="table table-striped">
@@ -31,8 +31,8 @@
                         </td>
                         <td>{{$article->updated_at}}</td>
                         <td>
-                            <a href="/admins/articles/edit/{{$article->id}}">Редактировать</a>
-                            <a href="/admins/articles/delete/{{$article->id}}">Удалить</a>
+                            <a href="/admin/articles/edit/{{$article->id}}">Редактировать</a>
+                            <a href="/admin/articles/delete/{{$article->id}}">Удалить</a>
                         </td>
                     </tr>
                     @endforeach
