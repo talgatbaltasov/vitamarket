@@ -1,52 +1,122 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{-- <meta http-equiv="refresh" content="90"> --}}
+    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title')</title>
-	<meta name="keywords" content="Admin" />
-	<meta name="description" content="Maddt Admin">
-	<meta name="author" content="brainsmedia.ru">
-	<link rel="shortcut icon" href="/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/admin_assets/bootstrap.min.css" rel="stylesheet">
+
+    <title>{{ config('app.name', 'Westlinks Online Scheduler') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
+    <script src="https://kit.fontawesome.com/3e47064b43.js" crossorigin="anonymous"></script>
+
+    <!-- Styles -->
+    @if(\Auth::user() && \Auth::user()->is_darkmode == 1)
+      <link href="{{ asset('css/app_dark.css') }}" rel="stylesheet">
+    @else
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @endif
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div id="app">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    {{ config('app.name', 'Scheduler') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/admin">Главная <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/articles">Статьи</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    @yield('content')
-    <script src="/admin_assets/jquery-3.3.1.slim.min.js"></script>
-    <script src="/admin_assets/popper.min.js"></script>
-    <script src="/admin_assets/bootstrap.min.js"></script>
-	@yield('js')
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            @if(\Auth::user()->role->name == 'Administrator' || \Auth::user()->role->name == 'Manager')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/schedules">Schedule</a>
+                                </li>
+                            @endif
+                            {{-- @if(\Auth::user()->role->name == 'Administrator' || \Auth::user()->role->name == 'Manager')
+                              <li class="nav-item">
+                                  <a class="nav-link" href="/admin/settings">Settings</a>
+                              </li>
+                            @endif --}}
+                            <li class="nav-item">
+                              <a class="nav-link" href="/help">Help</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->full_name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/users/{{ \Auth::user()->id }}">View Profile</a>
+                                    @if(\Auth::user()->role->name == 'Administrator' || \Auth::user()->role->name == 'Manager')
+                                        <a class="dropdown-item" href="/admin/settings">Settings</a>
+                                    @endif
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-4 mt-5">
+          {{-- Darkmode: {{ \Auth::user() && \Auth::user()->is_darkmode }} --}}
+            @yield('content')
+        </main>
+        @yield('scripts')
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            toastr.options.newestOnTop = false;
+            toastr.options.showDuration = "1200";
+            toastr.options.positionClass = "toast-top-center";
+            @if(Session::get('success') != '')
+                toastr.success("{{Session::get('success')}}");
+            @elseif(Session::get('error') != '')
+                toastr.error("{{Session::get('error')}}");
+            @elseif(Session::get('warning') != '')
+                toastr.warning("{{Session::get('warning')}}");
+            @endif
+        </script>
+      </div>
 </body>
 </html>
