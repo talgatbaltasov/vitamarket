@@ -26,7 +26,7 @@ class BrandController extends Controller
     {
         $filename = '/images/brands/'.$request->slug.'_'.time().'.'.$request->file('image')->extension();
         
-        Image::make($request->file('image'))->resize(300, 300)->save(public_path($filename));
+        Image::make($request->file('image'))->save(public_path($filename));
 
         $data = $request->all();
         $data['image'] = $filename;
