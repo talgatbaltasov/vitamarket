@@ -25,8 +25,8 @@
     <div id="app">
         <nav class="navbar fixed-top navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ config('app.name', 'Scheduler') }}
+                <a class="navbar-brand" href="{{ url('/admin') }}">
+                    {{ config('app.name', 'Админ панель') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -51,19 +51,11 @@
                                 </li>
                             @endif
                         @else
-                            @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Manager')
+                            @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Admin')
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/admin/schedules">Schedule</a>
+                                    <a class="nav-link" href="/admin/products">Товары</a>
                                 </li>
                             @endif
-                            {{-- @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Manager')
-                              <li class="nav-item">
-                                  <a class="nav-link" href="/admin/settings">Settings</a>
-                              </li>
-                            @endif --}}
-                            <li class="nav-item">
-                              <a class="nav-link" href="/help">Help</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->full_name }} <span class="caret"></span>
@@ -71,7 +63,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/users/{{ \Auth::user()->id }}">View Profile</a>
-                                    @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Manager')
+                                    @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Admin')
                                         <a class="dropdown-item" href="/admin/settings">Settings</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
