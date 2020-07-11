@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Brand;
+use App\Category;
 use App\Product;
+use App\Status;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class ProductController extends Controller
@@ -17,7 +20,10 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('admin.products.create');
+        $brands = Brand::pluck('name', 'id');
+        $categories = Category::pluck('name', 'id');
+        $statuses = Status::pluck('name_ru', 'id');
+        return view('admin.products.create', compact('brands', 'categories', 'statuses'));
     }
 
     public function store(Request $request)

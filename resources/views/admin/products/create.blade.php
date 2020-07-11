@@ -4,34 +4,53 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form action="/admin/articles/store" enctype="multipart/form-data" method="post">
-                @csrf
+            {!!Form::open(['route' => 'admin.products.store', 'file' => true])!!}
                 <div class="form-group">
-                    <label for="title">Название</label>
-                    <input type="text" id="title" name="title" class="form-control">
+                    {{Form::label('brand_id', 'Бренд')}}
+                    {{Form::select('brand_id', $brands, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('category_id', 'Категория')}}
+                    {{Form::select('category_id', $categories, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('name', 'Название')}}
+                    {{Form::text('name', null, ['class' => 'form-control'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('description', 'Описание')}}
+                    {{Form::textarea('description', null, ['class' => 'form-control'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('slug', 'Ссылка')}}
+                    {{Form::text('slug', null, ['class' => 'form-control'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('price', 'Цена')}}
+                    {{Form::text('price', null, ['class' => 'form-control'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('sale_price', 'Цена со скидкой')}}
+                    {{Form::text('sale_price', null, ['class' => 'form-control'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('order', 'Последовательность')}}
+                    {{Form::number('order', null, ['class' => 'form-control'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('status_id', 'Статус')}}
+                    {{Form::select('status_id', $statuses, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('main_image', 'Главная картинка')}}
+                    {{Form::file('main_image', null, ['class' => 'form-control'])}}
                 </div>
                 <div class="form-group">
                     <label for="main_image">Главная картинка</label>
                     <input type="file" id="main_image" name="main_image">
                 </div>
-                <div class="form-group">
-                    <label for="short_description">Краткое описание</label>
-                    <textarea name="short_description" id="short_description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="description">Описание</label>
-                    <textarea name="description" id="description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="slug">Ссылка</label>
-                    <input type="text" id="slug" name="slug" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="checkbox" id="status" name="status" value="1">
-                    <label for="status">Активный?</label>
-                </div>
                 <button class="btn btn-success">Добавить</button>
-            </form>
+            {!!Form::close()!!}
         </div>
     </div>
 </div>
