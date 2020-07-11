@@ -41,21 +41,13 @@
                     {{Form::label('status_id', 'Статус')}}
                     {{Form::select('status_id', $statuses, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
                 </div>
-                <div class="form-group">
-                    {{Form::label('main_image', 'Главная картинка')}}
-                    {{Form::file('main_image', null, ['class' => 'form-control'])}}
-                </div>
-                <div class="form-group">
-                    <label for="main_image">Главная картинка</label>
-                    <input type="file" id="main_image" name="main_image">
-                </div>
                 <button class="btn btn-success">Добавить</button>
             {!!Form::close()!!}
         </div>
     </div>
 </div>
 @endsection
-@section('js')
+@section('scripts')
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
     <script>
