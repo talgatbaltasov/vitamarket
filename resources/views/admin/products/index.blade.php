@@ -30,8 +30,8 @@
                         <td>{{$product->status->name_ru}}</td>
                         <td>{{$product->updated_at}}</td>
                         <td>
-                            <a href="/admin/products/edit/{{$product->id}}">Редактировать</a>
-                            <a href="/admin/products/delete/{{$product->id}}">Удалить</a>
+                            <a href="/admin/products/edit/{{$product->id}}" class="btn btn-success">Редактировать</a>
+                            <a href="/admin/products/delete/{{$product->id}}" class="btn btn-danger">Удалить</a>
                         </td>
                     </tr>
                     @endforeach
