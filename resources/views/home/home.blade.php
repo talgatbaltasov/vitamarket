@@ -4,889 +4,897 @@
 @section('description', '★ Интернет-магазин Vitamarket ★ Широкий выбор товаров ✔ Удобная оплата ✔ Продукция с гарантией и доставкой в интернет-магазине витамин и БАД ➤ Круглосуточно 24/7 ☎ +7 700 103 01 10')
 
 @section('content')
-    <section class="flat-row flat-slider">
+    <!--slider area start-->
+    <section class="slider_section">
+        <div class="slider_area owl-carousel">
+            <div class="single_slider d-flex align-items-center" data-bgimg="/assets/img/slider/slider1.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="slider_content">
+                                <h1>BIG SALE</h1>
+                                <p>Discount <span>20% Off </span> For Lukani Members </p> 
+                                <a class="button" href="shop.html">Discover Now </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider d-flex align-items-center" data-bgimg="/assets/img/slider/slider2.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="slider_content">
+                                <h1>TOP SALE</h1>
+                                <p>Discount <span>20% Off </span> For Lukani Members </p> 
+                                <a class="button" href="shop.html">Discover Now </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider d-flex align-items-center" data-bgimg="/assets/img/slider/slider3.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="slider_content">
+                                <h1>Lovely Plants </h1>
+                                <p>Discount <span>20% Off </span> For Lukani Members </p>
+                                <a class="button" href="shop.html">Discover Now </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--slider area end-->
+
+    <!--shipping area start-->
+    <div class="shipping_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="/assets/img/about/shipping1.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h3>Бесплатная доставка</h3>
+                            <p>Бесплатная доставка при заказе <br> свыше 10000 тг.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_shipping col_2">
+                        <div class="shipping_icone">
+                            <img src="/assets/img/about/shipping2.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h3>Оплата</h3>
+                            <p>Оплата через Каспи перевод<br/> или наличными<br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_shipping col_3">
+                        <div class="shipping_icone">
+                            <img src="/assets/img/about/shipping3.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h3>Акции и скидки</h3>
+                            <p>Регулярно проводим акции и скидки<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <!--shipping area end-->
+
+    <!--banner area start-->
+    <div class="banner_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <figure class="single_banner">
+                        <div class="banner_thumb">
+                            <a href="shop.html"><img src="/assets/img/bg/banner1.jpg" alt=""></a> 
+                            <div class="banner_content">
+                                <h3>Товары со скидкой</h3>
+                                <h2>Plants <br> For Interior</h2>
+                                <a href="shop.html">Посмотреть</a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <figure class="single_banner">
+                        <div class="banner_thumb">
+                            <a href="shop.html"><img src="/assets/img/bg/banner2.jpg" alt=""></a> 
+                            <div class="banner_content">
+                                <h3>Популярные товары</h3>
+                                <h2>Plants <br> For Healthy</h2>
+                                <a href="shop.html">Посмотреть</a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner area end-->
+        
+    <!--product area start-->
+    <div class="product_area  mb-95">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="product_header">
+                        <div class="section_title">
+                        <h2>Наши товары</h2>
+                        </div>
+                        <div class="product_tab_btn">
+                            <ul class="nav" role="tablist">
+                                @foreach($categories as $category)
+                                    <li>
+                                        <a @if($loop->first) class="active" @endif data-toggle="tab" href="#category{{$category->id}}" role="tab" aria-controls="category{{$category->id}}" aria-selected="true"> 
+                                            {{$category->name}}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="tab-content">
+                @foreach($categories as $category)
+                    <div class="tab-pane fade @if($loop->first) show active @endif" id="category{{$category->id}}" role="tabpanel">
+                        <div class="row">
+                            <div class="product_carousel product_column4 owl-carousel">
+                                <div class="col-lg-3">
+                                    <div class="product_items">
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product1.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-7%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">commodo augue nisi</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£69.00</span>
+                                                        <span class="old_price">£74.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product2.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-9%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">eget sagittis</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£65.00</span>
+                                                        <span class="old_price">£70.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div> 
+                                <div class="col-lg-3">
+                                    <div class="product_items">
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product3.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-6%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">fringilla augue</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£68.00</span>
+                                                        <span class="old_price">£75.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product4.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-5%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">massa massa</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£75.00</span>
+                                                        <span class="old_price">£80.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div> 
+                                <div class="col-lg-3">
+                                    <div class="product_items">
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product5.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-8%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">placerat vestibulum</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£65.00</span>
+                                                        <span class="old_price">£70.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product6.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-9%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">Porro Cook</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£62.00</span>
+                                                        <span class="old_price">£68.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div> 
+                                <div class="col-lg-3">
+                                    <div class="product_items">
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product7.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-4%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">sapien libero</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£69.00</span>
+                                                        <span class="old_price">£74.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product8.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-6%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">vulputate rutrum</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£64.00</span>
+                                                        <span class="old_price">£72.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div> 
+                                <div class="col-lg-3">
+                                    <div class="product_items">
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product9.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-8%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">adipiscing cursus</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£60.00</span>
+                                                        <span class="old_price">£70.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                        <article class="single_product">
+                                            <figure>
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product10.jpg" alt=""></a>
+                                                    <div class="label_product">
+                                                        <span class="label_sale">-9%</span>
+                                                    </div>
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>
+                                                            <li class="compare"><a href="#" title="Add to Compare"><i class="icon-sliders"></i></a></li>
+                                                            <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i></a></li>    
+                                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <figcaption class="product_content">
+                                                    <div class="product_rating">
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    </ul>
+                                                    </div>
+                                                    <h4 class="product_name"><a href="product-details.html">Donec eu cook</a></h4>
+                                                    <div class="price_box"> 
+                                                        <span class="current_price">£67.00</span>
+                                                        <span class="old_price">£77.00</span>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div> 
+                            </div> 
+                        </div>   
+                    </div>
+                @endforeach
+            </div>
+        </div> 
+    </div>
+    <!--product area end-->
+
+    <!--product area start-->
+    <div class="product_area product_deals ">
         <div class="container-fluid">
             <div class="row">
-                <div class="slider owl-carousel">
-                    <div class="slider-item" style="background-image: url(/images/banners/banner2.jpg);">
-                        <a href="#">
-                            <h2>
-                                Mi MIX 2S<br/>
-                                <small>Искусство x Технологии</small>
-                            </h2>
-                            <p class="descp">
-                                Двойная AI-камера с Dual Pixel автофокусом<br>
-                                Большие пиксели 1,4 мкм, 4-осевая стабилизация<br>
-                                5,99 Полноэкранный дисплей<br>
-                                Изогнутый керамический корпус<br>
-                            </p>
-                            <span class="btn-shop">ПОДРОБНЕЕ</span>
-                        </a>
-                    </div><!-- /.slider -->
-                    <div class="slider-item slider-light" style="background-image: url(/images/banners/banner3.jpg);">
-                        <a href="#">
-                            <h2>
-                                Redmi Note 5<br/>
-                                <small>Монстр фотографии</small>
-                            </h2>
-                            <p class="descp">
-                                Двойная камера 12 Мп + 5 Мп<br>
-                                Большие пиксели размером 1,4 мкм, Dual Pixel автофокус<br>
-                                5,99"" FHD+ дисплей<br>
-                                Соотношение сторон 18:9<br>
-                            </p>
-                            <span class="btn-shop">ПОДРОБНЕЕ</span>
-                        </a>
-                    </div><!-- /.slider -->
-                    <div class="slider-item" style="background-image: url(/images/banners/banner4.jpg);">
-                        <a href="#">
-                            <h2>
-                                Redmi 5<br/>
-                                <small><small>Полноэкранный смартфон для каждого</small></small>
-                            </h2>
-                            <p class="descp">
-                                5.7"HD+ полноэкранный дисплей<br>
-                                12 Мп основная камера, размер пикселя 1.25 мкм<br>
-                                Селфи-вспышка<br>
-                                Аккумулятор 3300 мАч<br>
-                                8-ядерный процессор Snapdragon 450<br>
-                            </p>
-                            <span class="btn-shop">ПОДРОБНЕЕ</span>
-                        </a>
-                    </div><!-- /.slider -->
-                    <div class="slider-item slider-light" style="background-image: url(/images/banners/banner5.jpg);">
-                        <a href="#">
-                            <h2>
-                                Redmi 5 Plus<br/>
-                                <small><small>Полноэкранный смартфон для каждого</small></small>
-                            </h2>
-                            <p class="descp">
-                                5.99"HD+ полноэкранный дисплей<br>
-                                12 Мп основная камера, размер пикселя 1.25 мкм<br>
-                                Селфи-вспышка<br>
-                                Аккумулятор 4000 мАч обеспечивает до 2 дней использования<br>
-                                8-ядерный процессор Snapdragon 625<br>
-                            </p>
-                            <span class="btn-shop">ПОДРОБНЕЕ</span>
-                        </a>
-                    </div><!-- /.slider -->
-                    <div class="slider-item" style="background-image: url(/images/banners/banner6.jpg);">
-                        <a href="#">
-                            <h2>
-                                Mi A1 Red<br/>
-                                <small>Ограниченная серия!</small>
-                            </h2>
-                            <p class="descp">
-                                Специальная цена только для первых покупателей.<br>
-                            </p>
-                            <span class="btn-shop">ПОДРОБНЕЕ</span>
-                        </a>
-                    </div><!-- /.slider -->
-                </div><!-- /.slider -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-slider -->
-
-    <section class="flat-row flat-banner-box" style="display:none;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="banner-box one-half">
-                        <div class="inner-box">
-                            <a href="#" title="">
-                                <img src="/images/banner_boxes/home-01.jpg" alt="">
-                            </a>
-                        </div><!-- /.inner-box -->
-                        <div class="inner-box">
-                            <a href="#" title="">
-                                <img src="/images/banner_boxes/home-05.jpg" alt="">
-                            </a>
-                        </div><!-- /.inner-box -->
-                        <div class="clearfix"></div>
-                    </div><!-- /.box -->
-                    <div class="banner-box">
-                        <div class="inner-box">
-                            <a href="#" title="">
-                                <img src="/images/banner_boxes/home-04.jpg" alt="">
-                            </a>
-                        </div>
-                    </div><!-- /.box -->
-                </div><!-- /.col-md-8 -->
-                <div class="col-md-4">
-                    <div class="banner-box">
-                        <div class="inner-box">
-                            <a href="#" title="">
-                                <img src="/images/banner_boxes/home-03.jpg" alt="">
-                            </a>
-                        </div><!-- /.inner-box -->
-                    </div><!-- /.box -->
-                </div><!-- /.col-md-4 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-banner-box -->
-
-    <section class="flat-imagebox">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-tab">
-                        <ul class="tab-list">
-                            <li class="active">Специальные предложения</li>
-                        </ul>
-                    </div><!-- /.product-tab -->
-                </div><!-- /.col-md-12 -->
-            </div><!-- /.row -->
-            <div class="box-product">
+                <div class="col-12">
+                    <div class="section_title">
+                    <h2>Акции и скидки</h2>
+                    </div>
+                </div>
+            </div> 
+            <div class="product_deals_container">
                 <div class="row">
-                    @foreach($sale_products as $product)
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="product-box">
-                                <div class="imagebox">
-                                    <span class="item-sale">АКЦИЯ</span>
-                                    <ul class="box-image owl-carousel-1">
-                                        @foreach($product->images as $image)
-                                            <li>
-                                                <a href="/p/{{$product->slug}}" title="">
-                                                    <img src="/images{{$image->image}}" class="product-image" alt="">
-                                                </a>
-                                            </li>
-                                        @endforeach
-                                        <li>
-                                            <a href="#" title="">
-                                                <img src="/images/product/other/05.jpg" alt="">
-                                            </a>
-                                        </li>
-                                    </ul><!-- /.box-image -->
-                                    <div class="box-content">
-                                        <div class="cat-name">
-                                            <a href="/c/{{$product->category->slug}}" title="">{{$product->category->name}}</a>
+                    <div class="product_carousel product_column5 owl-carousel">
+                        <div class="col-lg-3">
+                            <article class="single_product">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product1.jpg" alt=""></a>
+                                            <div class="label_product">
+                                                <span class="label_sale">-7%</span>
+                                            </div>
+                                            <div class="product_timing">
+                                                <div data-countdown="2020/12/15"></div>
+                                            </div>
                                         </div>
-                                        <div class="product-name">
-                                            <a href="/p/{{$product->slug}}" title="{{$product->title}}">{{$product->title}}</a>
+                                        <figcaption class="product_content">
+                                            <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                            </ul>
+                                            </div>
+                                            <h4 class="product_name"><a href="product-details.html">commodo augue nisi</a></h4>
+                                            <div class="price_box"> 
+                                                <span class="current_price">£69.00</span>
+                                                <span class="old_price">£74.00</span>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                        </div>        
+                        <div class="col-lg-3">        
+                            <article class="single_product">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product2.jpg" alt=""></a>
+                                            <div class="label_product">
+                                                <span class="label_sale">-9%</span>
+                                            </div>
+                                            <div class="product_timing">
+                                                <div data-countdown="2020/12/15"></div>
+                                            </div>
                                         </div>
-                                        <div class="price">
-                                            <span class="sale">{{$product->price}} тг.</span>
-                                            <!-- <span class="regular">$2,999.00</span> -->
+                                        <figcaption class="product_content">
+                                            <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                            </ul>
+                                            </div>
+                                            <h4 class="product_name"><a href="product-details.html">eget sagittis</a></h4>
+                                            <div class="price_box"> 
+                                                <span class="current_price">£65.00</span>
+                                                <span class="old_price">£70.00</span>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                        </div> 
+                        <div class="col-lg-3">
+                            <article class="single_product">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product3.jpg" alt=""></a>
+                                            <div class="label_product">
+                                                <span class="label_sale">-6%</span>
+                                            </div>
+                                            <div class="product_timing">
+                                                <div data-countdown="2020/12/15"></div>
+                                            </div>
                                         </div>
-                                    </div><!-- /.box-content -->
-                                    <div class="box-bottom">
-                                        <div class="btn-add-cart">
-                                            <a title="" onclick='addToCart(this, {{$product->id}})'>
-                                                <img src="/images/icons/add-cart.png" alt="">В КОРЗИНУ
-                                            </a>
+                                        <figcaption class="product_content">
+                                            <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                            </ul>
+                                            </div>
+                                            <h4 class="product_name"><a href="product-details.html">fringilla augue</a></h4>
+                                            <div class="price_box"> 
+                                                <span class="current_price">£68.00</span>
+                                                <span class="old_price">£75.00</span>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                        </div>        
+                        <div class="col-lg-3">        
+                            <article class="single_product">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product4.jpg" alt=""></a>
+                                            <div class="label_product">
+                                                <span class="label_sale">-5%</span>
+                                            </div>
+                                            <div class="product_timing">
+                                                <div data-countdown="2020/12/15"></div>
+                                            </div>
                                         </div>
-                                    </div><!-- /.box-bottom -->
-                                </div><!-- /.imagebox -->
-                            </div>
-                        </div><!-- /.col-lg-3 col-sm-6 -->
-                    @endforeach
-                </div><!-- /.row -->
-            </div><!-- /.box-product -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-imagebox -->
+                                        <figcaption class="product_content">
+                                            <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                            </ul>
+                                            </div>
+                                            <h4 class="product_name"><a href="product-details.html">massa massa</a></h4>
+                                            <div class="price_box"> 
+                                                <span class="current_price">£75.00</span>
+                                                <span class="old_price">£80.00</span>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                        </div> 
+                        
+                        <div class="col-lg-3">
+                            <article class="single_product">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product5.jpg" alt=""></a>
+                                            <div class="label_product">
+                                                <span class="label_sale">-8%</span>
+                                            </div>
+                                        <div class="product_timing">
+                                                <div data-countdown="2020/12/15"></div>
+                                            </div>
+                                        </div>
+                                        <figcaption class="product_content">
+                                            <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                                <li><a href="#"><i class="icon-star"></i></a></li>
+                                            </ul>
+                                            </div>
+                                            <h4 class="product_name"><a href="product-details.html">placerat vestibulum</a></h4>
+                                            <div class="price_box"> 
+                                                <span class="current_price">£65.00</span>
+                                                <span class="old_price">£70.00</span>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                        </div>        
+                        <div class="col-lg-3">        
+                            <article class="single_product">
+                                <figure>
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product6.jpg" alt=""></a>
+                                        <div class="label_product">
+                                            <span class="label_sale">-9%</span>
+                                        </div>
+                                        <div class="product_timing">
+                                            <div data-countdown="2020/12/15"></div>
+                                        </div>
+                                    </div>
+                                    <figcaption class="product_content">
+                                        <div class="product_rating">
+                                        <ul>
+                                            <li><a href="#"><i class="icon-star"></i></a></li>
+                                            <li><a href="#"><i class="icon-star"></i></a></li>
+                                            <li><a href="#"><i class="icon-star"></i></a></li>
+                                            <li><a href="#"><i class="icon-star"></i></a></li>
+                                            <li><a href="#"><i class="icon-star"></i></a></li>
+                                        </ul>
+                                        </div>
+                                        <h4 class="product_name"><a href="product-details.html">Porro Cook</a></h4>
+                                        <div class="price_box"> 
+                                            <span class="current_price">£62.00</span>
+                                            <span class="old_price">£68.00</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div> 
+                    </div> 
+                </div>   
+            </div>
+        </div> 
+    </div>
+    <!--product area end-->
 
-    <section class="flat-imagebox">
+    <!--testimonial area start-->
+    <div class="testimonial_area">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="product-tab">
-                        <ul class="tab-list">
-                            <li class="active">Новинки</li>
-                        </ul>
-                    </div><!-- /.product-tab -->
-                </div><!-- /.col-md-12 -->
-            </div><!-- /.row -->
-            <div class="box-product">
+                <div class="col-12">
+                    <div class="section_title">
+                    <h2>Отзывы</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial_container">
                 <div class="row">
-                    @foreach($new_products as $product)
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product-box">
-                            <div class="imagebox">
-                                <span class="item-new">НОВИНКА</span>
-                                <ul class="box-image owl-carousel-1">
-                                    @foreach($product->images as $image)
-                                        <li>
-                                            <a href="/p/{{$product->slug}}" title="">
-                                                <img src="/images{{$image->image}}" class="product-image" alt="">
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul><!-- /.box-image -->
-                                <div class="box-content">
-                                    <div class="cat-name">
-                                        <a href="/c/{{$product->category->slug}}" title="">{{$product->category->name}}</a>
+                    <div class="testimonial_carousel owl-carousel">
+                        <div class="col-12">
+                            <div class="single-testimonial">
+                                <div class="testimonial-icon-img">
+                                    <img src="/assets/img/about/testimonials-icon.png" alt="">
+                                </div>
+                                <div class="testimonial_content">
+                                    <p>“ When a beautiful design is combined with powerful technology, <br>
+                                    it truly is an artwork. I love how my website operates and looks with this theme. Thank you for the awesome product. ”</p>
+                                    <div class="testimonial_text_img">
+                                        <a href="#"><img src="/assets/img/about/testimonial1.png" alt=""></a>
                                     </div>
-                                    <div class="product-name">
-                                        <a href="/p/{{$product->slug}}" title="{{$product->title}}">{{$product->title}}</a>
+                                    <div class="testimonial_author">
+                                        <p><a href="#">Rebecka Filson</a> / <span>CEO of CSC</span></p>
                                     </div>
-                                    <div class="price">
-                                        <span class="sale">{{$product->price}} тг.</span>
-                                        <!-- <span class="regular">$2,999.00</span> -->
-                                    </div>
-                                </div><!-- /.box-content -->
-                                <div class="box-bottom">
-                                    <div class="btn-add-cart">
-                                        <a title="" onclick='addToCart(this, {{$product->id}})'>
-                                            <img src="/images/icons/add-cart.png" alt="">В КОРЗИНУ
-                                        </a>
-                                    </div>
-                                </div><!-- /.box-bottom -->
-                            </div><!-- /.imagebox -->
+                                </div>
+                            </div>
                         </div>
-                    </div><!-- /.col-lg-3 col-sm-6 -->
-                    @endforeach
-                </div><!-- /.row -->
-            </div><!-- /.box-product -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-imagebox -->
-
-    <section class="flat-imagebox style2 background">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-wrap">
-                        <div class="product-tab style1">
-                            <ul class="tab-list">
-                                @php $i = 0;@endphp
-                                @foreach($bottom_categories as $category)
-                                    @if($category->products->count() > 0)
-                                        <li @if($i==0) class="active" @endif>{{$category->name}}</li>
-                                        @php $i++;@endphp
-                                    @endif
-                                @endforeach
-                            </ul><!-- /.tab-list -->
-                        </div><!-- /.product-tab style1 -->
-                        <div class="tab-item">
-                            @php $i = 0;@endphp
-                            @foreach($bottom_categories as $category)
-                                @if($category->products->count() > 0)
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            @php $product = $category->products()->where('is_category_main', 1)->orderBy('order_by')->first(); @endphp
-                                            <div class="product-box">
-                                                <div class="imagebox style2 v1">
-                                                    <div class="box-image">
-                                                        <a href="/p/{{$product->slug}}" title="">
-                                                            <img src="/images{{$product->mainImage()}}" alt="" class="image-h-400">
-                                                        </a>
-                                                    </div><!-- /.box-image -->
-                                                    <div class="box-content">
-                                                        <div class="cat-name">
-                                                            <a href="/c/{{$category->slug}}" title="">{{$category->name}}</a>
-                                                        </div>
-                                                        <div class="product-name">
-                                                            <a href="/p/{{$product->slug}}" title="">{{$product->title}}</a>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span class="sale">{{$product->price}} тг.</span>
-                                                            <!-- <span class="regular">$2,999.00</span> -->
-                                                        </div>
-                                                    </div><!-- /.box-content -->
-                                                    <div class="box-bottom">
-                                                        <div class="btn-add-cart">
-                                                            <a title="" onclick='addToCart(this, {{$product->id}})'>
-                                                                <img src="/images/icons/add-cart.png" alt="">В КОРЗИНУ
-                                                            </a>
-                                                        </div>
-                                                    </div><!-- /.box-bottom -->
-                                                </div><!-- /.imagebox style2 -->
-                                            </div><!-- /.product-box -->
-                                        </div><!-- /.col-md-6 -->
-                                        <div class="col-md-3 col-sm-6">
-                                            @php $products = $category->products()->where('is_category_main', 1)->orderBy('order_by')->skip(1)->take(2)->get(); @endphp
-                                            @foreach($products as $product)
-                                            <div class="product-box style2">
-                                                <div class="imagebox style2">
-                                                    <div class="box-image">
-                                                        <a href="/p/{{$product->slug}}" title="">
-                                                            <img src="/images{{$product->mainImage()}}" alt="" class="image-h-177">
-                                                        </a>
-                                                    </div><!-- /.box-image -->
-                                                    <div class="box-content">
-                                                        <div class="cat-name">
-                                                            <a href="/c/{{$category->slug}}" title="">{{$category->name}}</a>
-                                                        </div>
-                                                        <div class="product-name">
-                                                            <a href="/p/{{$product->slug}}" title="">{{$product->title}}</a>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span class="sale">{{$product->price}} тг.</span>
-                                                            <!-- <span class="regular">$2,999.00</span> -->
-                                                        </div>
-                                                    </div><!-- /.box-content -->
-                                                    <div class="box-bottom">
-                                                        <div class="btn-add-cart">
-                                                            <a title="" onclick='addToCart(this, {{$product->id}})'>
-                                                                <img src="/images/icons/add-cart.png" alt="">В КОРЗИНУ
-                                                            </a>
-                                                        </div>
-                                                    </div><!-- /.box-bottom -->
-                                                </div><!-- /.imagebox style2 -->
-                                            </div><!-- /.product-box -->
-                                            @endforeach
-                                        </div><!-- /.col-md-3 col-sm-6 -->
-                                        <div class="col-md-3 col-sm-6">
-                                            @php $products = $category->products()->where('is_category_main', 1)->orderBy('order_by')->skip(3)->take(2)->get(); @endphp
-                                            @foreach($products as $product)
-                                            <div class="product-box style2">
-                                                <div class="imagebox style2">
-                                                    <div class="box-image">
-                                                        <a href="/p/{{$product->slug}}" title="">
-                                                            <img src="/images{{$product->mainImage()}}" alt="" class="image-h-177">
-                                                        </a>
-                                                    </div><!-- /.box-image -->
-                                                    <div class="box-content">
-                                                        <div class="cat-name">
-                                                            <a href="/c/{{$category->slug}}" title="">{{$category->name}}</a>
-                                                        </div>
-                                                        <div class="product-name">
-                                                            <a href="/p/{{$product->slug}}" title="">{{$product->title}}</a>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span class="sale">{{$product->price}} тг.</span>
-                                                            <!-- <span class="regular">$2,999.00</span> -->
-                                                        </div>
-                                                    </div><!-- /.box-content -->
-                                                    <div class="box-bottom">
-                                                        <div class="btn-add-cart">
-                                                            <a onclick='addToCart(this, {{$product->id}})' title="">
-                                                                <img src="/images/icons/add-cart.png" alt="">В КОРЗИНУ
-                                                            </a>
-                                                        </div>
-                                                    </div><!-- /.box-bottom -->
-                                                </div><!-- /.imagebox style2 -->
-                                            </div><!-- /.product-box -->
-                                            @endforeach
-                                        </div><!-- /.col-md-3 col-sm-6 -->
-                                    </div><!-- /.row -->
-                                    @php $i++;@endphp
-                                @endif
-                            @endforeach
-                        </div><!-- /.tab-item -->
-                    </div><!-- /.product-wrap -->
-                </div><!-- /.col-md-12 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-imagebox style2 -->
-
-    {{-- <section class="flat-imagebox style3" style="display: none;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel-2">
-                        <div class="box-counter">
-                            <div class="counter">
-                                <span class="special">Специальное предложение</span>
-                                <div class="counter-content">
-                                    <p>Акция продолжится еще</p>
-                                    <div class="count-down">
-                                        <div class="square">
-                                            <div class="numb">
-                                                14
-                                            </div>
-                                            <div class="text">
-                                                ДНЕЙ
-                                            </div>
-                                        </div>
-                                        <div class="square">
-                                            <div class="numb">
-                                                09
-                                            </div>
-                                            <div class="text">
-                                                ЧАСОВ
-                                            </div>
-                                        </div>
-                                        <div class="square">
-                                            <div class="numb">
-                                                48
-                                            </div>
-                                            <div class="text">
-                                                МИНУТ
-                                            </div>
-                                        </div>
-                                        <div class="square">
-                                            <div class="numb">
-                                                23
-                                            </div>
-                                            <div class="text">
-                                                СЕКУНД
-                                            </div>
-                                        </div>
-                                    </div><!-- /.count-down -->
-                                </div><!-- /.counter-content -->
-                            </div><!-- /.counter -->
-                            <div class="product-item">
-                                <div class="imagebox style3">
-                                    <div class="box-image save">
-                                        <a href="#" title="">
-                                            <img src="/images/product/other/l06.jpg" alt="">
-                                        </a>
-                                        <span>Сэкономь 15000 тг.</span>
-                                    </div><!-- /.box-image -->
-                                    <div class="box-content">
-                                        <div class="product-name">
-                                            <a href="#" title="">27-inch iMac with Retina 5K display</a>
-                                        </div>
-                                        <ul class="product-info">
-                                            <li>3.3GHz quad-core Intel Core i5 processor</li>
-                                            <li>Turbo Boost up to 3.9GHz</li>
-                                            <li>8GB (two 4GB) memory, configurable up to 32GB</li>
-                                            <li>2TB Fusion Drive1</li>
-                                            <li>AMD Radeon R9 M395 with 2GB video memory</li>
-                                            <li>Retina 5K 5120-by-2880 P3 display</li>
-                                        </ul>
-                                        <div class="price">
-                                            <span class="sale">$2,299.00</span>
-                                            <span class="regular">$2,999.00</span>
-                                        </div>
-                                    </div><!-- /.box-content -->
-                                    <div class="box-bottom">
-                                        <div class="btn-add-cart">
-                                            <a onclick='addToCart(this, {{$product->id}})' title="">
-                                                <img src="/images/icons/add-cart.png" alt="">Add to Cart
-                                            </a>
-                                        </div>
-                                    </div><!-- /.box-bottom -->
-                                </div><!-- /.imagbox style3 -->
-                            </div><!-- /.product-item -->
-                        </div><!-- /.box-counter -->
-                        <div class="box-counter">
-                            <div class="counter">
-                                <span class="special">Special Offer</span>
-                                <div class="counter-content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majorited have suffered alteration.</p>
-                                    <div class="count-down">
-                                        <div class="square">
-                                            <div class="numb">
-                                                14
-                                            </div>
-                                            <div class="text">
-                                                DAYS
-                                            </div>
-                                        </div>
-                                        <div class="square">
-                                            <div class="numb">
-                                                09
-                                            </div>
-                                            <div class="text">
-                                                HOURS
-                                            </div>
-                                        </div>
-                                        <div class="square">
-                                            <div class="numb">
-                                                48
-                                            </div>
-                                            <div class="text">
-                                                MINS
-                                            </div>
-                                        </div>
-                                        <div class="square">
-                                            <div class="numb">
-                                                23
-                                            </div>
-                                            <div class="text">
-                                                SECS
-                                            </div>
-                                        </div>
-                                    </div><!-- /.count-down -->
-                                </div><!-- /.counter-content -->
-                            </div><!-- /.counter -->
-                            <div class="product-item">
-                                <div class="imagebox style3">
-                                    <div class="box-image save">
-                                        <a href="#" title="">
-                                            <img src="/images/product/other/l06.jpg" alt="">
-                                        </a>
-                                        <span>Save $105.00</span>
-                                    </div><!-- /.box-image -->
-                                    <div class="box-content">
-                                        <div class="product-name">
-                                            <a href="#" title="">27-inch iMac with Retina 5K display</a>
-                                        </div>
-                                        <ul class="product-info">
-                                            <li>3.3GHz quad-core Intel Core i5 processor</li>
-                                            <li>Turbo Boost up to 3.9GHz</li>
-                                            <li>8GB (two 4GB) memory, configurable up to 32GB</li>
-                                            <li>2TB Fusion Drive1</li>
-                                            <li>AMD Radeon R9 M395 with 2GB video memory</li>
-                                            <li>Retina 5K 5120-by-2880 P3 display</li>
-                                        </ul>
-                                        <div class="price">
-                                            <span class="sale">$5,599.00</span>
-                                            <span class="regular">$2,999.00</span>
-                                        </div>
-                                    </div><!-- /.box-content -->
-                                    <div class="box-bottom">
-                                        <div class="btn-add-cart">
-                                            <a onclick='addToCart(this, {{$product->id}})' title="">
-                                                <img src="/images/icons/add-cart.png" alt="">Add to Cart
-                                            </a>
-                                        </div>
-                                        <div class="compare-wishlist">
-                                            <a href="#" class="compare" title="">
-                                                <img src="/images/icons/compare.png" alt="">Compare
-                                            </a>
-                                            <a href="#" class="wishlist" title="">
-                                                <img src="/images/icons/wishlist.png" alt="">Wishlist
-                                            </a>
-                                        </div>
-                                    </div><!-- /.box-bottom -->
-                                </div><!-- /.imagbox style3 -->
-                            </div><!-- /.product-item -->
-                        </div><!-- /.box-counter -->
-                    </div><!-- /.owl-carousel-2 -->
-                </div><!-- /.col-md-12 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-imagebox style3 --> --}}
-
-    <section class="flat-imagebox style4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="flat-row-title">
-                        <h3>Популярные</h3>
-                    </div>
-                </div><!-- /.col-md-12 -->
-            </div><!-- /.row -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel-3">
-                        @foreach($most_viewed as $product)
-                            <div class="imagebox style4">
-                                <div class="box-image">
-                                    <a href="/p/{{$product->slug}}" title="">
-                                        <img src="/images{{$product->mainImage()}}" alt="" class="image-h-117">
-                                    </a>
-                                </div><!-- /.box-image -->
-                                <div class="box-content">
-                                    <div class="cat-name">
-                                        <a href="/c/{{$product->category->slug}}" title="">{{$product->category->name}}</a>
+                        <div class="col-12">
+                            <div class="single-testimonial">
+                                <div class="testimonial-icon-img">
+                                    <img src="/assets/img/about/testimonials-icon.png" alt="">
+                                </div>
+                                <div class="testimonial_content">
+                                    <p>“ When a beautiful design is combined with powerful technology, <br>
+                                    it truly is an artwork. I love how my website operates and looks with this theme. Thank you for the awesome product. ”</p>
+                                    <div class="testimonial_text_img">
+                                        <a href="#"><img src="/assets/img/about/testimonial2.png" alt=""></a>
                                     </div>
-                                    <div class="product-name">
-                                        <a href="/p/{{$product->slug}}" title="">{{$product->title}}</a>
+                                    <div class="testimonial_author">
+                                        <p><a href="#">Amber Laha</a> / <span>CEO of DND</span></p>
                                     </div>
-                                    <div class="price">
-                                        <span class="sale">{{$product->price}} тг.</span>
-                                        <!-- <span class="regular">$2,999.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="single-testimonial">
+                                <div class="testimonial-icon-img">
+                                    <img src="/assets/img/about/testimonials-icon.png" alt="">
+                                </div>
+                                <div class="testimonial_content">
+                                    <p>“ When a beautiful design is combined with powerful technology, <br>
+                                    it truly is an artwork. I love how my website operates and looks with this theme. Thank you for the awesome product. ”</p>
+                                    <div class="testimonial_text_img">
+                                        <a href="#"><img src="/assets/img/about/testimonial3.png" alt=""></a>
                                     </div>
-                                </div><!-- /.box-content -->
-                            </div><!-- /.imagebox style4 -->
-                        @endforeach
-                    </div><!-- /.owl-carousel-3 -->
-                </div><!-- /.col-md-12 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-imagebox style4 -->
+                                    <div class="testimonial_author">
+                                        <p><a href="#">Lindsy Neloms</a> / <span>CEO of SFD</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--testimonial area end-->
 
-    <section class="flat-highlights" style="display: none;">
+    <!--blog area start-->
+    <section class="blog_section">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="flat-row-title">
-                        <h3>Bestsellers</h3>
+                <div class="col-12">
+                    <div class="section_title">
+                    <h2>Статьи</h2>
                     </div>
-                    <ul class="product-list style1">
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/10.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Razer RZ02-01071500-R3M1</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$50.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/9.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Apple iPad Mini G2356</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$24.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/8.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Beats Pill + Portable Speaker</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$90.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                    </ul><!-- /.product-list style1 -->
-                </div><!-- /.col-md-4 -->
-                <div class="col-md-4">
-                    <div class="flat-row-title">
-                        <h3>Featured</h3>
-                    </div>
-                    <ul class="product-list style1">
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Razer RZ02-01071500-R3M1</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$50.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Apple iPad Mini G2356</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$24.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Beats Pill + Portable Speaker</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$90.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                    </ul>
-                </div><!-- /.col-md-4 -->
-                <div class="col-md-4">
-                    <div class="flat-row-title">
-                        <h3>Hot Sale</h3>
-                    </div>
-                    <ul class="product-list style1">
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/19.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Razer RZ02-01071500-R3M1</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$50.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/11.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Apple iPad Mini G2356</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$24.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="img-product">
-                                <a href="#" title="">
-                                    <img src="/images/product/highlights/20.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="info-product">
-                                <div class="name">
-                                    <a href="#" title="">Beats Pill + Portable Speaker</a>
-                                </div>
-                                <div class="queue">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="price">
-                                    <span class="sale">$90.00</span>
-                                    <span class="regular">$2,999.00</span>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                    </ul>
-                </div><!-- /.col-md-4 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-highlights -->
-
-    <section class="flat-iconbox">
-        <div class="container">
+                </div>
+            </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="iconbox">
-                        <div class="box-header">
-                            <div class="image" onclick="location.href='/payments-delivery'">
-                                <img src="/images/icons/car.png" alt="">
-                            </div>
-                            <div class="box-title">
-                                <h3>Быстрая доставка</h3>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-content">
-                            <p>по Алматы, низкие цены в другие города</p>
-                        </div><!-- /.box-content -->
-                    </div><!-- /.iconbox -->
-                </div><!-- /.col-md-3 col-sm-6 -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="iconbox">
-                        <div class="box-header">
-                            <div class="image" onclick="location.href='/faq'">
-                                <img src="/images/icons/order.png" alt="">
-                            </div>
-                            <div class="box-title">
-                                <h3>Как купить?</h3>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-content">
-                            <p>Добавляйте товар и заказывайте</p>
-                        </div><!-- /.box-content -->
-                    </div><!-- /.iconbox -->
-                </div><!-- /.col-md-3 col-sm-6 -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="iconbox">
-                        <div class="box-header">
-                            <div class="image" onclick="location.href='/faq'">
-                                <img src="/images/icons/payment.png" alt="">
-                            </div>
-                            <div class="box-title">
-                                <h3>Удобная оплата</h3>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-content">
-                            <p>Наличный, безналичный расчет</p>
-                        </div><!-- /.box-content -->
-                    </div><!-- /.iconbox -->
-                </div><!-- /.col-md-3 col-sm-6 -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="iconbox">
-                        <div class="box-header">
-                            <div class="image" onclick="location.href='/faq'">
-                                <img src="/images/icons/return.png" alt="">
-                            </div>
-                            <div class="box-title">
-                                <h3>Возврат товара</h3>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-content">
-                            <p>Условия возврата товара</p>
-                        </div><!-- /.box-content -->
-                    </div><!-- /.iconbox -->
-                </div><!-- /.col-md-3 col-sm-6 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-iconbox -->
+                <div class="blog_carousel blog_column3 owl-carousel">
+                    <div class="col-lg-3">
+                        <article class="single_blog">
+                            <figure>
+                                <div class="blog_thumb">
+                                    <a href="blog-details.html"><img src="/assets/img/blog/blog1.jpg" alt=""></a>
+                                </div>
+                                <figcaption class="blog_content">
+                                <h4 class="post_title"><a href="blog-details.html">Libero lorem</a></h4>
+                                <div class="articles_date">
+                                        <p>By <span>admin / July 16, 2019</span></p>
+                                    </div>
+                                    <p class="post_desc">Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus praesent</p>
+                                    <footer class="blog_footer">
+                                        <a href="blog-details.html">Continue Reading</a>
+                                        <p><i class="icon-message-circle"></i> <span>0</span></p>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-lg-3">
+                        <article class="single_blog">
+                            <figure>
+                                <div class="blog_thumb">
+                                    <a href="blog-details.html"><img src="/assets/img/blog/blog2.jpg" alt=""></a>
+                                </div>
+                                <figcaption class="blog_content">
+                                <h4 class="post_title"><a href="blog-details.html">Blog image post</a></h4>
+                                <div class="articles_date">
+                                        <p>By <span>admin / July 16, 2019</span></p>
+                                    </div>
+                                    <p class="post_desc">Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus praesent</p>
+                                    <footer class="blog_footer">
+                                        <a href="blog-details.html">Continue Reading</a>
+                                        <p><i class="icon-message-circle"></i> <span>0</span></p>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-lg-3">
+                        <article class="single_blog">
+                            <figure>
+                                <div class="blog_thumb">
+                                    <a href="blog-details.html"><img src="/assets/img/blog/blog3.jpg" alt=""></a>
+                                </div>
+                                <figcaption class="blog_content">
+                                <h4 class="post_title"><a href="blog-details.html">Post with Gallery</a></h4>
+                                <div class="articles_date">
+                                        <p>By <span>admin / July 16, 2019</span></p>
+                                    </div>
+                                    <p class="post_desc">Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus praesent</p>
+                                    <footer class="blog_footer">
+                                        <a href="blog-details.html">Continue Reading</a>
+                                        <p><i class="icon-message-circle"></i> <span>0</span></p>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-lg-3">
+                        <article class="single_blog">
+                            <figure>
+                                <div class="blog_thumb">
+                                    <a href="blog-details.html"><img src="/assets/img/blog/blog2.jpg" alt=""></a>
+                                </div>
+                                <figcaption class="blog_content">
+                                <h4 class="post_title"><a href="blog-details.html">Post with Audio</a></h4>
+                                <div class="articles_date">
+                                        <p>By <span>admin / July 16, 2019</span></p>
+                                    </div>
+                                    <p class="post_desc">Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus praesent</p>
+                                    <footer class="blog_footer">
+                                        <a href="blog-details.html">Continue Reading</a>
+                                        <p><i class="icon-message-circle"></i> <span>0</span></p>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--blog area end-->
 @endsection
