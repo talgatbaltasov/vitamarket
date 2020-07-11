@@ -51,12 +51,12 @@
                                 </li>
                             @endif
                         @else
-                            @if(\Auth::user()->role->name == 'Administrator' || \Auth::user()->role->name == 'Manager')
+                            @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Manager')
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin/schedules">Schedule</a>
                                 </li>
                             @endif
-                            {{-- @if(\Auth::user()->role->name == 'Administrator' || \Auth::user()->role->name == 'Manager')
+                            {{-- @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Manager')
                               <li class="nav-item">
                                   <a class="nav-link" href="/admin/settings">Settings</a>
                               </li>
@@ -71,7 +71,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/users/{{ \Auth::user()->id }}">View Profile</a>
-                                    @if(\Auth::user()->role->name == 'Administrator' || \Auth::user()->role->name == 'Manager')
+                                    @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Manager')
                                         <a class="dropdown-item" href="/admin/settings">Settings</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
