@@ -15,23 +15,7 @@
                         </div>
                         <div class="form-group">
                             {{Form::label('image[]', 'Фото')}}
-                            {{Form::file('image[]', null, ['class' => 'form-control'])}}
-                        </div>
-                        <div class="form-group">
-                            {{Form::label('image[]', 'Фото')}}
-                            {{Form::file('image[]', null, ['class' => 'form-control'])}}
-                        </div>
-                        <div class="form-group">
-                            {{Form::label('image[]', 'Фото')}}
-                            {{Form::file('image[]', null, ['class' => 'form-control'])}}
-                        </div>
-                        <div class="form-group">
-                            {{Form::label('image[]', 'Фото')}}
-                            {{Form::file('image[]', null, ['class' => 'form-control'])}}
-                        </div>
-                        <div class="form-group">
-                            {{Form::label('image[]', 'Фото')}}
-                            {{Form::file('image[]', null, ['class' => 'form-control'])}}
+                            {{Form::file('image[]', null, ['class' => 'form-control', 'multiple'])}}
                         </div>
                         <button class="btn btn-success">Добавить</button>
                     {!!Form::close()!!}
