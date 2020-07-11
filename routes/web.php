@@ -52,7 +52,7 @@ Route::get('/brands/{slug}', 'BrandController@show');
 Route::middleware(['auth'])->prefix('admin')->group(function(){
     Route::get('/', 'Admin\AdminController@index');
 
-    Route::resource('/products', 'Admin\ProductController')->as('admin');
+    Route::resource('/products', 'Admin\ProductController', ['as' => 'admin']);
 
     Route::prefix('articles')->group(function(){
         Route::get('/', 'Admin\ArticleController@index');
