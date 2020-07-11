@@ -26,7 +26,7 @@ class ProductImageController extends Controller
             'is_main'       => 1
         ]);
         
-        Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/products/'.$filename));
+        Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/images/products/'.$filename));
         
         $i = 0;
         foreach($request->file('images') as $image) {
