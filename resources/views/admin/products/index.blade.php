@@ -27,13 +27,7 @@
                     <tr>
                         <td>{{$product->id}}</td>
                         <td>{{$product->name}}</td>
-                        <td>
-                            @if($product->status->name == 'Active')
-                                Вкл.
-                            @else
-                                Выкл.
-                            @endif
-                        </td>
+                        <td>{{$product->status->name_ru}}</td>
                         <td>{{$product->updated_at}}</td>
                         <td>
                             <a href="/admin/products/edit/{{$product->id}}">Редактировать</a>
