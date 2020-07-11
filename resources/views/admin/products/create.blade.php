@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Добавить товар</div>
+                <div class="card-header">Добавить</div>
                 <div class="card-body">
                     {!!Form::open(['route' => 'admin.products.store', 'file' => true])!!}
                         <div class="form-group">
