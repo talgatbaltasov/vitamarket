@@ -162,7 +162,7 @@
                                                     <article class="single_product">
                                                         <figure>
                                                             <div class="product_thumb">
-                                                                <a class="primary_img" href="/p/{{$product->slug}}"><img src="{{$product->main_image}}" alt=""></a>
+                                                                <a class="primary_img" href="/p/{{$product->slug}}"><img src="{{$product->main_image->image}}" alt=""></a>
                                                                 @if($product->sale_price > 0) 
                                                                     <div class="label_product">
                                                                         <span class="label_sale">-{{($product->price - $product->sale_price) * 100 / $product->price}}%</span>
