@@ -36,7 +36,7 @@ class ProductImageController extends Controller
                 'image'         => $filename
             ]);
             
-            Image::make($image)->resize(870, 400)->save(public_path('/products/'.$filename));
+            Image::make($image)->resize(870, 400)->save(public_path('/images/products/'.$filename));
             $i++;
         }
 
