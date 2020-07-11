@@ -7,10 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Westlinks Online Scheduler') }}</title>
+    <title>{{ config('app.name', 'Админ панель') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('admin_assets/js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,11 +19,7 @@
     <script src="https://kit.fontawesome.com/3e47064b43.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
-    @if(\Auth::user() && \Auth::user()->is_darkmode == 1)
-      <link href="{{ asset('css/app_dark.css') }}" rel="stylesheet">
-    @else
-      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @endif
+    <link href="{{ asset('admin_assets/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
