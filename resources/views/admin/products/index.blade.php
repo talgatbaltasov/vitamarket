@@ -7,13 +7,7 @@
             Товары
             <ul class="nav float-right">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a href="/admin/products/create" class="btn btn-primary">Добавить</a>
                 </li>
             </ul>
         </div>
@@ -49,14 +43,6 @@
                     @endforeach
                 </tbody>
             </table>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <a href="/admin/products/create" class="btn btn-primary">Добавить</a>
-        </div>
-        <div class="col-md-12">
-            
         </div>
     </div>
 </div>
