@@ -2,11 +2,22 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <a href="/admin/products/create" class="btn btn-primary">Добавить</a>
+    <div class="card">
+        <div class="card-header">
+            Товары
+            <ul class="nav float-right">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-12">
+        <div class="card-body">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -38,6 +49,14 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/admin/products/create" class="btn btn-primary">Добавить</a>
+        </div>
+        <div class="col-md-12">
+            
         </div>
     </div>
 </div>
