@@ -8,15 +8,23 @@ class Product extends Model
 {
     protected $fillable = ['brand_id', 'category_id', 'name', 'description', 'slug', 'price', 'sale_price', 'order', 'status_id'];
 
-    public function images(){
-        return $this->hasMany('App\Image');
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    
+    public function main_image()
+    {
+        return $this->hasOne(ProductImage::class)->where('is_main', 1);
     }
 
-    public function mainImage(){
-        return $this->images()->where('is_main', 1)->first()->image;
+    public function product_images()
+    {
+        return $this->hasMany(ProductImage::class);
     }
 
-    public function category(){
-        return $this->belongsTo('App\Category');
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
     }
 }
