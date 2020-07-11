@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Добавить</div>
                 <div class="card-body">
-                    {!!Form::open(['route' => 'admin.products.store', 'file' => true])!!}
+                    {!!Form::open(['route' => 'admin.products.store'])!!}
                         <div class="form-group">
                             {{Form::label('brand_id', 'Бренд')}}
                             {{Form::select('brand_id', $brands, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}

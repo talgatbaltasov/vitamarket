@@ -2,41 +2,57 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <form action="/admin/articles/update/{{$article->id}}" enctype="multipart/form-data" method="post">
-                @csrf
-                <div class="form-group">
-                    <label for="title">Название</label>
-                    <input type="text" id="title" name="title" class="form-control" value="{{$article->title}}">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Добавить</div>
+                <div class="card-body">
+                    {!!Form::model($product, ['route' => ['admin.products.update', $product->id]])!!}
+                        <div class="form-group">
+                            {{Form::label('brand_id', 'Бренд')}}
+                            {{Form::select('brand_id', $brands, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('category_id', 'Категория')}}
+                            {{Form::select('category_id', $categories, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('name', 'Название')}}
+                            {{Form::text('name', null, ['class' => 'form-control'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('description', 'Описание')}}
+                            {{Form::textarea('description', null, ['class' => 'form-control'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('slug', 'Ссылка')}}
+                            {{Form::text('slug', null, ['class' => 'form-control'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('price', 'Цена')}}
+                            {{Form::text('price', null, ['class' => 'form-control'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('sale_price', 'Цена со скидкой')}}
+                            {{Form::text('sale_price', null, ['class' => 'form-control'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('order', 'Последовательность')}}
+                            {{Form::number('order', null, ['class' => 'form-control'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('status_id', 'Статус')}}
+                            {{Form::select('status_id', $statuses, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
+                        </div>
+                        <button class="btn btn-success">Сохранить</button>
+                    {!!Form::close()!!}
                 </div>
-                <div class="form-group">
-                    <label for="main_image">Главная картинка</label>
-                    <input type="file" id="main_image" name="main_image">
-                </div>
-                <div class="form-group">
-                    <label for="short_description">Краткое описание</label>
-                    <textarea name="short_description" id="short_description">{!!$article->short_description!!}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="description">Описание</label>
-                    <textarea name="description" id="description">{!!$article->description!!}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="slug">Ссылка</label>
-                    <input type="text" id="slug" name="slug" class="form-control" value="{{$article->slug}}">
-                </div>
-                <div class="form-group">
-                    <input type="checkbox" id="status" name="status" value="1" @if($article->status == 1) checked = 'checked' @endif>
-                    <label for="status">Активный?</label>
-                </div>
-                <button class="btn btn-success">Редактировать</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
 @endsection
-@section('js')
+@section('scripts')
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
     <script>
