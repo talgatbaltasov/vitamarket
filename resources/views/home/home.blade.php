@@ -170,8 +170,8 @@
                                                                 @endif
                                                                 <div class="action_links">
                                                                     <ul>
-                                                                        <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>  
-                                                                        <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                                        <li class="add_to_cart"><a href="cart.html" title="Добавить в корзину"><i class="icon-shopping-bag"></i></a></li>  
+                                                                        <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="Быстрый просмотр"> <i class="icon-eye"></i></a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
