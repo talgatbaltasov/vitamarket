@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Добавить</div>
                 <div class="card-body">
-                    {!!Form::open(['route' => 'admin.product_images.store'])!!}
+                    {!!Form::open(['route' => 'admin.product_images.store', 'files' => true])!!}
                         {{Form::hidden('product_id', $_GET['product_id'])}}
                         <div class="form-group">
                             {{Form::label('main_image', 'Главное фото')}}
