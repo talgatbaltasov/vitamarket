@@ -87,8 +87,8 @@
           {{-- Darkmode: {{ \Auth::user() && \Auth::user()->is_darkmode }} --}}
             @yield('content')
         </main>
-        @yield('scripts')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        @yield('scripts')
         <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
