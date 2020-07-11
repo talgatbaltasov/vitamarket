@@ -19,7 +19,7 @@ class ProductImageController extends Controller
     {
         $product = Product::find($request->product_id);
 
-        $filename = $product->slug.'_'.time().'.'.$request->main_image->extension();
+        $filename = $product->slug.'_'.time().'.'.$request->file('main_image')->extension();
         $product_image = ProductImage::create([
             'product_id'    => $product->id,
             'image'         => $filename,
