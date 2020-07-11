@@ -14,7 +14,7 @@
                             {{Form::file('main_image', null, ['class' => 'form-control'])}}
                         </div>
                         <div class="form-group">
-                            {{Form::label('image', 'Фото')}}
+                            {{Form::label('image', 'Фото (можно выбрать несколько фото)')}}
                             <input type="file" name="image[]" id="image" multiple>
                         </div>
                         <button class="btn btn-success">Добавить</button>
