@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <a href="/admin/articles/create" class="btn btn-primary">Добавить</a>
+            <a href="/admin/products/create" class="btn btn-primary">Добавить</a>
         </div>
         <div class="col-md-12">
             <table class="table table-striped">
@@ -18,21 +18,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($articles as $article)
+                    @foreach($products as $product)
                     <tr>
-                        <td>{{$article->id}}</td>
-                        <td>{{$article->title}}</td>
+                        <td>{{$product->id}}</td>
+                        <td>{{$product->name}}</td>
                         <td>
-                            @if($article->status == 0)
-                                Выкл.
-                            @else
+                            @if($product->status->name == 'Active')
                                 Вкл.
+                            @else
+                                Выкл.
                             @endif
                         </td>
-                        <td>{{$article->updated_at}}</td>
+                        <td>{{$product->updated_at}}</td>
                         <td>
-                            <a href="/admin/articles/edit/{{$article->id}}">Редактировать</a>
-                            <a href="/admin/articles/delete/{{$article->id}}">Удалить</a>
+                            <a href="/admin/products/edit/{{$product->id}}">Редактировать</a>
+                            <a href="/admin/products/delete/{{$product->id}}">Удалить</a>
                         </td>
                     </tr>
                     @endforeach
