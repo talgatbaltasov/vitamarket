@@ -4,10 +4,10 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            Товары
+            Бренды
             <ul class="nav float-right">
                 <li class="nav-item">
-                    <a href="/admin/products/create" class="btn btn-primary">Добавить</a>
+                    <a href="/admin/brands/create" class="btn btn-primary">Добавить</a>
                 </li>
             </ul>
         </div>
@@ -23,18 +23,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($products as $product)
+                    @foreach($brands as $brand)
                     <tr>
-                        <td>{{$product->id}}</td>
-                        <td>{{$product->name}}</td>
-                        <td>{{$product->status->name_ru}}</td>
-                        <td>{{$product->updated_at}}</td>
+                        <td>{{$brand->id}}</td>
+                        <td>{{$brand->name}}</td>
+                        <td>{{$brand->status->name_ru}}</td>
+                        <td>{{$brand->updated_at}}</td>
                         <td>
-                            <a href="/admin/products/{{$product->id}}/edit" class="btn btn-success">Редактировать</a>
-                            <a href="{{route('admin.products.destroy', ['product' => $product->id])}}"
+                            <a href="/admin/brands/{{$brand->id}}/edit" class="btn btn-success">Редактировать</a>
+                            <a href="{{route('admin.brands.destroy', ['brand' => $brand->id])}}"
                                 onclick="event.preventDefault();
-                                    document.getElementById('delete{{$product->id}}').submit();" class="btn btn-danger">Удалить</a>
-                            {!!Form::open(['route' => ['admin.products.destroy', $product->id], 'id' => 'delete'.$product->id, 'style' => 'display:none;', 'method' => 'delete'])!!}
+                                    document.getElementById('delete{{$brand->id}}').submit();" class="btn btn-danger">Удалить</a>
+                            {!!Form::open(['route' => ['admin.brands.destroy', $brand->id], 'id' => 'delete'.$brand->id, 'style' => 'display:none;', 'method' => 'delete'])!!}
                             {!!Form::close()!!}
                         </td>
                     </tr>

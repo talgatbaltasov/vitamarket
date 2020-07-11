@@ -7,15 +7,7 @@
             <div class="card">
                 <div class="card-header">Добавить</div>
                 <div class="card-body">
-                    {!!Form::model($product, ['route' => ['admin.products.update', $product->id], 'method' => 'put'])!!}
-                        <div class="form-group">
-                            {{Form::label('brand_id', 'Бренд')}}
-                            {{Form::select('brand_id', $brands, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
-                        </div>
-                        <div class="form-group">
-                            {{Form::label('category_id', 'Категория')}}
-                            {{Form::select('category_id', $categories, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
-                        </div>
+                    {!!Form::model($brand, ['route' => ['admin.brands.update', $brand->id], 'method' => 'put', 'files' => true])!!}
                         <div class="form-group">
                             {{Form::label('name', 'Название')}}
                             {{Form::text('name', null, ['class' => 'form-control'])}}
@@ -29,16 +21,8 @@
                             {{Form::text('slug', null, ['class' => 'form-control'])}}
                         </div>
                         <div class="form-group">
-                            {{Form::label('price', 'Цена')}}
-                            {{Form::text('price', null, ['class' => 'form-control'])}}
-                        </div>
-                        <div class="form-group">
-                            {{Form::label('sale_price', 'Цена со скидкой')}}
-                            {{Form::text('sale_price', null, ['class' => 'form-control'])}}
-                        </div>
-                        <div class="form-group">
-                            {{Form::label('order', 'Последовательность')}}
-                            {{Form::number('order', null, ['class' => 'form-control'])}}
+                            {{Form::label('image', 'Лого')}}
+                            {{Form::file('image', null, ['class' => 'form-control'])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('status_id', 'Статус')}}

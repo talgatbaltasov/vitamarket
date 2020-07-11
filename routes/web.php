@@ -52,6 +52,7 @@ Route::get('/brands/{slug}', 'BrandController@show');
 Route::middleware(['auth'])->prefix('admin')->group(function(){
     Route::get('/', 'Admin\AdminController@index');
 
+    Route::resource('/brands', 'Admin\BrandController', ['as' => 'admin']);
     Route::resource('/products', 'Admin\ProductController', ['as' => 'admin']);
     Route::resource('/product_images', 'Admin\ProductImageController', ['as' => 'admin']);
 
