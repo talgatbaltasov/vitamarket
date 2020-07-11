@@ -19,24 +19,24 @@ class ProductImageController extends Controller
     {
         $product = Product::find($request->product_id);
 
-        $filename = $product->slug.'_'.time().'.'.$request->file('main_image')->extension();
+        $filename = '/images/products/'.$product->slug.'_'.time().'.'.$request->file('main_image')->extension();
         $product_image = ProductImage::create([
             'product_id'    => $product->id,
             'image'         => $filename,
             'is_main'       => 1
         ]);
         
-        Image::make($request->file('main_image'))->resize(1000, 1000)->save(public_path('/images/products/'.$filename));
+        Image::make($request->file('main_image'))->resize(1000, 1000)->save(public_path($filename));
         
         $i = 0;
         foreach($request->file('image') as $image) {
-            $filename = $product->slug.'_'.$i.time().'.'.$image->extension();
+            $filename = '/images/products/'.$product->slug.'_'.$i.time().'.'.$image->extension();
             $product_image = ProductImage::create([
                 'product_id'    => $product->id,
                 'image'         => $filename
             ]);
             
-            Image::make($image)->resize(1000, 1000)->save(public_path('/images/products/'.$filename));
+            Image::make($image)->resize(1000, 1000)->save(public_path($filename));
             $i++;
         }
 
