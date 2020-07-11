@@ -67,7 +67,7 @@
     <script>
         $(document).ready(function(){
             $('#name').on('keyup', function(){
-                $('#slug').val(url_slug($('#title').val(), {}));
+                $('#slug').val(url_slug($('#name').val(), {}));
             })
         })
         function url_slug(s, opt){
