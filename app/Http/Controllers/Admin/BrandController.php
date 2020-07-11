@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Brand;
 use App\Status;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class BrandController extends Controller
 {
@@ -23,9 +24,15 @@ class BrandController extends Controller
 
     public function store(Request $request)
     {
-        $brand = Brand::create($request->all());
+        $filename = '/images/brands/'.$request->slug.'_'.time().'.'.$request->file('image')->extension();
         
-        return redirect('/admin/product_images/create?product_id='.$brand->id);
+        Image::make($request->file('image'))->resize(300, 300)->save(public_path($filename));
+
+        $data = $request->all();
+        $data['image'] = $filename;
+        $brand = Brand::create($data);
+        
+        return redirect('/admin/brands');
     }
 
     public function edit(Brand $brand)
