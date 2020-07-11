@@ -15,7 +15,7 @@
                         </div>
                         <div class="form-group">
                             {{Form::label('image[]', 'Фото')}}
-                            {{Form::file('image[]', null, ['class' => 'form-control', 'multiple'])}}
+                            {{Form::file('image[]', null, ['class' => 'form-control', 'multiple' => true])}}
                         </div>
                         <button class="btn btn-success">Добавить</button>
                     {!!Form::close()!!}
