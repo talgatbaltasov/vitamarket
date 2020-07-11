@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             {{Form::label('status_id', 'Статус')}}
-                            {{Form::select('status_id', $statuses, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
+                            {{Form::select('status_id', $statuses, 1, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
                         </div>
                         <button class="btn btn-success">Добавить</button>
                     {!!Form::close()!!}
