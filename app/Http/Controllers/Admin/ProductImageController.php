@@ -28,14 +28,16 @@ class ProductImageController extends Controller
         
         Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/images/products/'.$filename));
         
+        $i = 0;
         foreach($request->file('image') as $image) {
-            $filename = $product->slug.'_'.time().'.'.$image->extension();
+            $filename = $product->slug.'_'.$i.time().'.'.$image->extension();
             $product_image = ProductImage::create([
                 'product_id'    => $product->id,
                 'image'         => $filename
             ]);
             
             Image::make($image)->resize(870, 400)->save(public_path('/images/products/'.$filename));
+            $i++;
         }
 
         return redirect('/admin/products');
