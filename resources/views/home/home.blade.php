@@ -605,13 +605,8 @@
                                             <div class="col-lg-5 col-md-5 col-sm-12">
                                                 <div class="modal_tab">  
                                                     <div class="tab-content product-details-large">
-                                                        <div class="tab-pane fade show active" id="product_images{{$product->main_image->id}}" role="tabpanel" >
-                                                            <div class="modal_tab_img">
-                                                                <a href="#"><img src="{{$product->main_image->image}}" alt=""></a>    
-                                                            </div>
-                                                        </div>
                                                         @foreach($product->product_images as $pi)
-                                                            <div class="tab-pane fade" id="product_images{{$pi->id}}" role="tabpanel">
+                                                            <div class="tab-pane fade @if($loop->first) show active @endif" id="product_images{{$pi->id}}" role="tabpanel">
                                                                 <div class="modal_tab_img">
                                                                     <a href="#"><img src="{{$pi->image}}" alt=""></a>    
                                                                 </div>
@@ -620,12 +615,9 @@
                                                     </div>
                                                     <div class="modal_tab_button">    
                                                         <ul class="nav product_navactive owl-carousel" role="tablist">
-                                                            <li >
-                                                                <a class="nav-link active" data-toggle="tab" href="#product_images{{$product->main_image->id}}" role="tab" aria-controls="product_images{{$product->main_image->id}}" aria-selected="false"><img src="{{$product->main_image->image}}" alt=""></a>
-                                                            </li>
                                                             @foreach($product->product_images as $pi)
                                                                 <li>
-                                                                    <a class="nav-link" data-toggle="tab" href="#product_images{{$pi->id}}" role="tab" aria-controls="product_images{{$pi->id}}" aria-selected="false"><img src="{{$pi->image}}" alt=""></a>
+                                                                    <a class="nav-link @if($loop->first) active @endif" data-toggle="tab" href="#product_images{{$pi->id}}" role="tab" aria-controls="product_images{{$pi->id}}" aria-selected="false"><img src="{{$pi->image}}" alt=""></a>
                                                                 </li>
                                                             @endforeach
                                                         </ul>
