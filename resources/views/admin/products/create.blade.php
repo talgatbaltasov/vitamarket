@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
             {!!Form::open(['route' => 'admin.products.store', 'file' => true])!!}
                 <div class="form-group">
                     {{Form::label('brand_id', 'Бренд')}}
