@@ -157,45 +157,47 @@
                                     <div class="col-lg-3">
                                         <div class="product_items">
                                             @for($j = 0; $j < 2; $j++)
-                                                @php $product = $category->products[2*$i + $j]; @endphp
-                                                <article class="single_product">
-                                                    <figure>
-                                                        <div class="product_thumb">
-                                                            <a class="primary_img" href="/p/{{$product->slug}}"><img src="{{$product->main_image}}" alt=""></a>
-                                                            @if($product->sale_price > 0) 
-                                                                <div class="label_product">
-                                                                    <span class="label_sale">-{{($product->price - $product->sale_price) * 100 / $product->price}}%</span>
-                                                                </div>
-                                                            @endif
-                                                            <div class="action_links">
-                                                                <ul>
-                                                                    <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>  
-                                                                    <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <figcaption class="product_content">
-                                                            <div class="product_rating">
-                                                                <ul>
-                                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <h4 class="product_name"><a href="product-details.html">{{$product->name}}</a></h4>
-                                                            <div class="price_box">
+                                                @if(isset($category->products[2*$i + $j]))
+                                                    @php $product = $category->products[2*$i + $j]; @endphp
+                                                    <article class="single_product">
+                                                        <figure>
+                                                            <div class="product_thumb">
+                                                                <a class="primary_img" href="/p/{{$product->slug}}"><img src="{{$product->main_image}}" alt=""></a>
                                                                 @if($product->sale_price > 0) 
-                                                                    <span class="current_price">{{$product->sale_price}} тг.</span>
-                                                                    <span class="old_price">{{$product->price}} тг.</span>
-                                                                @else
-                                                                    <span class="current_price">{{$product->price}} тг.</span>
+                                                                    <div class="label_product">
+                                                                        <span class="label_sale">-{{($product->price - $product->sale_price) * 100 / $product->price}}%</span>
+                                                                    </div>
                                                                 @endif
+                                                                <div class="action_links">
+                                                                    <ul>
+                                                                        <li class="add_to_cart"><a href="cart.html" title="Add to cart"><i class="icon-shopping-bag"></i></a></li>  
+                                                                        <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <i class="icon-eye"></i></a></li>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </article>
+                                                            <figcaption class="product_content">
+                                                                <div class="product_rating">
+                                                                    <ul>
+                                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <h4 class="product_name"><a href="product-details.html">{{$product->name}}</a></h4>
+                                                                <div class="price_box">
+                                                                    @if($product->sale_price > 0) 
+                                                                        <span class="current_price">{{$product->sale_price}} тг.</span>
+                                                                        <span class="old_price">{{$product->price}} тг.</span>
+                                                                    @else
+                                                                        <span class="current_price">{{$product->price}} тг.</span>
+                                                                    @endif
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </article>
+                                                @endif
                                             @endfor
                                         </div>
                                     </div> 
