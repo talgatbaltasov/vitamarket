@@ -71,7 +71,11 @@
     <script>
         $(document).ready(function(){
             $('#name').on('keyup', function(){
-                $('#slug').val(url_slug($('#brand_id option:selected').text() + ' ' + $('#name').val(), {}));
+                if($('#brand_id option:selected').val() > 0) {
+                    $('#slug').val(url_slug($('#brand_id option:selected').text() + ' ' + $('#name').val(), {}));
+                } else {
+                    $('#slug').val(url_slug($('#name').val(), {}));
+                }
             })
         })
         function url_slug(s, opt){
