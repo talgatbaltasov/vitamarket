@@ -22,6 +22,7 @@ class CreateFeedbackTable extends Migration
             $table->string('image')->nullable();
             $table->string('link')->nullable();
             $table->string('link_label')->nullable();
+            $table->integer('status_id')->default(1);
             $table->timestamps();
         });
     }
