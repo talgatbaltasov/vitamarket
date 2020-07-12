@@ -43,7 +43,7 @@ class ProductImageController extends Controller
         return redirect('/admin/products');
     }
 
-    public function delete(ProductImage $product_image)
+    public function destroy(ProductImage $product_image)
     {
         $product_image->delete();
         return redirect()->route('admin.products');
