@@ -77,6 +77,14 @@
                     $('#slug').val(url_slug($('#name').val(), {}));
                 }
             })
+
+            $('#brand_id').on('change', function(){
+                if($('#brand_id option:selected').val() > 0) {
+                    $('#slug').val(url_slug($('#brand_id option:selected').text() + ' ' + $('#name').val(), {}));
+                } else {
+                    $('#slug').val(url_slug($('#name').val(), {}));
+                }
+            })
         })
         function url_slug(s, opt){
             s = String(s);
