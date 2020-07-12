@@ -20,9 +20,9 @@
                 <span class="badge badge-success">{{$product->category->name}}</span>
             </div>
             <div>
-                Цена: {{$product->price}}<br/>
+                Цена: {{$product->price}} тг.<br/>
                 @if($product->sale_price > 0)
-                    Цена со скидкой: {{$product->sale_price}}<br/>
+                    Цена со скидкой: {{$product->sale_price}} тг.<br/>
                     Скидка действительна до: {{$product->sale_end_at}}
                 @endif
             </div>
