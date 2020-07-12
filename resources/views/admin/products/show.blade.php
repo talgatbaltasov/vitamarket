@@ -32,7 +32,9 @@
         </div>
     </div>
     <div class="row">
-        <a href="/admin/product_images/create?product_id={{$product->id}}" class="btn btn-primary">Добавить фото</a>
+        <div class="col-md-12">
+            <a href="/admin/product_images/create?product_id={{$product->id}}" class="btn btn-primary">Добавить фото</a>
+        </div>
         @foreach($product->product_images as $product_image)
             <div class="col-md-3">
                 <div class="card">
