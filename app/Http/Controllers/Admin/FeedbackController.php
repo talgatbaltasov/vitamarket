@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Feedback;
 use App\Product;
 use App\Status;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class FeedbackController extends Controller
 {
@@ -30,7 +31,12 @@ class FeedbackController extends Controller
 
     public function store(Request $request)
     {
-        $feedback = Feedback::create($request->all());
+        $filename = '/images/feedbacks/'.time().'.'.$request->file('image')->extension();
+        Image::make($request->file('image'))->resize(200, 200)->save(public_path($filename));
+
+        $data = $request->all();
+        $data['image'] = $filename;
+        $feedback = Feedback::create($data);
         
         return redirect('/admin/feedbacks');
     }
@@ -45,7 +51,16 @@ class FeedbackController extends Controller
 
     public function update(Feedback $feedback, Request $request)
     {
-        $feedback->update($request->all());
+        $data = $request->all();
+        
+        if($request->has('image')) {
+            $filename = '/images/feedbacks/'.time().'.'.$request->file('image')->extension();
+            Image::make($request->file('image'))->resize(200, 200)->save(public_path($filename));
+    
+            $data['image'] = $filename;
+        }
+        
+        $feedback->update($data);
 
         return redirect()->route('admin.feedbacks');
     }
