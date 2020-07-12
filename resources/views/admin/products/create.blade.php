@@ -71,7 +71,7 @@
     <script>
         $(document).ready(function(){
             $('#name').on('keyup', function(){
-                $('#slug').val(url_slug($('#name').val(), {}));
+                $('#slug').val(url_slug($('#brand_id option:selected').text() + ' ' + $('#name').val(), {}));
             })
         })
         function url_slug(s, opt){
