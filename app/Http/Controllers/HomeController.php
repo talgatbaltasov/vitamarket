@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Newsletter;
+use Carbon\Carbon;
 use App\Product;
 use App\Category;
 use App\Article;
@@ -12,21 +12,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $categories = Category::orderBy('order')->get();
-        $bottom_categories = Category::where('parent_id', 6)->orderBy('order')->get();
-        // search tips
-        $products = Product::where('status_id', 1)->take(6)->get();
-
-        $new_products = Product::where('status_id', 1)->orderBy('id', 'desc')->take(4)->get();
-        $sale_products = Product::where('status_id', 1)->orderBy('id', 'desc')->skip(4)->take(4)->get();
-        $most_viewed = Product::where('status_id', 1)->inRandomOrder()->take(30)->get();
-        return view('home.home', compact('bottom_categories', 'categories', 'products', 'new_products', 'sale_products', 'most_viewed'));
-    }
-
-    public function subscribe(Request $request)
-    {
-        Newsletter::subscribe($request->email, [], 'subscribers', ['status' => 'pending']);
-        return back()->with(['subscribed'=>'success']);
+        $sale_products = Product::where('status_id', 1)
+                            ->whereNotNull('sale_price')
+                            ->where('sale_end_at', '>', Carbon::now())
+                            ->orderBy('order')
+                            ->get();
+        return view('home.home', compact('sale_products'));
     }
 
     public function search(Request $request)
