@@ -12,12 +12,13 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $categories = Category::whereNull('parent_id')->orderBy('order')->get();
         $sale_products = Product::where('status_id', 1)
                             ->whereNotNull('sale_price')
                             ->where('sale_end_at', '>', Carbon::now())
                             ->orderBy('order')
                             ->get();
-        return view('home.home', compact('sale_products'));
+        return view('home.home', compact('categories', 'sale_products'));
     }
 
     public function search(Request $request)
