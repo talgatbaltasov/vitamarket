@@ -52,7 +52,7 @@ class FeedbackController extends Controller
     public function update(Feedback $feedback, Request $request)
     {
         $data = $request->all();
-        
+
         if($request->has('image')) {
             $filename = '/images/feedbacks/'.time().'.'.$request->file('image')->extension();
             Image::make($request->file('image'))->resize(200, 200)->save(public_path($filename));
@@ -62,7 +62,7 @@ class FeedbackController extends Controller
         
         $feedback->update($data);
 
-        return redirect()->route('admin.feedbacks');
+        return redirect('/admin/feedbacks');
     }
 
     public function destroy(Feedback $feedback)
