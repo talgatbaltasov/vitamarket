@@ -45,7 +45,8 @@ class ProductImageController extends Controller
 
     public function destroy(ProductImage $product_image)
     {
+        $product_id = $product_image->product_id;
         $product_image->delete();
-        return redirect()->route('admin.products');
+        return redirect('/admin/products/'.$product_id);
     }
 }
