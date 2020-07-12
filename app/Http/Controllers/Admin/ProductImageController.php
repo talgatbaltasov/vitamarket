@@ -19,28 +19,32 @@ class ProductImageController extends Controller
     {
         $product = Product::find($request->product_id);
 
-        $filename = '/images/products/'.$product->slug.'_'.time().'.'.$request->file('main_image')->extension();
-        $product_image = ProductImage::create([
-            'product_id'    => $product->id,
-            'image'         => $filename,
-            'is_main'       => 1
-        ]);
-        
-        Image::make($request->file('main_image'))->resize(1000, 1000)->save(public_path($filename));
-        
-        $i = 0;
-        foreach($request->file('image') as $image) {
-            $filename = '/images/products/'.$product->slug.'_'.$i.time().'.'.$image->extension();
+        if($request->has('main_image')) {
+            $filename = '/images/products/'.$product->slug.'_'.time().'.'.$request->file('main_image')->extension();
             $product_image = ProductImage::create([
                 'product_id'    => $product->id,
-                'image'         => $filename
+                'image'         => $filename,
+                'is_main'       => 1
             ]);
             
-            Image::make($image)->resize(1000, 1000)->save(public_path($filename));
-            $i++;
+            Image::make($request->file('main_image'))->resize(1000, 1000)->save(public_path($filename));
+        }
+        
+        if($request->has('image')) {
+            $i = 0;
+            foreach($request->file('image') as $image) {
+                $filename = '/images/products/'.$product->slug.'_'.$i.time().'.'.$image->extension();
+                $product_image = ProductImage::create([
+                    'product_id'    => $product->id,
+                    'image'         => $filename
+                ]);
+                
+                Image::make($image)->resize(1000, 1000)->save(public_path($filename));
+                $i++;
+            }
         }
 
-        return redirect('/admin/products');
+        return redirect('/admin/products/'.$product->id);
     }
 
     public function destroy(ProductImage $product_image)
