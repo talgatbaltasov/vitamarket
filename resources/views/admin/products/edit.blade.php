@@ -37,6 +37,10 @@
                             {{Form::text('sale_price', null, ['class' => 'form-control'])}}
                         </div>
                         <div class="form-group">
+                            {{Form::label('sale_end_at', 'Скидка действительна до')}}
+                            {{Form::date('sale_end_at', null, ['class' => 'form-control'])}}
+                        </div>
+                        <div class="form-group">
                             {{Form::label('order', 'Последовательность')}}
                             {{Form::number('order', null, ['class' => 'form-control'])}}
                         </div>
