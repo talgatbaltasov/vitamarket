@@ -11,7 +11,7 @@ class BrandController extends Controller
 {
     public function index()
     {
-        $brands = Brand::where('status', 1)->get();
+        $brands = Brand::where('status_id', 1)->get();
     	return view('brands.index', compact('brands'));
     }
 

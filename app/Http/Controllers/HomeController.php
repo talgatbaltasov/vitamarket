@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use App\Product;
-use App\Category;
 use App\Article;
+use App\Category;
+use App\Feedback;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -18,7 +19,9 @@ class HomeController extends Controller
                             ->where('sale_end_at', '>', Carbon::now())
                             ->orderBy('order')
                             ->get();
-        return view('home.home', compact('categories', 'sale_products'));
+
+        $feedbacks = Feedback::where('status_id', 1)->take(3)->get();
+        return view('home.home', compact('categories', 'sale_products', 'feedbacks'));
     }
 
     public function search(Request $request)
