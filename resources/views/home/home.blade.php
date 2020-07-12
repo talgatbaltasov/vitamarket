@@ -165,7 +165,7 @@
                                                                 <a class="primary_img" href="/p/{{$product->slug}}"><img src="{{$product->main_image->image}}" alt=""></a>
                                                                 @if($product->sale_price > 0) 
                                                                     <div class="label_product">
-                                                                        <span class="label_sale">-{{($product->price - $product->sale_price) * 100 / $product->price}}%</span>
+                                                                        <span class="label_sale">-{{$product->sale_rate}}%</span>
                                                                     </div>
                                                                 @endif
                                                                 <div class="action_links">
@@ -231,7 +231,7 @@
                                         <div class="product_thumb">
                                             <a class="primary_img" href="/p/{{$product->slug}}"><img src="{{$product->main_image->image}}" alt=""></a>
                                             <div class="label_product">
-                                                <span class="label_sale">{{($product->price - $product->sale_price) * 100 / $product->price}} тг.</span>
+                                                <span class="label_sale">-{{$product->sale_rate}}%</span>
                                             </div>
                                             <div class="product_timing">
                                                 <div data-countdown="{{$product->sale_end_at->format('Y/m/d')}}"></div>
