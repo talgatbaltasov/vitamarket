@@ -25,7 +25,7 @@
                 <tbody>
                     @foreach($products as $product)
                     <tr>
-                        <td>{{$product->id}}</td>
+                        <td><a href="/admin/products/{{$product->id}}">{{$product->id}}</a></td>
                         <td>{{$product->name}}</td>
                         <td>{{$product->status->name_ru}}</td>
                         <td>{{$product->updated_at}}</td>

@@ -17,6 +17,11 @@ class ProductController extends Controller
     	return view('admin.products.index', compact('products'));
     }
 
+    public function show(Product $product)
+    {
+        return view('admin.products.show', compact('product'));
+    }
+
     public function create()
     {
         $brands = Brand::pluck('name', 'id');
