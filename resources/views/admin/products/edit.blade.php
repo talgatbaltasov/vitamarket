@@ -10,7 +10,7 @@
                     {!!Form::model($product, ['route' => ['admin.products.update', $product->id], 'method' => 'put'])!!}
                         <div class="form-group">
                             {{Form::label('brand_id', 'Бренд')}}
-                            {{Form::select('brand_id', $brands, null, ['class' => 'form-control', 'placeholder' => 'Выбрать', 'required'])}}
+                            {{Form::select('brand_id', $brands, null, ['class' => 'form-control', 'placeholder' => 'Выбрать'])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('category_id', 'Категория')}}
@@ -18,7 +18,7 @@
                         </div>
                         <div class="form-group">
                             {{Form::label('name', 'Название')}}
-                            {{Form::text('name', null, ['class' => 'form-control'])}}
+                            {{Form::text('name', null, ['class' => 'form-control', 'required'])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('description', 'Описание')}}
@@ -26,11 +26,11 @@
                         </div>
                         <div class="form-group">
                             {{Form::label('slug', 'Ссылка')}}
-                            {{Form::text('slug', null, ['class' => 'form-control'])}}
+                            {{Form::text('slug', null, ['class' => 'form-control', 'required'])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('price', 'Цена')}}
-                            {{Form::text('price', null, ['class' => 'form-control'])}}
+                            {{Form::text('price', null, ['class' => 'form-control', 'required'])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('sale_price', 'Цена со скидкой')}}
@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             {{Form::label('order', 'Последовательность')}}
-                            {{Form::number('order', null, ['class' => 'form-control'])}}
+                            {{Form::number('order', null, ['class' => 'form-control', 'required'])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('status_id', 'Статус')}}
