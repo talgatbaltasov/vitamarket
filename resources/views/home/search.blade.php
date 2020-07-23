@@ -55,7 +55,7 @@
                                             </div>
                                             <!-- /product image carousel -->
                                             @else
-                                            <a href="/products/{{$product->slug}}"> <img src="{{ Voyager::image( $product->mainImage()->image ) }}" alt="{{$product->title}}"> </a>
+                                            <a href="/products/{{$product->slug}}"> <img src="{{ Voyager::image( $product->main_image->image->image ) }}" alt="{{$product->title}}"> </a>
                                             @endif
                                             <!-- quick-view -->
                                             <a href="#" data-toggle="modal" data-target="#quickViewModal{{$product->id}}" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a>
@@ -130,7 +130,7 @@
                                 <div class="row product-info-outer">
                                     <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
                                         <div class="product-main-image">
-                                            <div class="product-main-image__item"><img src="{{ Voyager::image( $product->mainImage()->image ) }}" alt="{{$product->title}}" /></div>
+                                            <div class="product-main-image__item"><img src="{{ Voyager::image( $product->main_image->image->image ) }}" alt="{{$product->title}}" /></div>
                                         </div>
                                     </div>
                                     <div class="product-info col-xs-12 col-sm-7 col-md-6 col-lg-6">

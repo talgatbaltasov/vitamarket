@@ -179,7 +179,7 @@
                                     <div class="imagebox style1 v3">
                                         <div class="box-image">
                                             <a href="/p/{{$product->slug}}" title="">
-                                                <img src="/images{{$product->mainImage()}}" class="image-hw-227" alt="">
+                                                <img src="/images{{$product->main_image->image}}" class="image-hw-227" alt="">
                                             </a>
                                         </div><!-- /.box-image -->
                                         <div class="box-content">
@@ -261,7 +261,7 @@
                         <div class="imagebox style4">
                             <div class="box-image">
                                 <a href="/p/{{$p->slug}}" title="">
-                                    <img src="/images{{$p->mainImage()}}" class="image-hw-117" alt="">
+                                    <img src="/images{{$p->main_image->image}}" class="image-hw-117" alt="">
                                 </a>
                             </div><!-- /.box-image -->
                             <div class="box-content">

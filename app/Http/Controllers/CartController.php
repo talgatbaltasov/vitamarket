@@ -207,8 +207,9 @@ class CartController extends Controller
 
         $log = new Log;
         $log->session_id = $request->session()->getId();
-        $log->type = 'add_to_cart';
+        $log->log_type_id = 1;
         $log->product_id = $product->id;
+        $log->user_id = \Auth::user() ? \Auth::user()->id : null;
         $log->save();
 
         $cart_data = [
@@ -217,16 +218,16 @@ class CartController extends Controller
             'description' => $product->description,
             'category_id' => $product->category_id,
             'slug' => $product->slug,
-            'main_image' => $product->mainImage(),
+            'main_image' => $product->main_image->image,
             'price' => $price
         ];
 
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
-        $cart->add($cart_data, $product->mainImage(), $cart_data['id'], $request->quantity);
+        $cart->add($cart_data, $product->main_image->image, $cart_data['id'], $request->quantity);
         $request->session()->put('cart', $cart);
 
-        return ['result'=>'new_added', 'product' => $product, 'main_image' => $product->mainImage(), 'quantity' => $request->quantity];
+        return ['result'=>'new_added', 'product' => $product, 'main_image' => $product->main_image->image, 'quantity' => $request->quantity];
     }
 
     public function clearCart(Request $request)

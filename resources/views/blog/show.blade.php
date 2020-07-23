@@ -39,7 +39,7 @@
                             @foreach($bestsellers as $product)
                             <div class="box">
                                 <div class="image">
-                                    <img src="/images{{$product->mainImage()}}" alt="image" title="image" class="img-responsive">
+                                    <img src="/images{{$product->main_image->image}}" alt="image" title="image" class="img-responsive">
                                 </div>
                                 <div class="caption">
                                     <h4>{{$product->title}}</h4>
