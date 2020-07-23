@@ -175,7 +175,7 @@
                                         <a href="https://instagram.com/vitamarket.almaty" target="_blank"><i class="icon-instagram"></i></a>
                                     </div>
                                     <div class="header_account-list  mini_cart_wrapper">
-                                       <a href="javascript:void(0)"><i class="icon-shopping-bag"></i><span class="item_count">2</span></a>
+                                       <a href="javascript:void(0)"><i class="icon-shopping-bag"></i><span class="item_count">@if(isset($cart->items)) {{$cart->totalQty}} @else 0 @endif</span></a>
                                         <!--mini cart-->
                                         <div class="mini_cart">
                                             <div class="cart_gallery">
