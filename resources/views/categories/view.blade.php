@@ -42,7 +42,7 @@
                             <li>
                                 <div class="img-product">
                                     <a href="/p/{{$product->slug}}" title="">
-                                        <img src="/images{{$product->mainImage()}}" class="image-w-100" alt="">
+                                        <img src="/images{{$product->main_image->image}}" class="image-w-100" alt="">
                                     </a>
                                 </div>
                                 <div class="info-product">
