@@ -181,55 +181,41 @@
                                             <div class="cart_gallery">
                                                 <div class="cart_close">
                                                 	<div class="cart_text">
-                                                		<h3>cart</h3>
+                                                		<h3>Корзина</h3>
                                                 	</div>
                                                 	<div class="mini_cart_close">
                                                 		<a href="javascript:void(0)"><i class="icon-x"></i></a>
                                                 	</div>
                                                 </div>
-                                                <div class="cart_item">
-                                                   <div class="cart_img">
-                                                       <a href="#"><img src="/assets/img/s-product/product.jpg" alt=""></a>
-                                                   </div>
-                                                    <div class="cart_info">
-                                                        <a href="#">Primis In Faucibus</a>
-                                                        <p>1 x <span> $65.00 </span></p>    
+                                                @foreach($cart->items as $product)
+                                                    <div class="cart_item">
+                                                        <div class="cart_img">
+                                                            <a href="#"><img src="{{$product['main_image']}}" alt=""></a>
+                                                        </div>
+                                                        <div class="cart_info">
+                                                            <a href="#">{{$product['item']['name']}}</a>
+                                                            <p>{{$product['qty']}} x <span> {{$product['item']['price']}} тг. </span></p>    
+                                                        </div>
+                                                        <div class="cart_remove">
+                                                            <a href="#" onclick='removeCartItem({{$product["item"]["id"]}})'><i class="icon-x"></i></a>
+                                                        </div>
                                                     </div>
-                                                    <div class="cart_remove">
-                                                        <a href="#"><i class="icon-x"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="cart_item">
-                                                   <div class="cart_img">
-                                                       <a href="#"><img src="/assets/img/s-product/product2.jpg" alt=""></a>
-                                                   </div>
-                                                    <div class="cart_info">
-                                                        <a href="#">Letraset Sheets</a>
-                                                        <p>1 x <span> $60.00 </span></p>    
-                                                    </div>
-                                                    <div class="cart_remove">
-                                                        <a href="#"><i class="icon-x"></i></a>
-                                                    </div>
-                                                </div>
+                                                @endforeach
                                             </div>
                                             <div class="mini_cart_table">
                                                 <div class="cart_table_border">
                                                     <div class="cart_total">
-                                                        <span>Sub total:</span>
-                                                        <span class="price">$125.00</span>
-                                                    </div>
-                                                    <div class="cart_total mt-10">
-                                                        <span>total:</span>
-                                                        <span class="price">$125.00</span>
+                                                        <span>Общее:</span>
+                                                        <span class="price">@if(isset($cart->items)) {{$cart->totalPrice}} @else 0 @endif тг.</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="mini_cart_footer">
                                                <div class="cart_button">
-                                                    <a href="cart.html"><i class="fa fa-shopping-cart"></i> View cart</a>
+                                                    <a href="/cart"><i class="fa fa-shopping-cart"></i> Посмотреть корзину</a>
                                                 </div>
                                                 <div class="cart_button">
-                                                    <a class="active" href="checkout.html"><i class="fa fa-sign-in"></i> Checkout</a>
+                                                    <a class="active" href="/checkout"><i class="fa fa-sign-in"></i> Заказать</a>
                                                 </div>
 
                                             </div>
