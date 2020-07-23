@@ -29,7 +29,7 @@ Route::get('/faq', 'HomeController@faq');
 // Route::post('/subscribe', 'HomeController@subscribe');
 
 Route::get('/cart', 'CartController@cart');
-Route::post('/cart/addToCart', 'CartController@addToCart');
+Route::post('/cart/add', 'CartController@addToCart');
 Route::get('/cart/clearCart', 'CartController@clearCart');
 Route::post('/cart/clearCart', 'CartController@clearCart');
 Route::post('/cart/removeCartItem', 'CartController@removeCartItem');

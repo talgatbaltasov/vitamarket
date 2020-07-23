@@ -452,7 +452,7 @@
 	<script>
 		function addToCart(that, product_id, quantity = 1){
 			$.ajax({
-				url:'/cart/addToCart',
+				url:'/cart/add',
 				method:'POST',
 				data:{
 					product_id:product_id,
