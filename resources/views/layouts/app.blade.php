@@ -146,7 +146,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-md-3 col-4">
                             <div class="logo">
-                                <a href="index.html"><img src="/assets/img/logo/logo.png" alt=""></a>
+                                <a href="/"><img src="/assets/img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-6 col-6">
@@ -323,7 +323,7 @@
                     <div class="col-lg-4 col-md-5">
                         <div class="widgets_container widget_app">
                             <div class="footer_logo">
-                               <a href="index.html"><img src="/assets/img/logo/logo.png" alt=""></a>
+                               <a href="/"><img src="/assets/img/logo/logo.png" alt=""></a>
                            </div>
                            <div class="footer_widgetnav_menu">
                                <ul>
