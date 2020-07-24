@@ -55,17 +55,9 @@ Route::get('/brands/{slug}', 'BrandController@show');
 Route::middleware(['auth'])->prefix('admin')->group(function(){
     Route::get('/', 'Admin\AdminController@index');
 
+    Route::resource('/articles', 'Admin\ArticleController', ['as' => 'admin']);
     Route::resource('/brands', 'Admin\BrandController', ['as' => 'admin']);
     Route::resource('/feedbacks', 'Admin\FeedbackController', ['as' => 'admin']);
     Route::resource('/products', 'Admin\ProductController', ['as' => 'admin']);
     Route::resource('/product_images', 'Admin\ProductImageController', ['as' => 'admin']);
-
-    Route::prefix('articles')->group(function(){
-        Route::get('/', 'Admin\ArticleController@index');
-        Route::get('/create', 'Admin\ArticleController@create');
-        Route::post('/store', 'Admin\ArticleController@store');
-        Route::get('/edit/{article}', 'Admin\ArticleController@edit');
-        Route::post('/update/{article}', 'Admin\ArticleController@update');
-        Route::get('/delete/{article}', 'Admin\ArticleController@delete');
-    });
 });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Article;
+use App\Status;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class ArticleController extends Controller
@@ -17,7 +18,8 @@ class ArticleController extends Controller
 
     public function create()
     {
-        return view('admin.articles.create');
+        $statuses = Status::pluck('name_ru', 'id');
+        return view('admin.articles.create', compact('statuses'));
     }
 
     public function store(Request $request)
