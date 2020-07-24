@@ -187,7 +187,7 @@
                                                 		<a href="javascript:void(0)"><i class="icon-x"></i></a>
                                                 	</div>
                                                 </div>
-                                                @if(count($cart->items) > 0)
+                                                @if(isset($cart->items) && count($cart->items) > 0)
                                                     @foreach($cart->items as $product)
                                                         <div class="cart_item">
                                                             <div class="cart_img">
