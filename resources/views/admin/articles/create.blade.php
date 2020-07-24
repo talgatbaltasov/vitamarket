@@ -54,8 +54,8 @@
     </script>
     <script>
         $(document).ready(function(){
-            $('#name').on('keyup', function(){
-                $('#slug').val(url_slug($('#name').val(), {}));
+            $('#title').on('keyup', function(){
+                $('#slug').val(url_slug($('#title').val(), {}));
             })
         })
         function url_slug(s, opt){
