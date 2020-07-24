@@ -23,10 +23,10 @@
                         <td>{{$article->id}}</td>
                         <td>{{$article->title}}</td>
                         <td>
-                            @if($article->status == 0)
-                                Выкл.
-                            @else
+                            @if($article->status_id == 1)
                                 Вкл.
+                            @else
+                                Выкл.
                             @endif
                         </td>
                         <td>{{$article->updated_at}}</td>
