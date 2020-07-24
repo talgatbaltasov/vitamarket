@@ -9,8 +9,8 @@
                 <div class="card-body">
                     {!!Form::open(['route' => 'admin.articles.store', 'files' => true])!!}
                         <div class="form-group">
-                            {{Form::label('name', 'Название')}}
-                            {{Form::text('name', null, ['class' => 'form-control', 'required'])}}
+                            {{Form::label('title', 'Название')}}
+                            {{Form::text('title', null, ['class' => 'form-control', 'required'])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('short_description', 'Краткое описание')}}
