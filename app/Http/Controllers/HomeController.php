@@ -21,7 +21,9 @@ class HomeController extends Controller
                             ->get();
 
         $feedbacks = Feedback::where('status_id', 1)->take(3)->get();
-        return view('home.home', compact('categories', 'sale_products', 'feedbacks'));
+
+        $articles = Article::where('status_id', 1)->take(4)->get();
+        return view('home.home', compact('categories', 'sale_products', 'feedbacks', 'articles'));
     }
 
     public function search(Request $request)

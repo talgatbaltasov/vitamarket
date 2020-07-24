@@ -325,86 +325,30 @@
             </div>
             <div class="row">
                 <div class="blog_carousel blog_column3 owl-carousel">
-                    <div class="col-lg-3">
-                        <article class="single_blog">
-                            <figure>
-                                <div class="blog_thumb">
-                                    <a href="blog-details.html"><img src="/assets/img/blog/blog1.jpg" alt=""></a>
-                                </div>
-                                <figcaption class="blog_content">
-                                <h4 class="post_title"><a href="blog-details.html">Libero lorem</a></h4>
-                                <div class="articles_date">
-                                        <p>By <span>admin / July 16, 2019</span></p>
+                    @foreach($articles as $article)
+                        <div class="col-lg-3">
+                            <article class="single_blog">
+                                <figure>
+                                    <div class="blog_thumb">
+                                        <a href="/b/{{$article->slug}}"><img src="{{$article->main_image}}" alt=""></a>
                                     </div>
-                                    <p class="post_desc">Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus praesent</p>
-                                    <footer class="blog_footer">
-                                        <a href="blog-details.html">Continue Reading</a>
-                                        <p><i class="icon-message-circle"></i> <span>0</span></p>
-                                    </footer>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <div class="col-lg-3">
-                        <article class="single_blog">
-                            <figure>
-                                <div class="blog_thumb">
-                                    <a href="blog-details.html"><img src="/assets/img/blog/blog2.jpg" alt=""></a>
-                                </div>
-                                <figcaption class="blog_content">
-                                <h4 class="post_title"><a href="blog-details.html">Blog image post</a></h4>
-                                <div class="articles_date">
-                                        <p>By <span>admin / July 16, 2019</span></p>
-                                    </div>
-                                    <p class="post_desc">Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus praesent</p>
-                                    <footer class="blog_footer">
-                                        <a href="blog-details.html">Continue Reading</a>
-                                        <p><i class="icon-message-circle"></i> <span>0</span></p>
-                                    </footer>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <div class="col-lg-3">
-                        <article class="single_blog">
-                            <figure>
-                                <div class="blog_thumb">
-                                    <a href="blog-details.html"><img src="/assets/img/blog/blog3.jpg" alt=""></a>
-                                </div>
-                                <figcaption class="blog_content">
-                                <h4 class="post_title"><a href="blog-details.html">Post with Gallery</a></h4>
-                                <div class="articles_date">
-                                        <p>By <span>admin / July 16, 2019</span></p>
-                                    </div>
-                                    <p class="post_desc">Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus praesent</p>
-                                    <footer class="blog_footer">
-                                        <a href="blog-details.html">Continue Reading</a>
-                                        <p><i class="icon-message-circle"></i> <span>0</span></p>
-                                    </footer>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <div class="col-lg-3">
-                        <article class="single_blog">
-                            <figure>
-                                <div class="blog_thumb">
-                                    <a href="blog-details.html"><img src="/assets/img/blog/blog2.jpg" alt=""></a>
-                                </div>
-                                <figcaption class="blog_content">
-                                <h4 class="post_title"><a href="blog-details.html">Post with Audio</a></h4>
-                                <div class="articles_date">
-                                        <p>By <span>admin / July 16, 2019</span></p>
-                                    </div>
-                                    <p class="post_desc">Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus praesent</p>
-                                    <footer class="blog_footer">
-                                        <a href="blog-details.html">Continue Reading</a>
-                                        <p><i class="icon-message-circle"></i> <span>0</span></p>
-                                    </footer>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
+                                    <figcaption class="blog_content">
+                                    <h4 class="post_title">
+                                        <a href="/b/{{$article->slug}}">{{$article->title}}</a>
+                                    </h4>
+                                    <div class="articles_date">
+                                            <p><span>{{$article->created_at->format('Y-m-d')}}</span></p>
+                                        </div>
+                                        <p class="post_desc">{!!$article->short_description!!}</p>
+                                        <footer class="blog_footer">
+                                            <a href="blog-details.html">Читать далее</a>
+                                            <p><i class="icon-message-circle"></i> <span>0</span></p>
+                                        </footer>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

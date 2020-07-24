@@ -23,8 +23,11 @@ Route::get('/contacts', 'HomeController@contact');
 Route::post('/contact', 'HomeController@postContact');
 Route::get('/faq', 'HomeController@faq');
 // Route::get('/search', 'HomeController@search');
-// Route::get('/blog', 'HomeController@blog');
-// Route::get('/b/{slug}', 'HomeController@blogShow');
+
+Route::group(['prefix' => 'articles'], function(){
+    Route::get('/', 'BlogController@index');
+    Route::get('/{slug}', 'BlogController@show');
+});
 
 // Route::post('/subscribe', 'HomeController@subscribe');
 
