@@ -330,18 +330,18 @@
                             <article class="single_blog">
                                 <figure>
                                     <div class="blog_thumb">
-                                        <a href="/b/{{$article->slug}}"><img src="{{$article->main_image}}" alt=""></a>
+                                        <a href="/articles/{{$article->slug}}"><img src="{{$article->main_image}}" alt=""></a>
                                     </div>
                                     <figcaption class="blog_content">
                                     <h4 class="post_title">
-                                        <a href="/b/{{$article->slug}}">{{$article->title}}</a>
+                                        <a href="/articles/{{$article->slug}}">{{$article->title}}</a>
                                     </h4>
                                     <div class="articles_date">
                                             <p><span>{{$article->created_at->format('Y-m-d')}}</span></p>
                                         </div>
                                         <div class="post_desc">{!!$article->short_description!!}</div>
                                         <footer class="blog_footer">
-                                            <a href="blog-details.html">Читать далее</a>
+                                            <a href="/articles/{{$article->slug}}">Читать далее</a>
                                             <p><i class="icon-message-circle"></i> <span>0</span></p>
                                         </footer>
                                     </figcaption>
