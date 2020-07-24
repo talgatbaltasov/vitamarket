@@ -339,7 +339,7 @@
                                     <div class="articles_date">
                                             <p><span>{{$article->created_at->format('Y-m-d')}}</span></p>
                                         </div>
-                                        <p class="post_desc">{!!$article->short_description!!}</p>
+                                        <div class="post_desc">{!!$article->short_description!!}</div>
                                         <footer class="blog_footer">
                                             <a href="blog-details.html">Читать далее</a>
                                             <p><i class="icon-message-circle"></i> <span>0</span></p>
