@@ -23,19 +23,8 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $filename = $request->slug.'.'.$request->main_image->extension();
-        Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/photos/'.$filename));
-        $article = new Article;
-        $article->title = $request->title;
-        $article->short_description = $request->short_description;
-        $article->description = $request->description;
-        $article->main_image = $filename;
-        $article->slug = $request->slug;
-        if(isset($request->status) && $request->status == 1){
-            $article->status = $request->status;
-        } else {
-            $article->status = 0;
-        }
-        $article->save();
+        Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/images/articles/'.$filename));
+        $article = Article::create($request->all());
 
         return redirect('/admin/articles');
     }
@@ -49,7 +38,7 @@ class ArticleController extends Controller
     {
         if(isset($request->main_image)){
             $filename = $request->slug.'.'.$request->main_image->extension();
-            Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/photos/'.$filename));
+            Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/images/articles/'.$filename));
             $article->main_image = $filename;
         }
 
