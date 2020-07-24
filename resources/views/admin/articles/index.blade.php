@@ -31,8 +31,12 @@
                         </td>
                         <td>{{$article->updated_at}}</td>
                         <td>
-                            <a href="/admin/articles/edit/{{$article->id}}">Редактировать</a>
-                            <a href="/admin/articles/delete/{{$article->id}}">Удалить</a>
+                            <a href="/admin/articles/{{$article->id}}/edit" class="btn btn-success">Редактировать</a>
+                            <a href="{{route('admin.articles.destroy', ['article' => $article->id])}}"
+                                onclick="event.preventDefault();
+                                    document.getElementById('delete{{$article->id}}').submit();" class="btn btn-danger">Удалить</a>
+                            {!!Form::open(['route' => ['admin.articles.destroy', $article->id], 'id' => 'delete'.$article->id, 'style' => 'display:none;', 'method' => 'delete'])!!}
+                            {!!Form::close()!!}
                         </td>
                     </tr>
                     @endforeach
