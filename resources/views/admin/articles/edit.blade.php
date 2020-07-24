@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Добавить</div>
                 <div class="card-body">
-                    {!!Form::model($article, ['route' => ['admin.articles.update', $article->id], 'files' => true])!!}
+                    {!!Form::model($article, ['route' => ['admin.articles.update', $article->id], 'method' => 'put', 'files' => true])!!}
                         <div class="form-group">
                             {{Form::label('title', 'Название')}}
                             {{Form::text('title', null, ['class' => 'form-control', 'required'])}}
