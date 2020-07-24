@@ -53,6 +53,9 @@
                         @else
                             @if(\Auth::user()->role->name == 'Super Admin' || \Auth::user()->role->name == 'Admin')
                                 <li class="nav-item">
+                                    <a class="nav-link" href="/admin/articles">Статьи</a>
+                                </li>    
+                                <li class="nav-item">
                                     <a class="nav-link" href="/admin/brands">Бренды</a>
                                 </li>
                                 <li class="nav-item">

@@ -22,9 +22,11 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
-        $filename = $request->slug.'.'.$request->main_image->extension();
-        Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/images/articles/'.$filename));
-        $article = Article::create($request->all());
+        $filename = '/images/articles/'.$request->slug.'.'.$request->main_image->extension();
+        Image::make($request->file('main_image'))->resize(870, 400)->save(public_path($filename));
+        $data = $request->all();
+        $data['main_image'] = $filename;
+        $article = Article::create($data);
 
         return redirect('/admin/articles');
     }
@@ -36,22 +38,15 @@ class ArticleController extends Controller
 
     public function update(Article $article, Request $request)
     {
-        if(isset($request->main_image)){
-            $filename = $request->slug.'.'.$request->main_image->extension();
-            Image::make($request->file('main_image'))->resize(870, 400)->save(public_path('/images/articles/'.$filename));
-            $article->main_image = $filename;
-        }
+        $data = $request->all();
 
-        $article->title = $request->title;
-        $article->short_description = $request->short_description;
-        $article->description = $request->description;
-        $article->slug = $request->slug;
-        if(isset($request->status) && $request->status == 1){
-            $article->status = $request->status;
-        } else {
-            $article->status = 0;
+        if(isset($request->main_image)){
+            $filename = '/images/articles/'.$request->slug.'.'.$request->main_image->extension();
+            Image::make($request->file('main_image'))->resize(870, 400)->save(public_path($filename));
+            $data['main_image'] = $filename;
         }
-        $article->save();
+        
+        $article->update($data);
 
         return redirect('/admin/articles');
     }
