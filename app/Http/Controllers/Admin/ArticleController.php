@@ -25,7 +25,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $filename = '/images/articles/'.$request->slug.'.'.$request->main_image->extension();
-        Image::make($request->file('main_image'))->resize(870, 400)->save(public_path($filename));
+        Image::make($request->file('main_image'))->resize(600, 373)->save(public_path($filename));
         $data = $request->all();
         $data['main_image'] = $filename;
         $article = Article::create($data);
@@ -45,7 +45,7 @@ class ArticleController extends Controller
 
         if(isset($request->main_image)){
             $filename = '/images/articles/'.$request->slug.'.'.$request->main_image->extension();
-            Image::make($request->file('main_image'))->resize(870, 400)->save(public_path($filename));
+            Image::make($request->file('main_image'))->resize(600, 373)->save(public_path($filename));
             $data['main_image'] = $filename;
         }
         
