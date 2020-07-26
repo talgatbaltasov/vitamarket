@@ -4,184 +4,154 @@
 @section('description', '★ Интернет-магазин Vitamarket ★ Широкий выбор товаров ✔ Удобная оплата ✔ Продукция с гарантией и доставкой в интернет-магазине витамин и БАД ➤ Круглосуточно 24/7 ☎ +7 700 103 01 10')
 
 @section('content')
-    <section class="flat-breadcrumb">
-        <div class="container">
+    <div class="breadcrumbs_area">
+        <div class="container">   
             <div class="row">
-                <div class="col-md-12">
-                    <ul class="breadcrumbs">
-                        <li class="trail-item">
-                            <a href="/" title="">Главная</a>
-                            <span><img src="/images/icons/arrow-right.png" alt=""></span>
-                        </li>
-                        <li class="trail-end">
-                            <a href="#" title="">Корзина</a>
-                        </li>
-                    </ul><!-- /.breacrumbs -->
-                </div><!-- /.col-md-12 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section>
-
-    <section class="flat-shop-cart">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="flat-row-title style1">
-                        <h3>Корзина</h3>
+                <div class="col-12">
+                    <div class="breadcrumb_content">
+                    <h3>Корзина</h3>
+                        <ul>
+                            <li><a href="/">Главная</a></li>
+                            <li>Корзина</li>
+                        </ul>
                     </div>
-                    <div class="table-cart mCustomScrollbar _mCS_1 mCS_no_scrollbar"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_horizontal mCSB_inside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x" style="position: relative; top: 0px; left: 0px; width: 616px; min-width: 100%; overflow-x: inherit;" dir="ltr">
-                        <table>
+                </div>
+            </div>
+        </div>         
+    </div>
+    <!--breadcrumbs area end-->
+    <!--shopping cart area start -->
+    <div class="shopping_cart_area mt-100">
+        <div class="container">  
+            <form action="#"> 
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table_desc">
+                            <div class="cart_page table-responsive">
+                                <table>
                             <thead>
                                 <tr>
-                                    <th>Товар</th>
-                                    <th>Количество</th>
-                                    <th>Общее</th>
-                                    <th></th>
+                                    <th class="product_remove">Удалить</th>
+                                    <th class="product_thumb">Картинка</th>
+                                    <th class="product_name">Товар</th>
+                                    <th class="product-price">Цена</th>
+                                    <th class="product_quantity">Количество</th>
+                                    <th class="product_total">Общее</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @if(isset($cart->items))
-                                    @foreach($cart->items as $product)
+                                @foreach($cart->items as $item)
                                     <tr>
-                                        <td>
-                                            <div class="img-product">
-                                                <img src="/images{{$product['main_image']}}" alt="" class="mCS_img_loaded">
-                                            </div>
-                                            <div class="name-product">
-                                                {{$product['item']['name']}}
-                                            </div>
-                                            <div class="price">
-                                                {{$product['item']['price']}} тг.
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </td>
-                                        <td>
-                                            <div class="quanlity">
-                                                <span class="btn-down" onclick='decrementCartItem({{$product["item"]["id"]}})'></span>
-                                                <input type="number" name="number" value="{{$product['qty']}}" min="1" max="100" placeholder="Quanlity">
-                                                <span class="btn-up" onclick='incrementCartItem({{$product["item"]["id"]}})'></span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="total">
-                                                {{$product['item']['price'] * $product['qty']}} тг.
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <a onclick='removeCartItem({{$product["item"]["id"]}})' title="" style="cursor: pointer;">
-                                                <img src="/images/icons/delete.png" alt="" class="mCS_img_loaded">
-                                            </a>
-                                        </td>
+                                        <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        <td class="product_thumb"><a href="#"><img src="{{$item['main_image']}}" alt=""></a></td>
+                                        <td class="product_name"><a href="#">{{$item['item']['name']}}</a></td>
+                                        <td class="product-price">{{$item['item']['price']}} тг.</td>
+                                        <td class="product_quantity"><label>Количество</label> <input min="1" max="100" value="{{$item['qty']}}" type="number" name="quantity"></td>
+                                        <td class="product_total">{{$item['item']['price'] * $item['qty']}} тг.</td>
                                     </tr>
-                                    @endforeach
-                                @endif
+                                @endforeach
                             </tbody>
-                        </table>
-                        <div class="form-coupon" style="display: none;">
-                            <form action="#" method="get" accept-charset="utf-8">
-                                <div class="coupon-input">
-                                    <input type="text" name="coupon code" placeholder="Coupon Code">
-                                    <button type="submit">Apply Coupon</button>
+                        </table>   
+                            </div>  
+                            <div class="cart_submit">
+                                <button type="submit">обновить корзину</button>
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+                <!--coupon code area start-->
+                <div class="coupon_area">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="coupon_code left">
+                                <h3>Купон</h3>
+                                <div class="coupon_inner">   
+                                    <p>Введите купонный код если у вас есть.</p>                                
+                                    <input placeholder="Купонный код" type="text">
+                                    <button type="submit">Использовать код</button>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="coupon_code right">
+                                <h3>Общее</h3>
+                                <div class="coupon_inner">
+                                <div class="cart_subtotal">
+                                    <p>Общее</p>
+                                    <p class="cart_amount">{{$cart->totalPrice}} тг.</p>
                                 </div>
-                            </form>
-                        </div><!-- /.form-coupon -->
-                    </div><div id="mCSB_1_scrollbar_horizontal" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_horizontal" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 30px; width: 0px; left: 0px;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div><!-- /.table-cart -->
-                </div><!-- /.col-lg-8 -->
-                <div class="col-lg-4">
-                    <div class="cart-totals">
-                        <h3>Корзина</h3>
-                        <form action="#" method="get" accept-charset="utf-8">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>Доставка</td>
-                                        <td class="btn-radio">
-                                            Может взиматься дополнительная плата за доставку.
-                                        </td><!-- /.btn-radio -->
-                                    </tr>
-                                    <tr>
-                                        <td>Общее</td>
-                                        <td class="price-total">{{$cart->totalPrice}} тг.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="btn-cart-totals">
-                                <a href="/cart" class="update" title="">Обновить корзину</a>
-                                <a href="/checkout" class="checkout" title="">Оформить заказ</a>
-                            </div><!-- /.btn-cart-totals -->
-                        </form><!-- /form -->
-                    </div><!-- /.cart-totals -->
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section>
+                                <div class="cart_subtotal ">
+                                    <p>Доставка</p>
+                                    <p class="cart_amount"><span>Стандарт:</span> 2000 тг</p>
+                                </div>
+                                <a href="#">Рассчитать стоимость доставки</a>
 
-    <section class="flat-iconbox">
+                                <div class="cart_subtotal">
+                                    <p>Total</p>
+                                    <p class="cart_amount">£215.00</p>
+                                </div>
+                                <div class="checkout_btn">
+                                    <a href="#">Оформить заказ</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--coupon code area end-->
+            </form> 
+        </div>     
+    </div>
+    <!--shopping cart area end -->
+    <!--brand area start-->
+    <div class="brand_area">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="iconbox">
-                        <div class="box-header">
-                            <div class="image">
-                                <img src="/images/icons/car.png" alt="">
-                            </div>
-                            <div class="box-title">
-                                <h3>Быстрая доставка</h3>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-content">
-                            <p>по Алматы, низкие цены в другие города</p>
-                        </div><!-- /.box-content -->
-                    </div><!-- /.iconbox -->
-                </div><!-- /.col-md-3 col-sm-6 -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="iconbox">
-                        <div class="box-header">
-                            <div class="image">
-                                <img src="/images/icons/order.png" alt="">
-                            </div>
-                            <div class="box-title">
-                                <h3>Как купить?</h3>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-content">
-                            <p>Добавляйте товар и заказывайте</p>
-                        </div><!-- /.box-content -->
-                    </div><!-- /.iconbox -->
-                </div><!-- /.col-md-3 col-sm-6 -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="iconbox">
-                        <div class="box-header">
-                            <div class="image">
-                                <img src="/images/icons/payment.png" alt="">
-                            </div>
-                            <div class="box-title">
-                                <h3>Удобная оплата</h3>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-content">
-                            <p>Наличный, безналичный расчет</p>
-                        </div><!-- /.box-content -->
-                    </div><!-- /.iconbox -->
-                </div><!-- /.col-md-3 col-sm-6 -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="iconbox">
-                        <div class="box-header">
-                            <div class="image">
-                                <img src="/images/icons/return.png" alt="">
-                            </div>
-                            <div class="box-title">
-                                <h3>Возврат товара</h3>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-content">
-                            <p>Условия возврата товара</p>
-                        </div><!-- /.box-content -->
-                    </div><!-- /.iconbox -->
-                </div><!-- /.col-md-3 col-sm-6 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.flat-iconbox -->
+                <div class="col-12">
+                    <div class="brand_container owl-carousel owl-loaded owl-drag">
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1170px, 0px, 0px); transition: 0s; width: 3705px;"><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand3.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand4.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand5.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand6.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                        </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand1.png" alt=""></a>
+                        </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                        </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand3.png" alt=""></a>
+                        </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand4.png" alt=""></a>
+                        </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand5.png" alt=""></a>
+                        </div></div><div class="owl-item active last" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand6.png" alt=""></a>
+                        </div></div><div class="owl-item" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand1.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand3.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand4.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand5.png" alt=""></a>
+                        </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
+                            <a href="#"><img src="assets/img/brand/brand6.png" alt=""></a>
+                        </div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots disabled"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('js')
