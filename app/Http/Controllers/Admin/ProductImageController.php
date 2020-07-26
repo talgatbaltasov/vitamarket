@@ -27,7 +27,9 @@ class ProductImageController extends Controller
                 'is_main'       => 1
             ]);
             
-            Image::make($request->file('main_image'))->resize(1000, 1000)->save(public_path($filename));
+            Image::make($request->file('main_image'))->resize(1000, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->crop(1000, 1000)->save(public_path($filename));
         }
         
         if($request->has('image')) {
@@ -39,7 +41,9 @@ class ProductImageController extends Controller
                     'image'         => $filename
                 ]);
                 
-                Image::make($image)->resize(1000, 1000)->save(public_path($filename));
+                Image::make($request->file('main_image'))->resize(1000, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->crop(1000, 1000)->save(public_path($filename));
                 $i++;
             }
         }
