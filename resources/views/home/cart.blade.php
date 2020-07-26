@@ -108,27 +108,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="brand_container owl-carousel owl-loaded owl-drag">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage" style="transform: translate3d(-1170px, 0px, 0px); transition: 0s; width: 3705px;">
-                                @foreach($brands as $brand)
-                                    <div class="owl-item cloned" style="width: 195px;">
-                                        <div class="single_brand">
-                                            <a href="#"><img src="{{$brand->main_image}}" alt=""></a>
-                                        </div>
-                                    </div>
-                                @endforeach
+                    <div class="brand_container owl-carousel">
+                        @foreach($brands as $brand)
+                            <div class="owl-item" style="width: 195px;">
+                                <div class="single_brand">
+                                    <a href="#"><img src="{{$brand->main_image}}" alt=""></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="owl-nav">
-                            <div class="owl-prev">
-                                <i class="fa fa-angle-left"></i>
-                            </div>
-                            <div class="owl-next">
-                                <i class="fa fa-angle-right"></i>
-                            </div>
-                        </div>
-                        <div class="owl-dots disabled"></div>
+                        @endforeach
                     </div>
                 </div>
             </div>
