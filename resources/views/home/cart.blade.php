@@ -80,7 +80,13 @@
                                 <div class="coupon_inner">
                                 <div class="cart_subtotal">
                                     <p>Общее</p>
-                                    <p class="cart_amount">{{$cart->totalPrice}} тг.</p>
+                                    <p class="cart_amount">
+                                        @if(isset($cart->items) && count($cart->items) > 0)
+                                            {{$cart->totalPrice}} тг.
+                                        @else
+                                            0 тг.
+                                        @endif
+                                    </p>
                                 </div>
                                 <div class="cart_subtotal ">
                                     <p>Доставка</p>
