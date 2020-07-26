@@ -410,7 +410,10 @@
                                                     </div> 
                                                     <div class="variants_selects">
                                                         <div class="modal_add_to_cart">
-                                                            <button onclick="addToCart(this, {{$product->id}})">Добавить в корзину</button>
+                                                            <form action="#">
+                                                                <input min="1" max="100" step="1" value="1" type="number">
+                                                                <button type="submit">Добавить в корзину</button>
+                                                            </form>
                                                         </div>   
                                                     </div>
                                                     <div class="modal_social">
