@@ -40,7 +40,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if(count($cart->items) > 0)
+                                @if(isset($cart->items) && count($cart->items) > 0)
                                     @foreach($cart->items as $item)
                                         <tr>
                                             <td class="product_remove"><a href="#" onclick='removeCartItem({{$item["item"]["id"]}})'><i class="fa fa-trash-o"></i></a></td>
