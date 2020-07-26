@@ -110,43 +110,43 @@
                 <div class="col-12">
                     <div class="brand_container owl-carousel owl-loaded owl-drag">
                     <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1170px, 0px, 0px); transition: 0s; width: 3705px;"><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand2.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand3.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand3.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand4.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand4.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand5.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand5.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand6.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand6.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand2.png" alt=""></a>
                         </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand1.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand1.png" alt=""></a>
                         </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand2.png" alt=""></a>
                         </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand3.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand3.png" alt=""></a>
                         </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand4.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand4.png" alt=""></a>
                         </div></div><div class="owl-item active" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand5.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand5.png" alt=""></a>
                         </div></div><div class="owl-item active last" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand6.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand6.png" alt=""></a>
                         </div></div><div class="owl-item" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand2.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand1.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand1.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand2.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand2.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand3.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand3.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand4.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand4.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand5.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand5.png" alt=""></a>
                         </div></div><div class="owl-item cloned" style="width: 195px;"><div class="single_brand">
-                            <a href="#"><img src="assets/img/brand/brand6.png" alt=""></a>
+                            <a href="#"><img src="/assets/img/brand/brand6.png" alt=""></a>
                         </div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots disabled"></div></div>
                 </div>
             </div>
