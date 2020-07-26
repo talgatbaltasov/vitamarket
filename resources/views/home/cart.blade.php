@@ -40,16 +40,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($cart->items as $item)
-                                    <tr>
-                                        <td class="product_remove"><a href="#" onclick='removeCartItem({{$item["item"]["id"]}})'><i class="fa fa-trash-o"></i></a></td>
-                                        <td class="product_thumb"><a href="#"><img src="{{$item['main_image']}}" alt=""></a></td>
-                                        <td class="product_name"><a href="#">{{$item['item']['name']}}</a></td>
-                                        <td class="product-price">{{$item['item']['price']}} тг.</td>
-                                        <td class="product_quantity"><label>Количество</label> <input min="1" max="100" value="{{$item['qty']}}" type="number" name="quantity"></td>
-                                        <td class="product_total">{{$item['item']['price'] * $item['qty']}} тг.</td>
-                                    </tr>
-                                @endforeach
+                                @if(count($cart->items) > 0)
+                                    @foreach($cart->items as $item)
+                                        <tr>
+                                            <td class="product_remove"><a href="#" onclick='removeCartItem({{$item["item"]["id"]}})'><i class="fa fa-trash-o"></i></a></td>
+                                            <td class="product_thumb"><a href="#"><img src="{{$item['main_image']}}" alt=""></a></td>
+                                            <td class="product_name"><a href="#">{{$item['item']['name']}}</a></td>
+                                            <td class="product-price">{{$item['item']['price']}} тг.</td>
+                                            <td class="product_quantity"><label>Количество</label> <input min="1" max="100" value="{{$item['qty']}}" type="number" name="quantity"></td>
+                                            <td class="product_total">{{$item['item']['price'] * $item['qty']}} тг.</td>
+                                        </tr>
+                                    @endforeach
+                                @endif
                             </tbody>
                         </table>   
                             </div>  
