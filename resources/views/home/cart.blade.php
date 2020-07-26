@@ -95,8 +95,14 @@
                                 <a href="#">Рассчитать стоимость доставки</a>
 
                                 <div class="cart_subtotal">
-                                    <p>Total</p>
-                                    <p class="cart_amount">£215.00</p>
+                                    <p>Общее</p>
+                                    <p class="cart_amount">
+                                        @if(isset($cart->items) && count($cart->items) > 0)
+                                            {{$cart->totalPrice}} тг.
+                                        @else
+                                            0 тг.
+                                        @endif
+                                    </p>
                                 </div>
                                 <div class="checkout_btn">
                                     <a href="#">Оформить заказ</a>
