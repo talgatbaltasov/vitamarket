@@ -66,18 +66,4 @@ class HomeController extends Controller
         mail($to, $subject, $message, $headers);
         return redirect('/');
     }
-
-    public function blog()
-    {
-        $bestsellers = Product::inRandomOrder()->take(5)->get();
-        $articles = Article::where('status_id', 1)->orderBy('id', 'desc')->paginate(5);
-        return view('blog.index', compact('bestsellers', 'articles'));
-    }
-
-    public function blogShow($slug)
-    {
-        $bestsellers = Product::inRandomOrder()->take(5)->get();
-        $article = Article::where('slug', $slug)->first();
-        return view('blog.show', compact('article', 'bestsellers'));
-    }
 }

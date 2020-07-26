@@ -40,10 +40,10 @@ Route::post('/cart/incrementCartItem', 'CartController@incrementCartItem');
 Route::post('/cart/decrementCartItem', 'CartController@decrementCartItem');
 // Route::post('/cart/apply-coupon', 'CartController@applyCoupon');
 
-Route::get('/checkout', 'CartController@checkout');
-Route::post('/checkout', 'CartController@postCheckout');
-Route::get('/checkout/done', 'CartController@getDone');
-Route::get('/checkout/cancel', 'CartController@getCancel');
+Route::get('/checkout', 'CheckoutController@index');
+Route::post('/checkout', 'CheckoutController@store');
+Route::get('/checkout/done', 'CheckoutController@getDone');
+Route::get('/checkout/cancel', 'CheckoutController@getCancel');
 
 Route::get('/p/{slug}', 'ProductController@show');
 Route::get('/c/{slug}/{brand}', 'CategoryController@brand');
