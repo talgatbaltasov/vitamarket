@@ -19,7 +19,7 @@ class CartController extends Controller
     public function cart(Request $request)
     {
         $cart = $request->session()->has('cart') ? $request->session()->get('cart') : null;
-        return view('home.cart', compact('cart'));
+        return view('cart.index', compact('cart'));
     }
 
     public function applyCoupon(Request $request)

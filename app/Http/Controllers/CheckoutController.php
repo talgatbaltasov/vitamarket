@@ -21,7 +21,7 @@ class CheckoutController extends Controller
         $cart = $request->session()->has('cart') ? $request->session()->get('cart') : null;
         $cities = City::pluck('name', 'id');
 
-        return view('home.checkout', compact('cart', 'cities'));
+        return view('checkout.index', compact('cart', 'cities'));
     }
 
     public function store(Request $request)
@@ -75,7 +75,7 @@ class CheckoutController extends Controller
             }
         );
         //$request->session()->forget('cart');
-        return view('home.done', compact('order'));
+        return view('checkout.done', compact('order'));
     }
 
     public function getDone(Request $request){
@@ -147,7 +147,7 @@ class CheckoutController extends Controller
 
         //Mail::to($address->user)->send(new OrderFinished($order_products));
         //$request->session()->forget('cart');
-        return view('home.done', compact('order'));
+        return view('checkout.done', compact('order'));
     }
 
     public function getCancel(Request $request){

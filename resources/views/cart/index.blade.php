@@ -105,7 +105,7 @@
                                     </p>
                                 </div>
                                 <div class="checkout_btn">
-                                    <a href="#">Оформить заказ</a>
+                                    <a href="/checkout">Оформить заказ</a>
                                 </div>
                                 </div>
                             </div>
