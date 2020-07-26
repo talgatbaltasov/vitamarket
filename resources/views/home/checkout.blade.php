@@ -64,66 +64,39 @@
                         {!!Form::close()!!}
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <form action="#">    
-                            <h3>Ваш заказ</h3> 
-                            <div class="order_table table-responsive">
-                                <table>
-                                    <thead>
+                        <h3>Ваш заказ</h3>
+                        <div class="order_table table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Товар</th>
+                                        <th>Общее</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($cart->items as $item)
                                         <tr>
-                                            <th>Товар</th>
-                                            <th>Общее</th>
+                                            <td> {{$item['item']['name']}} <strong> × {{$item['qty']}}</strong></td>
+                                            <td> {{$item['qty'] * $item['item']['price']}} тг.</td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($cart->items as $item)
-                                            <tr>
-                                                <td> {{$item['item']['name']}} <strong> × {{$item['qty']}}</strong></td>
-                                                <td> {{$item['qty'] * $item['item']['price']}}</td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Cart Subtotal</th>
-                                            <td>$215.00</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Shipping</th>
-                                            <td><strong>$5.00</strong></td>
-                                        </tr>
-                                        <tr class="order_total">
-                                            <th>Order Total</th>
-                                            <td><strong>$220.00</strong></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>     
-                            </div>
-                            <div class="payment_method">
-                            <div class="panel-default">
-                                    <input id="payment" name="check_method" type="radio" data-target="createp_account">
-                                    <label for="payment" data-toggle="collapse" data-target="#method" aria-controls="method">Create an account?</label>
-
-                                    <div id="method" class="collapse one" data-parent="#accordion">
-                                        <div class="card-body1">
-                                        <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                        </div>
-                                    </div>
-                                </div> 
-                            <div class="panel-default">
-                                    <input id="payment_defult" name="check_method" type="radio" data-target="createp_account">
-                                    <label for="payment_defult" data-toggle="collapse" data-target="#collapsedefult" aria-controls="collapsedefult">PayPal <img src="assets/img/icon/papyel.png" alt=""></label>
-
-                                    <div id="collapsedefult" class="collapse one" data-parent="#accordion">
-                                        <div class="card-body1">
-                                        <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="order_button">
-                                    <button type="submit">Proceed to PayPal</button> 
-                                </div>    
-                            </div> 
-                        </form>         
+                                    @endforeach
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Общее</th>
+                                        <td>{{$cart->totalPrice}} тг.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Доставка</th>
+                                        <td><strong>2000 тг.</strong></td>
+                                    </tr>
+                                    <tr class="order_total">
+                                        <th>Общее</th>
+                                        <td><strong>{{$cart->totalPrice + 2000}} тг.</strong></td>
+                                    </tr>
+                                </tfoot>
+                            </table>     
+                        </div>
                     </div>
                 </div> 
             </div> 
