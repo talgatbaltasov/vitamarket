@@ -8,6 +8,7 @@ use Session;
 use Mail;
 use DB;
 
+use App\Brand;
 use App\Product;
 use App\Log;
 use App\Image;
@@ -19,7 +20,8 @@ class CartController extends Controller
     public function cart(Request $request)
     {
         $cart = $request->session()->has('cart') ? $request->session()->get('cart') : null;
-        return view('home.cart', compact('cart'));
+        $brands = Brand::where('status_id', 1)->get();
+        return view('home.cart', compact('cart', 'brands'));
     }
 
     public function checkout(Request $request)
