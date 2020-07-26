@@ -42,7 +42,7 @@
                             <tbody>
                                 @foreach($cart->items as $item)
                                     <tr>
-                                        <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        <td class="product_remove"><a href="#" onclick='removeCartItem({{$item["item"]["id"]}})'><i class="fa fa-trash-o"></i></a></td>
                                         <td class="product_thumb"><a href="#"><img src="{{$item['main_image']}}" alt=""></a></td>
                                         <td class="product_name"><a href="#">{{$item['item']['name']}}</a></td>
                                         <td class="product-price">{{$item['item']['price']}} тг.</td>
@@ -103,24 +103,6 @@
         </div>     
     </div>
     <!--shopping cart area end -->
-    <!--brand area start-->
-    <div class="brand_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="brand_container owl-carousel">
-                        @foreach($brands as $brand)
-                            <div class="owl-item" style="width: 195px;">
-                                <div class="single_brand">
-                                    <a href="#"><img src="{{$brand->main_image}}" alt=""></a>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 
 @section('js')
