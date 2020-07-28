@@ -4901,7 +4901,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .breadcrumb_content ul li {
   display: inline-block;
-  text-transform: capitalize;
   font-size: 14px;
   margin-right: 3px;
   padding-right: 13px;
