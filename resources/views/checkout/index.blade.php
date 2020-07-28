@@ -86,7 +86,13 @@
                                 <tfoot>
                                     <tr>
                                         <th>Общее</th>
-                                        <td>{{$cart->totalPrice}} тг.</td>
+                                        <td>
+                                            @if(isset($cart->items))
+                                                {{$cart->totalPrice}} тг.
+                                            @else
+                                                0 тг.
+                                            @endif
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th>Доставка</th>
