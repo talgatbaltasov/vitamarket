@@ -100,7 +100,13 @@
                                     </tr>
                                     <tr class="order_total">
                                         <th>Общее</th>
-                                        <td><strong>{{$cart->totalPrice + 2000}} тг.</strong></td>
+                                        <td>
+                                            @if(isset($cart->items))
+                                                <strong>{{$cart->totalPrice + 2000}} тг.</strong>
+                                            @else
+                                                0 тг.
+                                            @endif
+                                        </td>
                                     </tr>
                                 </tfoot>
                             </table>     
