@@ -14,7 +14,7 @@
                             <div class="col-12">
                                 <div class="slider_content">
                                     <h1>{{$banner->title}}</h1>
-                                    <p>{{$banner->description}}</p> 
+                                    <p>{!!$banner->description!!}</p> 
                                     <a class="button" href="{{$banner->link}}">{{$banner->link_label}}</a>
                                 </div>
                             </div>
