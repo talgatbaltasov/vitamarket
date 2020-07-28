@@ -8,11 +8,13 @@ use Session;
 use Mail;
 use DB;
 
+use App\Address;
 use App\City;
 use App\Product;
 use App\Log;
 use App\Order;
-use App\OrderProduct;
+use App\OrderItem;
+use App\User;
 
 class CheckoutController extends Controller
 {
@@ -26,35 +28,48 @@ class CheckoutController extends Controller
 
     public function store(Request $request)
     {
-        $log = new Log;
-        $log->session_id = $request->session()->getId();
-        $log->log_type_id = 2;
-        $log->user = $request->email;
-        $log->save();
+        $user = User::where('email', $request->email)->first();
+        if(!$user) {
+            $user = User::create([
+                'firstname' => $request->firstname,
+                'lastname' => $request->lastname,
+                'email' => $request->email,
+            ]);
+        }
+        $log = Log::create([
+            'session_id'    => $request->session()->getId(),
+            'log_type_id'   => 2,
+            'user_id'       => $user->id
+        ]);
 
-        $request->session()->put('user', ['email' => $request->email]);
+        $request->session()->put('user', ['id' => $user->id]);
 
         $cart = $request->session()->get('cart');
 
-        $order = new Order;
-        $order->total = $cart->totalPrice;
-        $order->name = $request->fullname;
-        $order->user = $request->email;
-        $order->phone = $request->phone;
-        $order->status = 'pending';
-        $order->shipping_price = 0;
-        $order->total = $cart->totalPrice;
-        $order->address = $request->address.', '.$request->city.', '.$request->zip;
-        $order->comment = $request->comment;
-        $order->save();
+        $address = Address::create([
+            'user_id'       => $user->id, 
+            'phone_number'  => $request->phone, 
+            'street'        => $request->street, 
+            'street2'       => $request->street2, 
+            'city_id'       => $request->city_id
+        ]);
+
+        $order = Order::create([
+            'user_id'           => $user->id, 
+            'address_id'        => $address->id, 
+            'order_status_id'   => 1, 
+            'shipping_type_id'  => $request->shipping_type_id, 
+            'total'             => $cart->totalPrice, 
+            'comment'           => $request->comment
+        ]);
 
         foreach ($cart->items as $item) {
-            $order_product = new OrderProduct();
-            $order_product->order_id = $order->id;
-            $order_product->product_id = $item['item']['id'];
-            $order_product->price = $item['item']['price'];
-            $order_product->quantity = $item['qty'];
-            $order_product->save();
+            $order_item = OrderItem::create([
+                'order_id'      => $order->id, 
+                'product_id'    => $item['item']['id'], 
+                'price'         => $item['item']['price'], 
+                'quantity'      => $item['qty']
+            ]);
         }
 
         // Clear the shopping cart, write to database, send notifications, etc.
@@ -63,15 +78,15 @@ class CheckoutController extends Controller
 
         // Thank the user for the purchase
 
-        $order_products = OrderProduct::where('order_id', $order->id)->get();
+        $order_items = OrderItem::where('order_id', $order->id)->get();
 
         Mail::send(
             [],
             [],
             function ($message) {
-                $message->from('talgat.baltasov@gmail.com')->to('talgat.baltasov@gmail.com')
-                    ->subject('New Order on Litestore.kz')
-                    ->setBody('<h1>Hi, there is new order!</h1>', 'text/html');
+                $message->from('talgat.baltasov@gmail.com')->to('dulat-serikov@mail.ru')
+                    ->subject('Новый заказ на сайте Vitamarket.kz')
+                    ->setBody('<h1>Ассалямуалейкум. Пришел новый заказ!</h1>', 'text/html');
             }
         );
         //$request->session()->forget('cart');

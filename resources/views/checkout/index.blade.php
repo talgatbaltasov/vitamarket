@@ -26,7 +26,7 @@
             <div class="checkout_form">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        {!!Form::open(['route' => 'admin.articles.store', 'files' => true])!!}
+                        {!!Form::open(['url' => '/checkout'])!!}
                             <h3>Информация</h3>
                             <div class="form-group">
                                 {{Form::label('firstname', 'Имя')}}
