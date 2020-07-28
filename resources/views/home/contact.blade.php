@@ -32,7 +32,7 @@
         <div class="container">   
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                <div class="contact_message content">
+                    <div class="contact_message content">
                         <h3>Наши контакты</h3>    
                         <ul>
                             <li><i class="fa fa-fax"></i>  Адрес : г Алматы, ул. Абая, 143</li>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                 <div class="contact_message form">
-                        <h3>Tell us your project</h3>
+                        <h3>Задайте ваш вопрос</h3>
                         {!!Form::open(['url' => '/contact', 'id' => 'contact-form'])!!}
                             <p>
                                 {{Form::label('name', 'Имя и фамилия')}}
