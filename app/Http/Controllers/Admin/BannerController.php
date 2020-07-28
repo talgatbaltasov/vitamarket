@@ -25,7 +25,7 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         $filename = '/images/banners/'.time().'.'.$request->image->extension();
-        Image::make($request->file('image'))->resize(600, 373)->save(public_path($filename));
+        Image::make($request->file('image'))->resize(1920, 738)->save(public_path($filename));
         $data = $request->all();
         $data['image'] = $filename;
         $banner = Banner::create($data);
@@ -45,7 +45,7 @@ class BannerController extends Controller
 
         if(isset($request->image)){
             $filename = '/images/banners/'.time().'.'.$request->image->extension();
-            Image::make($request->file('image'))->resize(600, 373)->save(public_path($filename));
+            Image::make($request->file('image'))->resize(1920, 738)->save(public_path($filename));
             $data['image'] = $filename;
         }
         
