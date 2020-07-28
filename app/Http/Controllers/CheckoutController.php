@@ -32,8 +32,8 @@ class CheckoutController extends Controller
         if(!$user) {
             $user = User::create([
                 'firstname' => $request->firstname,
-                'lastname' => $request->lastname,
-                'email' => $request->email,
+                'lastname'  => $request->lastname,
+                'email'     => $request->email
             ]);
         }
         $log = Log::create([
