@@ -309,14 +309,13 @@
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6">
                         <div class="widgets_container widget_menu">
-                            <h3>Information</h3>
+                            <h3>Информация</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="faq.html">Frequently Questions</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="/checkout">Оформить заказ</a></li>
+                                    <li><a href="/contact">Контакты</a></li>
+                                    <li><a href="/payments-delivery">Доставка и оплата</a></li>
+                                    <li><a href="/faq">Вопросы и ответы</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -326,56 +325,31 @@
                             <div class="footer_logo">
                                <a href="/"><img src="/assets/img/logo/logo.png" alt=""></a>
                            </div>
-                           <div class="footer_widgetnav_menu">
-                               <ul>
-                                   <li><a href="#">Payment</a></li>
-                                   <li><a href="#">Affiliates</a></li>
-                                   <li><a href="#">Contact</a></li>
-                                   <li><a href="#">Internet</a></li>
-                               </ul>
-                           </div>
                             <div class="footer_social">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="footer_app">
-                                <ul>
-                                    <li><a href="#"><img src="/assets/img/icon/icon-app.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="/assets/img/icon/icon1-app.jpg" alt=""></a></li>
+                                    <li><a href="https://instagram.com/vitamarket.almaty"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6">
                         <div class="widgets_container widget_menu">
-                            <h3>My Account</h3>
+                            <h3>Заказ</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="my-account.html">My Account</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="cart.html">Shopping cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="#">Order History</a></li>
+                                    <li><a href="/contact">Контакты</a></li>
+                                    <li><a href="/cart">Корзина</a></li>
+                                    <li><a href="/checkout">Оформить заказ</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6">
                         <div class="widgets_container widget_menu">
-                            <h3>Customer Service</h3>
+                            <h3>Служба поддержки</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="#">Terms of use</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="contact.html">Site Map</a></li>
-                                    <li><a href="my-account.html">My Account</a></li>
-                                    <li><a href="#">Returns</a></li>
+                                    <li><a href="/contact">Контакты</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -389,7 +363,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="copyright_area">
-                            <p>Copyright &copy; 2020 <a href="#">Lukani</a>  All Right Reserved.</p>
+                            <p>Copyright &copy; {{date('Y')}} <a href="#">Brainsmedia</a>  All Right Reserved.</p>
                         </div>
                     </div>    
                     <div class="col-lg-6 col-md-6">    
