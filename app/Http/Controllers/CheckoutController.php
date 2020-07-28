@@ -14,6 +14,7 @@ use App\Product;
 use App\Log;
 use App\Order;
 use App\OrderItem;
+use App\ShippingType;
 use App\User;
 
 class CheckoutController extends Controller
@@ -23,7 +24,9 @@ class CheckoutController extends Controller
         $cart = $request->session()->has('cart') ? $request->session()->get('cart') : null;
         $cities = City::pluck('name', 'id');
 
-        return view('checkout.index', compact('cart', 'cities'));
+        $shipping_types = ShippingType::pluck('name', 'id');
+
+        return view('checkout.index', compact('cart', 'cities', 'shipping_types'));
     }
 
     public function store(Request $request)

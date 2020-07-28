@@ -57,6 +57,10 @@
                                 {{Form::email('email', null, ['class' => 'form-control'])}}
                             </div>
                             <div class="form-group">
+                                {{Form::label('shipping_type_id', 'Вид доставки')}}
+                                {{Form::select('shipping_type_id', $shipping_types, null, ['class' => 'form-control'])}}
+                            </div>
+                            <div class="form-group">
                                 {{Form::label('comment', 'Комментарии к заказу')}}
                                 {{Form::text('comment', null, ['class' => 'form-control'])}}
                             </div>
