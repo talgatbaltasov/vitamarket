@@ -74,12 +74,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($cart->items as $item)
-                                        <tr>
-                                            <td> {{$item['item']['name']}} <strong> × {{$item['qty']}}</strong></td>
-                                            <td> {{$item['qty'] * $item['item']['price']}} тг.</td>
-                                        </tr>
-                                    @endforeach
+                                    @if(isset($cart->items))
+                                        @foreach($cart->items as $item)
+                                            <tr>
+                                                <td> {{$item['item']['name']}} <strong> × {{$item['qty']}}</strong></td>
+                                                <td> {{$item['qty'] * $item['item']['price']}} тг.</td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
                                 </tbody>
                                 <tfoot>
                                     <tr>
