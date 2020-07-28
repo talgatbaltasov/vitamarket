@@ -302,10 +302,9 @@
                     <div class="col-lg-2 col-md-4 col-sm-6">
                         <div class="widgets_container contact_us">
                             <h3>Время работы</h3>
-                            <p><span>Понедельник - Пятница:</span> 09:00 - 18:00</p>
-                            <p><span>Суббота:</span> 09:00 - 14:00</p>
-                            <p><span>Воскресенье:</span> 09:00 - 14:00</p>
-                            <p><b>Работаем без выходных и праздников</b></p>
+                            <p><span>Понедельник - Пятница:</span> 10:00 - 20:00</p>
+                            <p><span>Суббота:</span> 10:00 - 18:00</p>
+                            <p><span>Воскресенье:</span> выходной</p>
                         </div>          
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6">
