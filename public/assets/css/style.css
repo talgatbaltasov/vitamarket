@@ -4641,10 +4641,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .contact_us > p b {
   font-weight: 500;
 }
-.contact_us > p:last-child {
-  margin-top: 50px;
-  margin-bottom: 0;
-}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .contact_us > p:last-child {
     margin-top: 22px;
