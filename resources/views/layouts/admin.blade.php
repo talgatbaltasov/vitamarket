@@ -56,6 +56,9 @@
                                     <a class="nav-link" href="/admin/articles">Статьи</a>
                                 </li>    
                                 <li class="nav-item">
+                                    <a class="nav-link" href="/admin/banners">Баннеры</a>
+                                </li>    
+                                <li class="nav-item">
                                     <a class="nav-link" href="/admin/brands">Бренды</a>
                                 </li>
                                 <li class="nav-item">
