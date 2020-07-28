@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Article;
 use App\Category;
+use App\Banner;
 use App\Feedback;
 use App\Product;
 
@@ -23,7 +24,8 @@ class HomeController extends Controller
         $feedbacks = Feedback::where('status_id', 1)->take(3)->get();
 
         $articles = Article::where('status_id', 1)->take(4)->get();
-        return view('home.home', compact('categories', 'sale_products', 'feedbacks', 'articles'));
+        $banners = Banner::where('status_id', 1)->get();
+        return view('home.home', compact('categories', 'sale_products', 'feedbacks', 'articles', 'banners'));
     }
 
     public function search(Request $request)
