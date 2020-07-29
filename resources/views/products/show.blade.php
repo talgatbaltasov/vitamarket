@@ -121,9 +121,6 @@
                                     <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Описание</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet" aria-selected="false">Характеристики</a>
-                                </li>
-                                <li>
                                 <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Отзывы ({{$product->feedbacks->count()}})</a>
                                 </li>
                             </ul>
@@ -131,52 +128,25 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="info" role="tabpanel">
                                 <div class="product_info_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-                                    <p>Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget.</p>
+                                    {!!$product->description!!}
                                 </div>    
                             </div>
-                            <div class="tab-pane fade" id="sheet" role="tabpanel">
-                                <div class="product_d_table">
-                                <form action="#">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="first_child">Compositions</td>
-                                                    <td>Polyester</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="first_child">Styles</td>
-                                                    <td>Girly</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="first_child">Properties</td>
-                                                    <td>Short Dress</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </form>
-                                </div>
-                                <div class="product_info_content">
-                                    <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
-                                </div>    
-                            </div>
-
                             <div class="tab-pane fade" id="reviews" role="tabpanel">
                                 <div class="reviews_wrapper">
-                                    <h2>1 review for Donec eu furniture</h2>
+                                    <h2>{{$product->feedbacks->count()}}</h2>
                                     <div class="reviews_comment_box">
                                         <div class="comment_thmb">
-                                            <img src="assets/img/blog/comment2.jpg" alt="">
+                                            <img src="/assets/img/blog/comment2.jpg" alt="">
                                         </div>
                                         <div class="comment_text">
                                             <div class="reviews_meta">
                                                 <div class="star_rating">
                                                     <ul>
                                                         <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
+                                                        <li><a href="#"><i class="icon-star"></i></a></li>
                                                     </ul>   
                                                 </div>
                                                 <p><strong>admin </strong>- September 12, 2018</p>
