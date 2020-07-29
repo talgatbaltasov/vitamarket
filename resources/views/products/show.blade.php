@@ -1267,8 +1267,8 @@
                     <div class="flexslider">
                         <ul class="slides">
                             @foreach($product->product_images as $image)
-                                <li data-thumb="/images{{$image->image}}">
-                                    <a href='#' id="zoom{{$image->id}}" class='zoom'><img src="/images{{$image->image}}" alt='' width='400' height='300' /></a>
+                                <li data-thumb="{{$image->image}}">
+                                    <a href='#' id="zoom{{$image->id}}" class='zoom'><img src="{{$image->image}}" alt='' width='400' height='300' /></a>
                                     <span>НОВИНКА</span>
                                 </li>
                             @endforeach
