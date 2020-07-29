@@ -23,7 +23,7 @@ class CategoryController extends Controller
 
         $viewed = Product::inRandomOrder()->take(20)->get();
 
-    	return view('categories.view', compact('category', 'categories', 'bestsellers', 'products', 'viewed'));
+    	return view('categories.show', compact('category', 'categories', 'bestsellers', 'products', 'viewed'));
     }
 
     public function brand($slug, $brand)
