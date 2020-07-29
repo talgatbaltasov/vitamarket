@@ -10,7 +10,7 @@
                 <div class="col-12">
                     <div class="breadcrumb_content">
                         <ul>
-                            <li><a href="/">главная</a></li>
+                            <li><a href="/">Главная</a></li>
                             <li>Детали товара</li>
                         </ul>
                     </div>
@@ -220,7 +220,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product3.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product3.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-6%</span>
                                     </div>
@@ -255,7 +255,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product4.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product4.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-5%</span>
                                     </div>
@@ -290,7 +290,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product5.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product5.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-8%</span>
                                     </div>
@@ -325,7 +325,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product6.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product6.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
@@ -360,7 +360,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product1.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product1.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-7%</span>
                                     </div>
@@ -395,7 +395,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product2.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product2.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
@@ -430,7 +430,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product3.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product3.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-6%</span>
                                     </div>
@@ -465,7 +465,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product4.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product4.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-5%</span>
                                     </div>
@@ -500,7 +500,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product5.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product5.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-8%</span>
                                     </div>
@@ -535,7 +535,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product6.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product6.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
@@ -570,7 +570,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product1.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product1.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-7%</span>
                                     </div>
@@ -605,7 +605,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product2.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product2.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
@@ -640,7 +640,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product3.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product3.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-6%</span>
                                     </div>
@@ -675,7 +675,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product4.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product4.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-5%</span>
                                     </div>
@@ -733,7 +733,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product9.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product9.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-8%</span>
                                     </div>
@@ -768,7 +768,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product10.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product10.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
@@ -803,7 +803,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product1.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product1.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-7%</span>
                                     </div>
@@ -838,7 +838,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product2.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product2.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
@@ -873,7 +873,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product7.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product7.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-4%</span>
                                     </div>
@@ -908,7 +908,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product8.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product8.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-6%</span>
                                     </div>
@@ -943,7 +943,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product9.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product9.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-8%</span>
                                     </div>
@@ -978,7 +978,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product10.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product10.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
@@ -1013,7 +1013,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product1.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product1.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-7%</span>
                                     </div>
@@ -1048,7 +1048,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product2.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product2.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
@@ -1083,7 +1083,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product7.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product7.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-4%</span>
                                     </div>
@@ -1118,7 +1118,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product8.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product8.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-6%</span>
                                     </div>
@@ -1153,7 +1153,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product9.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product9.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-8%</span>
                                     </div>
@@ -1188,7 +1188,7 @@
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product10.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="/assets/img/product/product10.jpg" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">-9%</span>
                                     </div>
