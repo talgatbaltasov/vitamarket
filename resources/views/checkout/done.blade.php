@@ -43,7 +43,7 @@
                             @php $total = 0; @endphp
                             @foreach($order->items as $item)
                                 @php $total += $item->price * $item->quantity; @endphp
-                                <li>{{$item->product->title}}: {{$item->price * $item->quantity}} тг.</li>
+                                <li>{{$item->product->name}}: {{$item->price * $item->quantity}} тг.</li>
                             @endforeach
                             <li>Общее: {{$total}} тг.</li>
                         </ul> 
