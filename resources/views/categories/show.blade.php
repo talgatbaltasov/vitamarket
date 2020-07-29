@@ -133,15 +133,6 @@
 
                     <div class="shop_toolbar t_bottom">
                         {{$products->links()}}
-                        <div class="pagination">
-                            <ul>
-                                <li class="current">1</li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li class="next"><a href="#">next</a></li>
-                                <li><a href="#">&gt;&gt;</a></li>
-                            </ul>
-                        </div>
                     </div>
                     <!--shop toolbar end-->
                     <!--shop wrapper end-->
