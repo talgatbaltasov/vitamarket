@@ -132,6 +132,7 @@
                     </div>
 
                     <div class="shop_toolbar t_bottom">
+                        {{$products->links()}}
                         <div class="pagination">
                             <ul>
                                 <li class="current">1</li>
