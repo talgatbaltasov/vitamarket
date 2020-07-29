@@ -12,6 +12,6 @@ class ProductController extends Controller
     {
         $product = Product::where('slug', $slug)->first();
         $viewed = Product::inRandomOrder()->take(20)->get();
-    	return view('products.view', compact('product', 'viewed'));
+    	return view('products.show', compact('product', 'viewed'));
     }
 }
