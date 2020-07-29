@@ -42,8 +42,7 @@ Route::post('/cart/decrementCartItem', 'CartController@decrementCartItem');
 
 Route::get('/checkout', 'CheckoutController@index');
 Route::post('/checkout', 'CheckoutController@store');
-Route::get('/checkout/done', 'CheckoutController@getDone');
-Route::get('/checkout/cancel', 'CheckoutController@getCancel');
+Route::get('/thank-you', 'CheckoutController@thankYou');
 
 Route::get('/p/{slug}', 'ProductController@show');
 Route::get('/c/{slug}/{brand}', 'CategoryController@brand');
