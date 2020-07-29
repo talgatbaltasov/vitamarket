@@ -21,7 +21,7 @@
     </div>
     <!--breadcrumbs area end-->
     <!--contact area start-->
-    <div class="contact_area">
+    <div class="contact_area mt-100">
         <div class="container">   
             <div class="row">
                 <div class="col-lg-6 col-md-12">
