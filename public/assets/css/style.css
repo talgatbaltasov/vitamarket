@@ -6031,7 +6031,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #79a206;
   height: 42px;
   line-height: 42px;
-  text-transform: capitalize;
   min-width: 270px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

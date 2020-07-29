@@ -69,7 +69,7 @@
                                     <li><a href="#"><i class="icon-star"></i></a></li>
                                     <li><a href="#"><i class="icon-star"></i></a></li>
                                     <li><a href="#"><i class="icon-star"></i></a></li>
-                                    <li class="review"><a href="#"> (отзывы клиентовs) </a></li>
+                                    <li class="review"><a href="#"> (отзывы клиентов) </a></li>
                                 </ul>
                             </div>
                             <div class="price_box">
