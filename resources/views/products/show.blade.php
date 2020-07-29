@@ -32,7 +32,16 @@
                         </div>
                         <div class="single-zoom-thumb">
                             <ul class="s-tab-zoom owl-carousel single-product-active owl-loaded owl-drag" id="gallery_01">
-                                <div class="owl-stage-outer">
+                                @foreach($product->product_images as $image)
+                                    <div>
+                                        <li>
+                                            <a href="#" class="elevatezoom-gallery active" data-update="" data-image="{{$image->image}}" data-zoom-image="{{$image->image}}">
+                                                <img src="{{$image->image}}" alt="zo-th-1">
+                                            </a>
+                                        </li>
+                                    </div>
+                                @endforeach
+                                {{-- <div class="owl-stage-outer">
                                     <div class="owl-stage" style="transform: translate3d(-471px, 0px, 0px); transition: 0s; width: 1413px;">
                                         @foreach($product->product_images as $image)
                                             <div class="owl-item cloned" style="width: 102.75px; margin-right: 15px;">
@@ -53,7 +62,7 @@
                                         <i class="fa fa-angle-right"></i>
                                     </div>
                                 </div>
-                                <div class="owl-dots disabled"></div>
+                                <div class="owl-dots disabled"></div> --}}
                             </ul>
                         </div>
                     </div>
