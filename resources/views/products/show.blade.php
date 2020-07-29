@@ -118,13 +118,13 @@
                         <div class="product_info_button">    
                             <ul class="nav" role="tablist">
                                 <li>
-                                    <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Description</a>
+                                    <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Описание</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet" aria-selected="false">Specification</a>
+                                    <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet" aria-selected="false">Характеристики</a>
                                 </li>
                                 <li>
-                                <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews (1)</a>
+                                <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Отзывы ({{$product->feedbacks->count()}})</a>
                                 </li>
                             </ul>
                         </div>

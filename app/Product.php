@@ -19,6 +19,11 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function feedbacks()
+    {
+        return $this->hasMany(Feedback::class);
+    }
     
     public function main_image()
     {
