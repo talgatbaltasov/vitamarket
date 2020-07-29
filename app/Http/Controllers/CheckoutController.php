@@ -87,7 +87,7 @@ class CheckoutController extends Controller
             [],
             [],
             function ($message) {
-                $message->from('talgat.baltasov@gmail.com')->to('talgat.baltasov@gmail.com')
+                $message->from('kzvitamarket@gmail.com')->to('dulat-serikov@mail.ru')
                     ->subject('Новый заказ на сайте Vitamarket.kz')
                     ->setBody('<h1>Ассалямуалейкум. Пришел новый заказ!</h1>', 'text/html');
             }
