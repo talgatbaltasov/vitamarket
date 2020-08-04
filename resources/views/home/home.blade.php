@@ -161,7 +161,7 @@
                                                                         <li><a href="#"><i class="icon-star"></i></a></li>
                                                                     </ul>
                                                                 </div>
-                                                                <h4 class="product_name"><a href="/p/{{$p->slug}}">{{$product->name}}</a></h4>
+                                                                <h4 class="product_name"><a href="/p/{{$product->slug}}">{{$product->name}}</a></h4>
                                                                 <div class="price_box">
                                                                     @if($product->sale_price > 0) 
                                                                         <span class="current_price">{{$product->sale_price}} тг.</span>

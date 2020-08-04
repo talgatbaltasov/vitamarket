@@ -37,6 +37,10 @@
 
 </head>
 <body>
+
+    <a href="https://api.whatsapp.com/send?phone=77001030110" style="position: fixed; z-index: 999; bottom: 50px; right: 15px;">
+        <img src="/assets/img/icon/whatsapp.png" alt="">
+    </a>
     <!--header area start-->
     
     <!--offcanvas menu area start-->
