@@ -38,7 +38,7 @@
 </head>
 <body>
 
-    <a href="https://api.whatsapp.com/send?phone=77001030110" style="position: fixed; z-index: 999; bottom: 50px; right: 15px;">
+    <a href="https://api.whatsapp.com/send?phone=77001030110" style="position: fixed; z-index: 999; bottom: 35px; right: 15px;">
         <img src="/assets/img/icon/whatsapp.png" alt="" width="50">
     </a>
     <!--header area start-->
