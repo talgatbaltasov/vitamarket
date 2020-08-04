@@ -75,11 +75,11 @@
                 <div class="col-lg-6 col-md-6">
                     <figure class="single_banner">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="/assets/img/bg/banner1.jpg" alt=""></a> 
+                            <a href="/c/vitaminy-iherb"><img src="/assets/img/bg/banner1.jpg" alt=""></a> 
                             <div class="banner_content">
                                 <h3>Товары со скидкой</h3>
                                 <h2>Plants <br> For Interior</h2>
-                                <a href="shop.html">Посмотреть</a>
+                                <a href="/c/vitaminy-iherb">Посмотреть</a>
                             </div>
                         </div>
                     </figure>
@@ -87,11 +87,11 @@
                 <div class="col-lg-6 col-md-6">
                     <figure class="single_banner">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="/assets/img/bg/banner2.jpg" alt=""></a> 
+                            <a href="/c/tovary-vostochnoi-islamskoi-mediciny"><img src="/assets/img/bg/banner2.jpg" alt=""></a> 
                             <div class="banner_content">
                                 <h3>Популярные товары</h3>
                                 <h2>Plants <br> For Healthy</h2>
-                                <a href="shop.html">Посмотреть</a>
+                                <a href="/c/tovary-vostochnoi-islamskoi-mediciny">Посмотреть</a>
                             </div>
                         </div>
                     </figure>
@@ -161,7 +161,7 @@
                                                                         <li><a href="#"><i class="icon-star"></i></a></li>
                                                                     </ul>
                                                                 </div>
-                                                                <h4 class="product_name"><a href="product-details.html">{{$product->name}}</a></h4>
+                                                                <h4 class="product_name"><a href="/p/{{$p->slug}}">{{$product->name}}</a></h4>
                                                                 <div class="price_box">
                                                                     @if($product->sale_price > 0) 
                                                                         <span class="current_price">{{$product->sale_price}} тг.</span>

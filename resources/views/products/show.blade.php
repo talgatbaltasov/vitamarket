@@ -225,7 +225,7 @@
                                 <article class="single_product">
                                     <figure>
                                         <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html">
+                                            <a class="primary_img" href="/p/{{$p->slug}}">
                                                 <img src="{{$p->main_image->image}}" alt="">
                                             </a>
                                             @if($p->sale_price != null)
