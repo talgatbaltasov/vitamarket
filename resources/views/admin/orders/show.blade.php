@@ -31,7 +31,7 @@
                     </tr>
                 @endforeach
                 <tr>
-                    <td colspan="4">Итого:</td>
+                    <td colspan="4" class="text-right">Итого:</td>
                     <td>{{$total}} тг.</td>
                 </tr>
             </table>
