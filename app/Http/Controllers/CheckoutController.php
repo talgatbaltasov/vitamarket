@@ -84,14 +84,13 @@ class CheckoutController extends Controller
         $order_items = OrderItem::where('order_id', $order->id)->get();
 
         Mail::send(
-            [],
-            [],
+            'emails.admin.orders.new',
+            $order,
             function ($message) {
                 $message->from('kzvitamarket@gmail.com')
                     ->to('dulat-serikov@mail.ru')
                     ->bcc('talgat.baltasov@gmail.com')
-                    ->subject('Новый заказ на сайте Vitamarket.kz')
-                    ->setBody('<h1>Ассалямуалейкум. Пришел новый заказ!</h1>', 'text/html');
+                    ->subject('Новый заказ на сайте Vitamarket.kz');
             }
         );
         //$request->session()->forget('cart');
