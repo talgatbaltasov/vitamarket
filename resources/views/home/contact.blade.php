@@ -36,7 +36,7 @@
                         <h3>Наши контакты</h3>    
                         <ul>
                             <li><i class="fa fa-fax"></i>  Адрес : г Алматы, ул. Абая, 143</li>
-                            <li><i class="fa fa-phone"></i> <a href="#">dulat-serikov@mail.ru</a></li>
+                            <li><i class="fa fa-phone"></i> <a href="#">kzvitamarket@gmail.com</a></li>
                             <li><i class="fa fa-envelope-o"></i><a href="tel:+77078079777">+7 (707) 807-97-77</a></li>
                         </ul>             
                     </div> 

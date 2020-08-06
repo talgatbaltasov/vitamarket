@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="offcanvas_footer">
-                            <span><a href="#"><i class="fa fa-envelope-o"></i> dulat-serikov@mail.ru</a></span>
+                            <span><a href="#"><i class="fa fa-envelope-o"></i> kzvitamarket@gmail.com</a></span>
                             <ul>
                                 <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>

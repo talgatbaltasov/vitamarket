@@ -88,7 +88,7 @@ class CheckoutController extends Controller
             ['order' => $order],
             function ($message) {
                 $message->from('kzvitamarket@gmail.com')
-                    ->to('dulat-serikov@mail.ru')
+                    ->to('kzvitamarket@gmail.com')
                     ->bcc('talgat.baltasov@gmail.com')
                     ->subject('Новый заказ на сайте Vitamarket.kz');
             }

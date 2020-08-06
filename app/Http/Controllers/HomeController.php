@@ -62,7 +62,7 @@ class HomeController extends Controller
             [],
             function ($message) use($request) {
                 $message->from('kzvitamarket@gmail.com')
-                    ->to('dulat-serikov@mail.ru')
+                    ->to('kzvitamarket@gmail.com')
                     ->bcc('talgat.baltasov@gmail.com')
                     ->subject('Контакт: '.$request->subject)
                     ->setBody('Имя: '.$request->name.'<br>'.
