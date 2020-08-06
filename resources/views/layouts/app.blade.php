@@ -129,7 +129,7 @@
                                     </div>
                                     <div class="header_account-list header_wishlist">
                                         <a href="https://instagram.com/vitamarket.almaty" target="_blank">
-                                            <img src="/assets/img/icon/instagram.png" width="25" alt="">
+                                            <img src="/assets/img/icon/instagram.png" width="20" alt="">
                                         </a>
                                     </div>
                                     <div class="header_account-list  mini_cart_wrapper">
