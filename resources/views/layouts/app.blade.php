@@ -331,7 +331,7 @@
                            </div>
                             <div class="footer_social">
                                 <a href="https://instagram.com/vitamarket.almaty">
-                                    <img src="/assets/img/icon/instagram.jpg" alt="" width="15">
+                                    <img src="/assets/img/icon/instagram.png" alt="" width="50">
                                 </a>
                             </div>
                         </div>
