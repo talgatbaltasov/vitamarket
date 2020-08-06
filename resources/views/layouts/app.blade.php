@@ -247,7 +247,7 @@
                                         @endforeach
                                     </ul>
                                 </div>
-                                <div class="search_container mt-3">
+                                <div class="search_container search_container_mobile mt-3">
                                     <form action="#">
                                          <div class="hover_category">
                                              <select class="select_option" name="select" id="categori2">
