@@ -19,7 +19,7 @@ class HomeController extends Controller
         $sale_products = Product::where('status_id', 1)
                             ->whereNotNull('sale_price')
                             ->where('sale_end_at', '>', Carbon::now())
-                            ->orderBy('order')
+                            ->inRandomOrder()
                             ->get();
 
         $feedbacks = Feedback::where('status_id', 1)->take(3)->get();
