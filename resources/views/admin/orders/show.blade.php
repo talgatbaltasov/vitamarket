@@ -24,7 +24,7 @@
                     @endphp
                     <tr>
                         <td>{{$item->id}}</td>
-                        <td>{{$item->product->name}}</td>
+                        <td><a href="/p/{{$item->product->slug}}">{{$item->product->name}}</a></td>
                         <td>{{$item->quantity}}</td>
                         <td>{{$item->price}} тг.</td>
                         <td>{{$item->quantity * $item->price}} тг.</td>

@@ -20,7 +20,7 @@
                 <tbody>
                     @foreach($orders as $order)
                     <tr>
-                        <td>{{$order->id}}</td>
+                        <td><a href="/admin/orders/{{$order->id}}">{{$order->id}}</a></td>
                         <td>{{$order->user->full_name}}</td>
                         <td>{{$order->order_status->name}}</td>
                         <td>{{$order->created_at}}</td>
