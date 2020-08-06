@@ -71,16 +71,6 @@
                     <div class="product_d_right">
                         <form action="#">
                             <h1><a href="#">{{$product->name}}</a></h1>
-                            <div class=" product_ratting">
-                                <ul>
-                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                    <li class="review"><a href="#"> (отзывы клиентов) </a></li>
-                                </ul>
-                            </div>
                             <div class="price_box">
                                 @if($product->sale_price != null)
                                     <span class="current_price">{{$product->sale_price}} тг.</span>
@@ -167,16 +157,6 @@
                                     <div class="comment_title">
                                         <h2>Add a review </h2>
                                         <p>Your email address will not be published.  Required fields are marked </p>
-                                    </div>
-                                    <div class="product_ratting mb-10">
-                                    <h3>Your rating</h3>
-                                        <ul>
-                                            <li><a href="#"><i class="icon-star"></i></a></li>
-                                            <li><a href="#"><i class="icon-star"></i></a></li>
-                                            <li><a href="#"><i class="icon-star"></i></a></li>
-                                            <li><a href="#"><i class="icon-star"></i></a></li>
-                                            <li><a href="#"><i class="icon-star"></i></a></li>
-                                        </ul>
                                     </div>
                                     <div class="product_review_form">
                                         <form action="#">
