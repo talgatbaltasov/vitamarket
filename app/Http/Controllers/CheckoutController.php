@@ -85,7 +85,7 @@ class CheckoutController extends Controller
 
         Mail::send(
             'emails.admin.orders.new',
-            $order,
+            ['order' => $order],
             function ($message) {
                 $message->from('kzvitamarket@gmail.com')
                     ->to('dulat-serikov@mail.ru')
