@@ -85,7 +85,7 @@
                             <div class="product_variant quantity">
                                 <label>Количество</label>
                                 <input min="1" max="100" value="1" type="number">
-                                <button class="button" onclick="addToCart(this, {{$product->id}})">Добавить в корзину</button>  
+                                <button class="button" type="button" onclick="addToCart(this, {{$product->id}})">Добавить в корзину</button>  
                             </div>
                             <div class="product_meta">
                                 <span>Категория: <a href="#">{{$product->category->name}}</a></span>
