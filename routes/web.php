@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/payments-delivery', 'HomeController@paymentsDelivery');
 Route::get('/service-center', 'HomeController@serviceCenter');
 Route::get('/contacts', 'HomeController@contact');
-Route::post('/contact', 'HomeController@postContact');
+Route::post('/contacts', 'HomeController@postContact');
 Route::get('/faq', 'HomeController@faq');
 // Route::get('/search', 'HomeController@search');
 

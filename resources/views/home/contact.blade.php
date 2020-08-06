@@ -44,7 +44,7 @@
                 <div class="col-lg-6 col-md-12">
                 <div class="contact_message form">
                         <h3>Задайте ваш вопрос</h3>
-                        {!!Form::open(['url' => '/contact', 'id' => 'contact-form'])!!}
+                        {!!Form::open(['url' => '/contacts', 'id' => 'contact-form'])!!}
                             <p>
                                 {{Form::label('name', 'Имя и фамилия')}}
                                 {{Form::text('name', null)}}

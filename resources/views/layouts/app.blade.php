@@ -317,7 +317,7 @@
                             <div class="footer_menu">
                                 <ul>
                                     <li><a href="/checkout">Оформить заказ</a></li>
-                                    <li><a href="/contact">Контакты</a></li>
+                                    <li><a href="/contacts">Контакты</a></li>
                                     <li><a href="/payments-delivery">Доставка и оплата</a></li>
                                     <li><a href="/faq">Вопросы и ответы</a></li>
                                 </ul>
@@ -341,7 +341,7 @@
                             <h3>Заказ</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="/contact">Контакты</a></li>
+                                    <li><a href="/contacts">Контакты</a></li>
                                     <li><a href="/cart">Корзина</a></li>
                                     <li><a href="/checkout">Оформить заказ</a></li>
                                 </ul>
@@ -353,7 +353,7 @@
                             <h3>Служба поддержки</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="/contact">Контакты</a></li>
+                                    <li><a href="/contacts">Контакты</a></li>
                                 </ul>
                             </div>
                         </div>
