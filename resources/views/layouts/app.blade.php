@@ -179,9 +179,9 @@
                                         <!--mini cart end-->
                                    </div>
                                 </div>
-                                <div class="header_mobile_number">
-                                    <a href="tel:+77078079777">+7 (707) 807-97-77</a>
-                                </div>
+                            </div>
+                            <div class="header_mobile_number">
+                                <a href="tel:+77078079777">+7 (707) 807-97-77</a>
                             </div>
                         </div>
                     </div>
