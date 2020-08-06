@@ -5,11 +5,6 @@
     <div class="card">
         <div class="card-header">
             Заказы
-            <ul class="nav float-right">
-                <li class="nav-item">
-                    <a href="/admin/orders/create" class="btn btn-primary">Добавить</a>
-                </li>
-            </ul>
         </div>
         <div class="card-body">
             <table class="table table-striped">
