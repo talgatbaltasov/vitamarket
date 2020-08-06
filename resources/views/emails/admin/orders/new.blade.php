@@ -1,5 +1,5 @@
 <h1>Детали заказа</h1>
-Новый заказ: <a href="{{env('APP_URL').'/admin/orders/'.$order->id}}">#{{$order->id}}s</a>
+Новый заказ: <a href="{{env('APP_URL').'/admin/orders/'.$order->id}}">#{{$order->id}}</a>
 <table>
     <tr>
         <td>Товар</td>

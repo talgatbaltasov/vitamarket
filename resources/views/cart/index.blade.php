@@ -65,16 +65,6 @@
                 <div class="coupon_area">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
-                            <div class="coupon_code left">
-                                <h3>Купон</h3>
-                                <div class="coupon_inner">   
-                                    <p>Введите купонный код если у вас есть.</p>                                
-                                    <input placeholder="Купонный код" type="text">
-                                    <button type="submit">Использовать код</button>
-                                </div>    
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
                             <div class="coupon_code right">
                                 <h3>Общее</h3>
                                 <div class="coupon_inner">
