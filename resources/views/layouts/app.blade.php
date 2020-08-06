@@ -123,10 +123,14 @@
                                 </div>
                                 <div class="header_account_area">
                                     <div class="header_account-list top_links">
-                                        <a href="https://wa.me/77078079777?text={{urlencode('Здравствуйте. Я заинтересован в покупке с вашего интернет-магазина')}}" target="_blank"><i class="icon-message-circle"></i></a>
+                                        <a href="https://wa.me/77078079777?text={{urlencode('Здравствуйте. Я заинтересован в покупке с вашего интернет-магазина')}}" target="_blank">
+                                            <img src="/assets/img/icon/whatsapp.png" width="40" alt="">
+                                        </a>
                                     </div>
                                     <div class="header_account-list header_wishlist">
-                                        <a href="https://instagram.com/vitamarket.almaty" target="_blank"><i class="icon-instagram"></i></a>
+                                        <a href="https://instagram.com/vitamarket.almaty" target="_blank">
+                                            <img src="/assets/img/icon/instagram.png" width="40" alt="">
+                                        </a>
                                     </div>
                                     <div class="header_account-list  mini_cart_wrapper">
                                        <a href="javascript:void(0)"><i class="icon-shopping-bag"></i><span class="item_count">@if(isset($cart->items)) {{$cart->totalQty}} @else 0 @endif</span></a>
