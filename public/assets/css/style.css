@@ -1180,6 +1180,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .search_container {
   margin-right: 138px;
 }
+.search_container_mobile {
+  display: none;
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .search_container {
     margin-right: 40px;
