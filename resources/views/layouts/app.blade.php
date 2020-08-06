@@ -60,23 +60,7 @@
                             <a href="javascript:void(0)"><i class="icon-x"></i></a>  
                         </div>
                         <div class="welcome-text">
-                           <p>Free Delivery: Take advantage of our time to save event</p>
-                       </div>
-                        <div class="search_container">
-                           <form action="#">
-                                <div class="hover_category">
-                                    <select class="select_option" name="select" id="categori2">
-                                        <option selected value="0">Все категории</option>
-                                        @foreach($categories as $category)
-                                            <option value="{{$category->id}}">{{$category->name}}</option>
-                                        @endforeach
-                                    </select>                        
-                                </div>
-                                <div class="search_box">
-                                    <input placeholder="Поиск..." type="text">
-                                     <button type="submit"><i class="icon-search"></i></button>
-                                </div>
-                            </form>
+                            <p>Free Delivery: Take advantage of our time to save event</p>
                         </div>
                         <div class="call-support">
                             <p>Наш телефон: <a href="tel:+77078079777">+7 (707) 807-97-77</a></p>
@@ -263,6 +247,22 @@
                                         @endforeach
                                     </ul>
                                 </div>
+                                <div class="search_container">
+                                    <form action="#">
+                                         <div class="hover_category">
+                                             <select class="select_option" name="select" id="categori2">
+                                                 <option selected value="0">Все категории</option>
+                                                 @foreach($categories as $category)
+                                                     <option value="{{$category->id}}">{{$category->name}}</option>
+                                                 @endforeach
+                                             </select>                        
+                                         </div>
+                                         <div class="search_box">
+                                             <input placeholder="Поиск..." type="text">
+                                              <button type="submit"><i class="icon-search"></i></button>
+                                         </div>
+                                     </form>
+                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
