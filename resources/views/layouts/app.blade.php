@@ -79,7 +79,7 @@
                             </form>
                         </div>
                         <div class="call-support">
-                            <p>Наш телефон: <a href="tel:+77001030110">+7 (700) 103-01-10</a></p>
+                            <p>Наш телефон: <a href="tel:+77078079777">+7 (707) 807-97-77</a></p>
                         </div>
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="header_account_area">
                                     <div class="header_account-list top_links">
-                                        <a href="https://wa.me/77001030110?text={{urlencode('Здравствуйте. Я заинтересован в покупке с вашего интернет-магазина')}}" target="_blank"><i class="icon-message-circle"></i></a>
+                                        <a href="https://wa.me/77078079777?text={{urlencode('Здравствуйте. Я заинтересован в покупке с вашего интернет-магазина')}}" target="_blank"><i class="icon-message-circle"></i></a>
                                     </div>
                                     <div class="header_account-list header_wishlist">
                                         <a href="https://instagram.com/vitamarket.almaty" target="_blank"><i class="icon-instagram"></i></a>
@@ -286,7 +286,7 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="call-support">
-                                <p>Наш телефон: <a href="tel:+77001030110">+7 (700) 103-01-10</a></p>
+                                <p>Наш телефон: <a href="tel:+77078079777">+7 (707) 807-97-77</a></p>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', (($category->parent) ? $category->parent->name.' ' : '').$category->name.' → купить в Алматы и Астане в интернет-магазине "Vitamarket" | цены, отзывы, доставка')
-@section('description', '★ Vitamarket ★ '.$category->name.' -  низкие цены и удобный выбор в интернет-магазине ➤ Круглосуточно 24/7 ☎ +7 700 103 01 10')
+@section('description', '★ Vitamarket ★ '.$category->name.' -  низкие цены и удобный выбор в интернет-магазине ➤ Круглосуточно 24/7 ☎ +7 707 807 97 77')
 
 @section('content')
     <!--breadcrumbs area start-->

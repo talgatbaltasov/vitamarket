@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Mail;
 use App\Article;
 use App\Category;
 use App\Banner;
@@ -56,16 +57,19 @@ class HomeController extends Controller
 
     public function postContact(Request $request)
     {
-        $to      = 'talgat.baltasov@gmail.com';
-        $subject = $request->subject;
-        $message = 'Имя: '.$request->name.'<br>';
-        $message .= 'Email: '.$request->email.'<br>';
-        $message .= $request->comment;
-        $headers = 'From: '.$request->email."\r\n" .
-            'Reply-To: webmaster@example.com' . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
-
-        mail($to, $subject, $message, $headers);
+        Mail::send(
+            [],
+            [],
+            function ($message) use($request) {
+                $message->from('kzvitamarket@gmail.com')
+                    ->to('dulat-serikov@mail.ru')
+                    ->bcc('talgat.baltasov@gmail.com')
+                    ->subject('Контакт: '.$request->subject)
+                    ->setBody('Имя: '.$request->name.'<br>'.
+                            'Email: '.$request->email.'<br>'. 
+                            $request->comment, 'text/html');
+            }
+        );
         return redirect('/');
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Контакты')
-@section('description', '★ Интернет-магазин Vitamarket ★ Широкий выбор товаров ✔ Удобная оплата ✔ Продукция с гарантией и доставкой в интернет-магазине витамин и БАД ➤ Круглосуточно 24/7 ☎ +7 700 103 01 10')
+@section('description', '★ Интернет-магазин Vitamarket ★ Широкий выбор товаров ✔ Удобная оплата ✔ Продукция с гарантией и доставкой в интернет-магазине витамин и БАД ➤ Круглосуточно 24/7 ☎ +7 707 807 97 77')
 
 @section('content')
     <div class="breadcrumbs_area">
@@ -37,7 +37,7 @@
                         <ul>
                             <li><i class="fa fa-fax"></i>  Адрес : г Алматы, ул. Абая, 143</li>
                             <li><i class="fa fa-phone"></i> <a href="#">dulat-serikov@mail.ru</a></li>
-                            <li><i class="fa fa-envelope-o"></i><a href="tel:+77001030110">+7 (700) 103-01-10</a></li>
+                            <li><i class="fa fa-envelope-o"></i><a href="tel:+77078079777">+7 (707) 807-97-77</a></li>
                         </ul>             
                     </div> 
                 </div>
