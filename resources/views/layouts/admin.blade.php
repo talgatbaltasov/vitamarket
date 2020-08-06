@@ -62,6 +62,9 @@
                                     <a class="nav-link" href="/admin/brands">Бренды</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="/admin/orders">Заказы</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="/admin/feedbacks">Отзывы</a>
                                 </li>
                                 <li class="nav-item">

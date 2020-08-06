@@ -18,6 +18,11 @@ class Order extends Model
         return $this->hasMany(OrderItem::class);
     }
 
+    public function order_status()
+    {
+        return $this->belongsTo(OrderStatus::class);
+    }
+
     public function shipping_type()
     {
         return $this->belongsTo(ShippingType::class);

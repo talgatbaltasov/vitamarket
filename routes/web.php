@@ -58,6 +58,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function(){
     Route::resource('/banners', 'Admin\BannerController', ['as' => 'admin']);
     Route::resource('/brands', 'Admin\BrandController', ['as' => 'admin']);
     Route::resource('/feedbacks', 'Admin\FeedbackController', ['as' => 'admin']);
+    Route::resource('/orders', 'Admin\OrderController', ['as' => 'admin']);
     Route::resource('/products', 'Admin\ProductController', ['as' => 'admin']);
     Route::resource('/product_images', 'Admin\ProductImageController', ['as' => 'admin']);
 });
