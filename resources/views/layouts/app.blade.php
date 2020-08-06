@@ -124,12 +124,12 @@
                                 <div class="header_account_area">
                                     <div class="header_account-list top_links">
                                         <a href="https://wa.me/77078079777?text={{urlencode('Здравствуйте. Я заинтересован в покупке с вашего интернет-магазина')}}" target="_blank">
-                                            <img src="/assets/img/icon/whatsapp.png" width="40" alt="">
+                                            <img src="/assets/img/icon/whatsapp.png" width="25" alt="">
                                         </a>
                                     </div>
                                     <div class="header_account-list header_wishlist">
                                         <a href="https://instagram.com/vitamarket.almaty" target="_blank">
-                                            <img src="/assets/img/icon/instagram.png" width="40" alt="">
+                                            <img src="/assets/img/icon/instagram.png" width="25" alt="">
                                         </a>
                                     </div>
                                     <div class="header_account-list  mini_cart_wrapper">
