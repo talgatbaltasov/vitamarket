@@ -180,7 +180,7 @@
                                    </div>
                                 </div>
                             </div>
-                            <div class="header_mobile_number">
+                            <div class="header_mobile_number text-right">
                                 <a href="tel:+77078079777">+7 (707) 807-97-77</a>
                             </div>
                         </div>
