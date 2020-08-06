@@ -64,7 +64,7 @@
                                 {{Form::label('comment', 'Комментарии к заказу')}}
                                 {{Form::text('comment', null, ['class' => 'form-control'])}}
                             </div>
-                            <button class="btn btn-success">Добавить</button>
+                            <button class="btn btn-success">Оформить заказ</button>
                         {!!Form::close()!!}
                     </div>
                     <div class="col-lg-6 col-md-6">
