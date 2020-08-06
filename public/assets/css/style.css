@@ -1556,6 +1556,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /*mini cart css here*/
 .mini_cart_wrapper {
   position: relative;
+  padding-top: 3px;
 }
 .mini_cart_wrapper span.item_count {
   position: absolute;
