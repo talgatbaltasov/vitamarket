@@ -77,15 +77,6 @@
                                         </div>
                                         <div class="product_content grid_content">
                                             <div class="product_price_rating">
-                                                <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                </ul>
-                                                </div>
                                                 <h4 class="product_name"><a href="/p/{{$product->slug}}">{{$product->name}}</a></h4>
                                                 <div class="price_box">
                                                     @if($product->sale_price != null)
@@ -98,15 +89,6 @@
                                             </div>
                                         </div>
                                         <div class="product_content list_content">
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                </ul>
-                                            </div>
                                             <h4 class="product_name"><a href="/p/{{$product->slug}}">{{$product->name}}</a></h4>
                                             <div class="price_box"> 
                                                 @if($product->sale_price != null)
