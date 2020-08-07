@@ -3503,10 +3503,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .product_carousel:hover .owl-nav div {
   opacity: 1;
   visibility: visible;
-  left: 0;
+  left: 15px;
 }
 .product_carousel:hover .owl-nav div.owl-next {
-  right: 0;
+  right: 15px;
 }
 .product_carousel .owl-nav.disabled {
   display: block;
