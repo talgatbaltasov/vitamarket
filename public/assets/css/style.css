@@ -743,6 +743,18 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-align: center;
   border: 1px solid #222222;
 }
+.canvas_open a::before {
+  content: "\e907";
+  font-family: 'plaza-icon';
+  color: #222222;
+  display: inline-block;
+  position: absolute;
+  font-size: 22px;
+  line-height: 0px;
+  left: 0;
+  top: 50%;
+  transform: translatey(-50%);
+}
 @media only screen and (max-width: 767px) {
   .canvas_open a {
     width: 32px;

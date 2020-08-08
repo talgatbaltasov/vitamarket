@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="canvas_open">
-                        <a href="javascript:void(0)"><i class="icon-menu"></i></a>
+                        <a href="javascript:void(0)"></a>
                     </div>
                     <div class="offcanvas_menu_wrapper">
                         <div class="canvas_close">
