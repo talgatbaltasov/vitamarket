@@ -25,44 +25,22 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="product-details-tab">
-                        <div id="img-1" class="zoomWrapper single-zoom">
+                        <div id="img-1">
                             <a href="#">
-                                <img id="zoom1" src="{{$product->main_image->image}}" data-zoom-image="{{$product->main_image->image}}" alt="big-1">
+                                <img src="{{$product->main_image->image}}" alt="big-1">
                             </a>
                         </div>
-                        <div class="single-zoom-thumb">
-                            <ul class="s-tab-zoom owl-carousel single-product-active owl-loaded owl-drag" id="gallery_01">
+                        <div>
+                            <ul class="owl-carousel single-product-active owl-loaded owl-drag" id="gallery_01">
                                 @foreach($product->product_images as $image)
                                     <div>
                                         <li>
-                                            <a href="#" class="elevatezoom-gallery active" data-update="" data-image="{{$image->image}}" data-zoom-image="{{$image->image}}">
+                                            <a href="#" class="active">
                                                 <img src="{{$image->image}}" alt="zo-th-1">
                                             </a>
                                         </li>
                                     </div>
                                 @endforeach
-                                {{-- <div class="owl-stage-outer">
-                                    <div class="owl-stage" style="transform: translate3d(-471px, 0px, 0px); transition: 0s; width: 1413px;">
-                                        @foreach($product->product_images as $image)
-                                            <div class="owl-item cloned" style="width: 102.75px; margin-right: 15px;">
-                                                <li>
-                                                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="{{$image->image}}" data-zoom-image="{{$image->image}}">
-                                                        <img src="{{$image->image}}" alt="zo-th-1">
-                                                    </a>
-                                                </li>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <div class="owl-nav disabled">
-                                    <div class="owl-prev">
-                                        <i class="fa fa-angle-left"></i>
-                                    </div>
-                                    <div class="owl-next">
-                                        <i class="fa fa-angle-right"></i>
-                                    </div>
-                                </div>
-                                <div class="owl-dots disabled"></div> --}}
                             </ul>
                         </div>
                     </div>
