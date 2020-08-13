@@ -102,7 +102,7 @@
                                    <form action="#">
                                        <div class="hover_category">
                                             <select class="select_option" name="select" id="categori1">
-                                                <option selected value="0">Все категории</option>
+                                                <option value="0">Все категории</option>
                                                 @foreach($categories as $category)
                                                     <option value="{{$category->slug}}">{{$category->name}}</option>
                                                 @endforeach
@@ -406,12 +406,12 @@
         }
 
         $(document).ready(function(){
-            $('.search_container select').on('change', function(){
-                console.log($('.search_container select option:selected').val())
-                if($('.search_container select option:selected').val() === 0) {
+            $('.search_container .select_option').on('change', function(){
+                console.log($('.search_container .select_option option:selected').val())
+                if($('.search_container .select_option option:selected').val() === 0) {
                     window.location.href = '/';
                 } else {
-                    window.location.href = '/c/' + $('.search_container select option:selected').val();
+                    window.location.href = '/c/' + $('.search_container .select_option option:selected').val();
                 }
             })
         })
