@@ -3448,7 +3448,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-align: center;
 }
 .product_content h4 {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   text-transform: capitalize;
@@ -3492,11 +3492,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-weight: 500;
   font-size: 15px;
   color: #79a206;
-}
-@media only screen and (max-width: 767px) {
-  .price_box span.current_price {
-    font-size: 13px;
-  }
 }
 
 .product_carousel .product_thumb a img {
