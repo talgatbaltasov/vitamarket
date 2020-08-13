@@ -14,7 +14,7 @@
                     Адрес: {{$order->address->street}} {{$order->address->street2}}, {{$order->address->city->name}}<br/>
                     Вид доставки: {{$order->shipping_type->name}}<br/>
                     Статус заказа: {{$order->order_status->name}}<br/>
-                    Комментарии к заказу: {{$order->comment}}
+                    Комментарии к заказу: {{$order->comment}}<br/>
                 </div>
             </div>
             <table class="table table-striped">
