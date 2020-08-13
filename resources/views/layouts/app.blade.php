@@ -408,7 +408,7 @@
         $(document).ready(function(){
             $('#categori2').on('change', function(){
                 console.log($('#categori2 option:selected').val())
-                if($('#categori2 option:selected').val() === 0) {
+                if($('#categori2 option:selected').val() == 0) {
                     window.location.href = '/';
                 } else {
                     window.location.href = '/c/' + $('#categori2 option:selected').val();
