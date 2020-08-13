@@ -3869,10 +3869,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .blog_carousel:hover .owl-nav div {
   opacity: 1;
   visibility: visible;
-  left: 0;
+  left: 15px;
 }
 .blog_carousel:hover .owl-nav div.owl-next {
-  right: 0;
+  right: 15px;
 }
 .blog_carousel .owl-nav.disabled {
   display: block;
@@ -4319,12 +4319,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .testimonial_carousel:hover .owl-nav div {
-  left: 0;
+  left: 15px;
   opacity: 1;
   visibility: visible;
 }
 .testimonial_carousel:hover .owl-nav div.owl-next {
-  right: 0;
+  right: 15px;
 }
 .testimonial_carousel .owl-nav div {
   position: absolute;
