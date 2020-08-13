@@ -45,11 +45,6 @@ class HomeController extends Controller
         return view('home.payments-delivery');
     }
 
-    public function faq()
-    {
-        return view('home.faq');
-    }
-
     public function contact()
     {
         return view('home.contact');

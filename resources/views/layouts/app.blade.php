@@ -285,7 +285,6 @@
                                     <li><a href="/checkout">Оформить заказ</a></li>
                                     <li><a href="/contacts">Контакты</a></li>
                                     <li><a href="/payments-delivery">Доставка и оплата</a></li>
-                                    <li><a href="/faq">Вопросы и ответы</a></li>
                                 </ul>
                             </div>
                         </div>
