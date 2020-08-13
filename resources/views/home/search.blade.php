@@ -1,222 +1,126 @@
 @extends('layouts.app')
 
-@section('title', 'Comics, movies, series, Dota 2 Game Cosplay Supplies, Accessories and Products Online | Maddt')
-@section('keywords', 'comics products, comics accessories, movies products, movies accessories, dota2 products, dota2 accessories, cosplay products, cosplay accessories')
-@section('description', 'Get the best comics, dota2 products and accessories online and in store! Maddt offers quality products and accessories for a cosplay, halloween and fun meeting.')
+@section('title', $_GET['search'].' → купить в Алматы и Астане в интернет-магазине "Vitamarket" | цены, отзывы, доставка')
+@section('description', '★ Vitamarket ★ '.$category->name.' -  низкие цены и удобный выбор в интернет-магазине ➤ Круглосуточно 24/7 ☎ +7 707 807 97 77')
 
 @section('content')
-    <!-- breadcrumbs -->
-		<div class="breadcrumbs">
-        <div class="container">
-            <ol class="breadcrumb breadcrumb--ys pull-left">
-                <li class="home-link"><a href="/" class="icon icon-home"></a></li>
-                <li class="active">Search Result</li>
-            </ol>
-        </div>
-    </div>
-    <!-- /breadcrumbs -->
-    <!-- CONTENT section -->
-    <div id="pageContent">
-        <div class="container">
-            <!-- two columns -->
+    <!--breadcrumbs area start-->
+    <div class="breadcrumbs_area">
+        <div class="container">   
             <div class="row">
-                <!-- left column -->
-                <aside class="col-md-4 col-lg-3 col-xl-2" id="leftColumn">
-                    <a href="#" class="slide-column-close visible-sm visible-xs"><span class="icon icon-chevron_left"></span>back</a>
-                </aside>
-                <!-- /left column -->
-                <!-- center column -->
-                <aside class="col-md-8 col-lg-9 col-xl-10" id="centerColumn">
-                    <!-- filters row -->
-                    <div class="filters-row">
-                        <div class="pull-right">
-                            <div class="filters-row__items hidden-sm hidden-xs">{{count($products)}} Item(s)</div>
+                <div class="col-12">
+                    <div class="breadcrumb_content">
+                        <h3>Поиск</h3>
+                        <ul>
+                            <li><a href="/">Главная</a></li>
+                            <li>Поиск</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
+    <!--breadcrumbs area end-->
+    <!--shop  area start-->
+    <div class="shop_area shop_fullwidth mt-100 mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!--shop wrapper start-->
+                    <!--shop toolbar start-->
+                    <div class="shop_toolbar_wrapper">
+                        <div class="shop_toolbar_btn">
+                            <button data-role="grid_3" type="button" class="btn-grid-3" data-toggle="tooltip" title="3"></button>
+                            <button data-role="grid_4" type="button" class="btn-grid-4 active" data-toggle="tooltip" title="4"></button>
+                            <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
+                        </div>
+                        {{-- <div class=" niceselect_option">
+                            <form class="select_option" action="#" style="display: none;">
+                                <select name="orderby" id="short">
+                                    <option selected="" value="1">Sort by average rating</option>
+                                    <option value="2">Sort by popularity</option>
+                                    <option value="3">Sort by newness</option>
+                                    <option value="4">Sort by price: low to high</option>
+                                    <option value="5">Sort by price: high to low</option>
+                                    <option value="6">Product Name: Z</option>
+                                </select>
+                            </form><div class="nice-select select_option" tabindex="0"><span class="current">Sort by average rating</span><ul class="list"><li data-value="1" class="option selected">Sort by average rating</li><li data-value="2" class="option">Sort by popularity</li><li data-value="3" class="option">Sort by newness</li><li data-value="4" class="option">Sort by price: low to high</li><li data-value="5" class="option">Sort by price: high to low</li><li data-value="6" class="option">Product Name: Z</li></ul></div>
+                        </div> --}}
+                        <div class="page_amount">
+                            <p>Показано {{$products->firstItem()}}–{{$products->lastItem()}} от {{$products->total()}}</p>
                         </div>
                     </div>
-                    <!-- /filters row -->
-                    <div class="product-listing row">
+                    <!--shop toolbar end-->
+                    <div class="row shop_wrapper grid_4">
                         @foreach($products as $product)
-                            <div class="col-xs-6 col-sm-4 col-md-6 col-lg-4 col-xl-one-fifth">
-                                <!-- product -->
-                                <div class="product product--zoom">
-                                    <div class="product__inside">
-                                        <!-- product image -->
-                                        <div class="product__inside__image">
-                                            @if(count($product->images) > 1)
-                                            <!-- product image carousel -->
-                                            <div class="product__inside__carousel slide" data-ride="carousel">
-                                                <div class="carousel-inner" role="listbox">
-                                                    @foreach($product->images as $key=>$image)
-                                                        <div class="item @if($key == 0) active @endif"> <a href="/products/{{$product->slug}}"><img src="{{ Voyager::image( $image->image ) }}" alt="{{$product->title}}"></a> </div>
-                                                    @endforeach
-                                                </div>
-                                                <!-- Controls -->
-                                                <a class="carousel-control next"></a> <a class="carousel-control prev"></a>
+                            <div class="col-md-4 col-sm-6 col-lg-3">
+                                <article class="single_product">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="/p/{{$product->slug}}"><img src="{{$product->main_image->image}}" alt=""></a>
+                                            <div class="label_product">
+                                                @if($product->sale_price != null)
+                                                    <span class="label_sale">-{{$product->sale_rate}}%</span>
+                                                @endif
                                             </div>
-                                            <!-- /product image carousel -->
-                                            @else
-                                            <a href="/products/{{$product->slug}}"> <img src="{{ Voyager::image( $product->main_image->image->image ) }}" alt="{{$product->title}}"> </a>
-                                            @endif
-                                            <!-- quick-view -->
-                                            <a href="#" data-toggle="modal" data-target="#quickViewModal{{$product->id}}" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a>
-                                            <!-- /quick-view -->
+                                            <div class="action_links">
+                                                <ul>
+                                                    <li class="add_to_cart"><a href="#" onclick="addToCart(this, {{$product->id}})" title="" data-original-title="Добавить в корзину"><i class="icon-shopping-bag"></i></a></li>  
+                                                    <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="" data-original-title="Быстрый просмотр"> <i class="icon-eye"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="action_links list_action">
+                                                <ul>  
+                                                    <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="" data-original-title="Быстрый просмотр"> <i class="icon-eye"></i></a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <!-- /product image -->
-                                        @if($product->sale_price != null)
-                                        <!-- label sale -->
-                                        <div class="product__label product__label--left product__label--sale"> <span>Sale<br>
-                                            -{{round(100-($product->sale_price*100/$product->price))}}%</span>
-                                        </div>
-                                        <!-- /label sale -->
-                                        @endif
-                                        <!-- product name -->
-                                        <div class="product__inside__name">
-                                            <h2><a href="/products/{{$product->slug}}">{{$product->title}}</a></h2>
-                                        </div>
-                                        <!-- /product name -->
-                                        <!-- product description -->
-                                        <!-- visible only in row-view mode -->
-                                        <div class="product__inside__description row-mode-visible"> {{$product->description}} </div>
-                                        <!-- /product description -->
-                                        <!-- product price -->
-                                        @if($product->sale_price != null)
-                                            <div class="product__inside__price price-box">${{$product->sale_price}}<span class="price-box__old">${{$product->price}}</span></div>
-                                        @else
-                                            <div class="product__inside__price price-box">${{$product->price}}</div>
-                                        @endif
-                                        <!-- /product price -->
-                                        <div class="product__inside__hover">
-                                            <!-- product info -->
-                                            <div class="product__inside__info">
-                                                <div class="product__inside__info__btns"> 
-                                                    <button onclick='addToCart({{$product->id}})' class="btn btn--ys btn--xl">
-                                                        <span class="icon icon-shopping_basket"></span> Add to cart
-                                                    </button>
-                                                    <a href="#" class="btn btn--ys btn--xl visible-xs"><span class="icon icon-favorite_border"></span></a>
-                                                    <a href="#" class="btn btn--ys btn--xl visible-xs"><span class="icon icon-sort"></span></a>
-                                                    <a href="#" data-toggle="modal" data-target="#quickViewModal" class="btn btn--ys btn--xl  row-mode-visible hidden-xs"><span class="icon icon-visibility"></span> Quick view</a>
+                                        <div class="product_content grid_content">
+                                            <div class="product_price_rating">
+                                                <h4 class="product_name"><a href="/p/{{$product->slug}}">{{$product->name}}</a></h4>
+                                                <div class="price_box">
+                                                    @if($product->sale_price != null)
+                                                        <span class="current_price">{{$product->sale_price}} тг.</span>
+                                                        <span class="old_price">{{$product->price}} тг.</span>
+                                                    @else
+                                                        <span class="current_price">{{$product->price}} тг.</span>
+                                                    @endif
                                                 </div>
                                             </div>
-                                            <!-- /product info -->
                                         </div>
-                                    </div>
-                                </div>
-                                <!-- /product -->
+                                        <div class="product_content list_content">
+                                            <h4 class="product_name"><a href="/p/{{$product->slug}}">{{$product->name}}</a></h4>
+                                            <div class="price_box"> 
+                                                @if($product->sale_price != null)
+                                                    <span class="current_price">{{$product->sale_price}} тг.</span>
+                                                    <span class="old_price">{{$product->price}} тг.</span>
+                                                @else
+                                                    <span class="current_price">{{$product->price}} тг.</span>
+                                                @endif
+                                            </div>
+                                            <div class="product_desc">
+                                                <p>{!!$product->description!!}</p>
+                                            </div>
+                                            <div class="action_links list_action_right">
+                                                <ul>
+                                                    <li class="add_to_cart"><a href="#" title="" onclick='addToCart(this, {{$product->id}})' data-original-title="Добавить в корзину">Добавить в корзину</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </article>
                             </div>
                         @endforeach
                     </div>
-                </aside>
-                <!-- center column -->
-            </div>
-            <!-- /two columns -->
-        </div>
-    </div>
-    <!-- End CONTENT section -->
-@endsection
 
-@section('quickview')
-    @foreach($products as $product)        
-        <!-- Modal (quickViewModal) -->		
-        <div class="modal  modal--bg fade productQuickView"  id="quickViewModal{{$product->id}}">
-            <div class="modal-dialog white-modal">
-                <div class="modal-content container">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon icon-clear"></span></button>
+                    <div class="shop_toolbar t_bottom">
+                        {{$products->links()}}
                     </div>
-                    <!--  -->
-                    <div class="product-popup">
-                        <div class="product-popup-content">
-                            <div class="container-fluid">
-                                <div class="row product-info-outer">
-                                    <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
-                                        <div class="product-main-image">
-                                            <div class="product-main-image__item"><img src="{{ Voyager::image( $product->main_image->image->image ) }}" alt="{{$product->title}}" /></div>
-                                        </div>
-                                    </div>
-                                    <div class="product-info col-xs-12 col-sm-7 col-md-6 col-lg-6">
-                                        <div class="wrapper">
-                                            <div class="product-info__sku pull-left">SKU: <strong>{{sprintf("%06d", $product->id)}}</strong></div>
-                                            <div class="product-info__availabilitu pull-right">Availability:   <strong class="color">In Stock</strong></div>
-                                        </div>
-                                        <div class="product-info__title">
-                                            <h2>{{$product->title}}</h2>
-                                        </div>
-                                        @if($product->sale_price != null)
-                                            <div class="price-box product-info__price"><span class="price-box__new">${{$product->sale_price}}</span> <span class="price-box__old">{{$product->price}}</span></div>
-                                        @else
-                                            <div class="price-box product-info__price"><span class="price-box__new">${{$product->price}}</span></div>
-                                        @endif
-                                        <div class="divider divider--xs product-info__divider"></div>
-                                        @if($product->images()->count() > 1)
-                                        <div class="wrapper">
-                                            <div class="pull-left"><span class="option-label">COLOR:</span></div>
-                                            <div class="pull-left required">*</div>
-                                            <div class="pull-right required">* Required Fields</div>
-                                        </div>
-                                        <ul class="options-swatch options-swatch--color options-swatch--lg">
-                                            @foreach($product->images as $image)
-                                                <li>
-                                                    <input type='radio' name='image' id='image_{{$product->id}}_{{$image->id}}' value='{{$image->id}}' />
-                                                    <label for='image_{{$product->id}}_{{$image->id}}' class="swatch-label image-label" onclick="changeMainImage('{{Voyager::image( $image->image )}}', {{$product->id}} )">
-                                                        <img src="{{Voyager::image( $image->image )}}" alt="{{$product->title}}"/>
-                                                    </label>
-                                                </li>
-                                            @endforeach
-                                        </ul>						
-                                        @endif
-                                        @if($product->sizes()->count() > 0)
-                                        <div class="wrapper">
-                                            <div class="pull-left"><span class="option-label">SIZE:</span></div>
-                                            <div class="pull-left required">*</div>
-                                        </div>
-                                        <ul class="options-swatch options-swatch--size options-swatch--lg">
-                                            @foreach($product->sizes as $size)
-                                            <li>
-                                                <input type='radio' name="size" value='{{$size->id}}' id='size_{{$product->id}}_{{$size->id}}' />
-                                                <label for='size_{{$product->id}}_{{$size->id}}'>
-                                                    {{$size->name}}
-                                                </label>
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                        @endif
-                                        <div class="divider divider--sm"></div>
-                                        <div class="wrapper">
-                                            <div class="pull-left"><span class="qty-label">QTY:</span></div>
-                                            <div class="pull-left"><input type="text" name="quantity" class="input--ys qty-input pull-left" value="1"></div>
-                                            <div class="pull-left">
-                                                <button type="submit" class="btn btn--ys btn--xxl" onclick='addToCart({{$product->id}}, $j("input[name=\"image\"]:checked").val(), $j("input[name=\"size\"]:checked").val(), $j("#quickViewModal{{$product->id}} input[type=\"quantity\"]").val())'>
-                                                    <span class="icon icon-shopping_basket"></span> Add to cart
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="divider divider--xs product-info__divider"></div>
-                                        <div class="product-info__description">
-                                            <div class="product-info__description__brand">
-                                            	<a href='/{{$product->brand->slug}}'>
-                                            		<img src="{{Voyager::image( $product->brand->image )}}" alt="{{$product->brand->title}}"> 
-                                            	</a>
-                                            </div>
-                                            <div class="product-info__description__text">{{$product->brand->description}}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / -->
+                    <!--shop toolbar end-->
+                    <!--shop wrapper end-->
                 </div>
             </div>
         </div>
-        <!-- / Modal (quickViewModal) -->
-    @endforeach
-@endsection
-
-@section('js')
-    <script>
-        $j(document).ready(function() {
-            listingModeToggle();
-            verticalCarousel($j('.vertical-carousel-1'),2,2,2,2,2);
-        })
-    </script>
+    </div>
+    <!--shop  area end-->
 @endsection
