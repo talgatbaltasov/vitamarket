@@ -393,7 +393,7 @@
 					_token:"<?=csrf_token()?>"
 				},
 				success:function(res) {
-					location.reload();
+					window.location.href = '/cart';
 				}
 			})
 		}

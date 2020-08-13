@@ -29,34 +29,35 @@
                         <div class="table_desc">
                             <div class="cart_page table-responsive">
                                 <table>
-                            <thead>
-                                <tr>
-                                    <th class="product_remove">Удалить</th>
-                                    <th class="product_thumb">Картинка</th>
-                                    <th class="product_name">Товар</th>
-                                    <th class="product-price">Цена</th>
-                                    <th class="product_quantity">Количество</th>
-                                    <th class="product_total">Общее</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @if(isset($cart->items) && count($cart->items) > 0)
-                                    @foreach($cart->items as $item)
+                                    <thead>
                                         <tr>
-                                            <td class="product_remove"><a href="#" onclick='removeCartItem({{$item["item"]["id"]}})'><i class="fa fa-trash-o"></i></a></td>
-                                            <td class="product_thumb"><a href="#"><img src="{{$item['main_image']}}" alt=""></a></td>
-                                            <td class="product_name"><a href="#">{{$item['item']['name']}}</a></td>
-                                            <td class="product-price">{{$item['item']['price']}} тг.</td>
-                                            <td class="product_quantity"><label>Количество</label> <input min="1" max="100" value="{{$item['qty']}}" type="number" name="quantity"></td>
-                                            <td class="product_total">{{$item['item']['price'] * $item['qty']}} тг.</td>
+                                            <th class="product_remove">Удалить</th>
+                                            <th class="product_thumb">Картинка</th>
+                                            <th class="product_name">Товар</th>
+                                            <th class="product-price">Цена</th>
+                                            <th class="product_quantity">Количество</th>
+                                            <th class="product_total">Общее</th>
                                         </tr>
-                                    @endforeach
-                                @endif
-                            </tbody>
-                        </table>   
-                            </div>  
+                                    </thead>
+                                    <tbody>
+                                        @if(isset($cart->items) && count($cart->items) > 0)
+                                            @foreach($cart->items as $item)
+                                                <tr>
+                                                    <td class="product_remove"><a href="#" onclick='removeCartItem({{$item["item"]["id"]}})'><i class="fa fa-trash-o"></i></a></td>
+                                                    <td class="product_thumb"><a href="#"><img src="{{$item['main_image']}}" alt=""></a></td>
+                                                    <td class="product_name"><a href="#">{{$item['item']['name']}}</a></td>
+                                                    <td class="product-price">{{$item['item']['price']}} тг.</td>
+                                                    <td class="product_quantity"><label>Количество</label> <input min="1" max="100" value="{{$item['qty']}}" type="number" name="quantity"></td>
+                                                    <td class="product_total">{{$item['item']['price'] * $item['qty']}} тг.</td>
+                                                </tr>
+                                            @endforeach
+                                        @endif
+                                    </tbody>
+                                </table>   
+                            </div>
                             <div class="cart_submit">
                                 <button type="submit">обновить корзину</button>
+                                <a href="/" class="button">Продолжить покупку</a>
                             </div>      
                         </div>
                     </div>
