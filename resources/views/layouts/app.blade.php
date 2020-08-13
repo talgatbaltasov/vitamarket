@@ -99,7 +99,7 @@
                         <div class="col-lg-9 col-md-6 col-6">
                             <div class="header_right_info">
                                 <div class="search_container">
-                                   <form action="#">
+                                   <form action="/search" method="GET">
                                        <div class="hover_category">
                                             <select class="select_option" name="select" id="categori1">
                                                 <option value="0">Все категории</option>
@@ -109,7 +109,7 @@
                                             </select>
                                        </div>
                                         <div class="search_box">
-                                            <input placeholder="Поиск..." type="text">
+                                            <input placeholder="Поиск..." type="text" name="search">
                                              <button type="submit"><i class="icon-search"></i></button>
                                         </div>
                                     </form>
@@ -214,7 +214,7 @@
                                     </ul>
                                 </div>
                                 <div class="search_container search_container_mobile mt-3">
-                                    <form action="#">
+                                    <form action="/search" method="GET">
                                          <div class="hover_category">
                                              <select class="select_option" name="select" id="categori2">
                                                  <option value="0">Все категории</option>
@@ -224,7 +224,7 @@
                                              </select>                        
                                          </div>
                                          <div class="search_box">
-                                             <input placeholder="Поиск..." type="text">
+                                             <input placeholder="Поиск..." type="text" name="search">
                                               <button type="submit"><i class="icon-search"></i></button>
                                          </div>
                                      </form>

@@ -22,7 +22,7 @@ Route::get('/service-center', 'HomeController@serviceCenter');
 Route::get('/contacts', 'HomeController@contact');
 Route::post('/contacts', 'HomeController@postContact');
 Route::get('/faq', 'HomeController@faq');
-// Route::get('/search', 'HomeController@search');
+Route::get('/search', 'HomeController@search');
 
 Route::group(['prefix' => 'articles'], function(){
     Route::get('/', 'BlogController@index');
