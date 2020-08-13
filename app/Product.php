@@ -17,7 +17,10 @@ class Product extends Model
 
     public function getSalePriceAttribute()
     {
-        return number_format($this->sale_price, 0);
+        if($this->sale_price != null) {
+            return number_format($this->sale_price, 0);
+        }
+        return null;
     }
 
     public function getSaleRateAttribute()
