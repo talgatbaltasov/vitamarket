@@ -8,6 +8,11 @@ class OrderItem extends Model
 {
     protected $fillable = ['order_id', 'product_id', 'price', 'quantity'];
 
+    public function getPriceAttribute($value)
+    {
+        return number_format($value, 0, '.', '');
+    }
+    
     public function order()
     {
     	return $this->belongsTo('App\Order');
