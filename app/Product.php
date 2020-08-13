@@ -10,15 +10,15 @@ class Product extends Model
 
     protected $dates = ['sale_end_at'];
 
-    public function getPriceAttribute()
+    public function getPriceAttribute($value)
     {
-        return number_format($this->price, 0);
+        return number_format($value, 0);
     }
 
-    public function getSalePriceAttribute()
+    public function getSalePriceAttribute($value)
     {
-        if($this->sale_price != null) {
-            return number_format($this->sale_price, 0);
+        if($value != null) {
+            return number_format($value, 0);
         }
         return null;
     }
