@@ -446,6 +446,7 @@
     
     $(window).click(function() {
         $(".categories_title").removeClass('active');
+        $('.categories_menu_toggle').hide();
     });
     /*---categories slideToggle---*/
     $(".categories_title").on("click", function(e) {
