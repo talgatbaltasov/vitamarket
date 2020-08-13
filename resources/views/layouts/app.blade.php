@@ -393,8 +393,7 @@
 					_token:"<?=csrf_token()?>"
 				},
 				success:function(res) {
-                    console.log(res)
-					// location.reload();
+					location.reload();
 				}
 			})
 		}

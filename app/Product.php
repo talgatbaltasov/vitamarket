@@ -12,13 +12,13 @@ class Product extends Model
 
     public function getPriceAttribute($value)
     {
-        return number_format($value, 0);
+        return number_format($value, 0, '.', '');
     }
 
     public function getSalePriceAttribute($value)
     {
         if($value != null) {
-            return number_format($value, 0);
+            return number_format($value, 0, '.', '');
         }
         return null;
     }
