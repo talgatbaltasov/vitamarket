@@ -34,15 +34,15 @@
                             </div>
                             <div class="form-group">
                                 {{Form::label('lastname', 'Фамилия')}}
-                                {{Form::text('lastname', null, ['class' => 'form-control'])}}
+                                {{Form::text('lastname', null, ['required', 'class' => 'form-control'])}}
                             </div>
                             <div class="form-group">
                                 {{Form::label('city_id', 'Город')}}
-                                {{Form::select('city_id', $cities, null, ['class' => 'form-control'])}}
+                                {{Form::select('city_id', $cities, null, ['required', 'class' => 'form-control'])}}
                             </div>
                             <div class="form-group">
                                 {{Form::label('street', 'Адрес')}}
-                                {{Form::text('street', null, ['class' => 'form-control', 'required'])}}
+                                {{Form::text('street', null, ['required', 'class' => 'form-control', 'required'])}}
                             </div>
                             <div class="form-group">
                                 {{Form::label('street2', 'Адрес')}}
@@ -50,15 +50,15 @@
                             </div>
                             <div class="form-group">
                                 {{Form::label('phone', 'Номер телефона')}}
-                                {{Form::text('phone', null, ['class' => 'form-control'])}}
+                                {{Form::text('phone', null, ['required', 'class' => 'form-control'])}}
                             </div>
                             <div class="form-group">
                                 {{Form::label('email', 'Электронная почта')}}
-                                {{Form::email('email', null, ['class' => 'form-control'])}}
+                                {{Form::email('email', null, ['required', 'class' => 'form-control'])}}
                             </div>
                             <div class="form-group">
                                 {{Form::label('shipping_type_id', 'Вид доставки')}}
-                                {{Form::select('shipping_type_id', $shipping_types, null, ['class' => 'form-control'])}}
+                                {{Form::select('shipping_type_id', $shipping_types, null, ['required', 'class' => 'form-control'])}}
                             </div>
                             <div class="form-group">
                                 {{Form::label('comment', 'Комментарии к заказу')}}
