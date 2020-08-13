@@ -7,6 +7,16 @@
             Заказ #{{$order->id}}
         </div>
         <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    Пользователь: {{$order->user->full_name}}, {{$order->user->email}}<br/>
+                    Номер телефона: {{$order->address->phone_number}}<br/>
+                    Адрес: {{$order->address->street}} {{$order->address->street2}}, {{$order->address->city->name}}<br/>
+                    Вид доставки: {{$order->shipping_type->name}}<br/>
+                    Статус заказа: {{$order->order_status->name}}<br/>
+                    Комментарии к заказу: {{$order->comment}}
+                </div>
+            </div>
             <table class="table table-striped">
                 <tr>
                     <td>ID</td>
