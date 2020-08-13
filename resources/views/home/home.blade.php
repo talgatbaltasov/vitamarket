@@ -376,17 +376,7 @@
                                                                 <button type="button" onclick="addToCart(this, {{$product->id}}, $('.modal_add_to_cart form input').val())">Добавить в корзину</button>
                                                             </form>
                                                         </div>   
-                                                    </div>
-                                                    <div class="modal_social">
-                                                        <h2>Поделиться</h2>
-                                                        <ul>
-                                                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                            <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                                            <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                            <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                        </ul>    
-                                                    </div>      
+                                                    </div>     
                                                 </div>    
                                             </div>    
                                         </div>     

@@ -77,14 +77,7 @@
                         </div>
 
                         <div class="offcanvas_footer">
-                            <span><a href="#"><i class="fa fa-envelope-o"></i> kzvitamarket@gmail.com</a></span>
-                            <ul>
-                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
+                            <span><a href="mailto:kzvitamarket@gmail.com"><i class="fa fa-envelope-o"></i> kzvitamarket@gmail.com</a></span>
                         </div>
                     </div>
                 </div>
@@ -111,9 +104,9 @@
                                             <select class="select_option" name="select" id="categori1">
                                                 <option selected value="0">Все категории</option>
                                                 @foreach($categories as $category)
-                                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                                    <option value="{{$category->slug}}">{{$category->name}}</option>
                                                 @endforeach
-                                            </select>                        
+                                            </select>
                                        </div>
                                         <div class="search_box">
                                             <input placeholder="Поиск..." type="text">
@@ -411,6 +404,16 @@
 				}
 			})
         }
+
+        $(document).ready(function(){
+            $('#categori1').on('change', function(){
+                if($('#categori1 option:selected').val() == 0) {
+                    window.location.href = '/';
+                } else {
+                    window.location.href = '/c/' + $('#categori1 option:selected').val();
+                }
+            })
+        })
 	</script>
 </body>
 </html>
