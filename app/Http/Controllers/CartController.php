@@ -55,7 +55,7 @@ class CartController extends Controller
             $price = $product->sale_price;
         }
 
-        dd($price);
+        return $price;
 
         $log = new Log;
         $log->session_id = $request->session()->getId();
