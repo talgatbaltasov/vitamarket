@@ -63,7 +63,7 @@
                             <div class="product_variant quantity">
                                 <label>Количество</label>
                                 <input min="1" max="100" value="1" type="number">
-                                <button class="button" type="button" onclick="addToCart(this, {{$product->id}})">Добавить в корзину</button>  
+                                <button class="button" type="button" onclick="addToCart(this, {{$product->id}})">В корзину</button>  
                             </div>
                             <div class="product_meta">
                                 <span>Категория: <a href="#">{{$product->category->name}}</a></span>
@@ -182,7 +182,7 @@
                                             @endif
                                             <div class="action_links">
                                                 <ul>
-                                                    <li class="add_to_cart"><a href="#" title="" onclick="addToCart(this, {{$p->id}})" data-original-title="Добавить в корзину"><i class="icon-shopping-bag"></i></a></li>
+                                                    <li class="add_to_cart"><a href="#" title="" onclick="addToCart(this, {{$p->id}})" data-original-title="В корзину"><i class="icon-shopping-bag"></i></a></li>
                                                     <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="" data-original-title="Быстрый просмотр"> <i class="icon-eye"></i></a></li>
                                                 </ul>
                                             </div>

@@ -149,7 +149,7 @@
                                                                 @endif
                                                                 <div class="action_links">
                                                                     <ul>
-                                                                        <li class="add_to_cart"><a href="#" onclick="addToCart(this, {{$product->id}})" title="Добавить в корзину"><i class="icon-shopping-bag"></i></a></li>  
+                                                                        <li class="add_to_cart"><a href="#" onclick="addToCart(this, {{$product->id}})" title="В корзинуы"><i class="icon-shopping-bag"></i></a></li>  
                                                                         <li class="quick_button"><a href="#" data-toggle="modal" data-target="#product{{$product->id}}"  title="Быстрый просмотр"> <i class="icon-eye"></i></a></li>
                                                                     </ul>
                                                                 </div>
@@ -373,7 +373,7 @@
                                                         <div class="modal_add_to_cart">
                                                             <form action="#">
                                                                 <input min="1" max="100" step="1" value="1" type="number">
-                                                                <button type="button" onclick="addToCart(this, {{$product->id}}, $('.modal_add_to_cart form input').val())">Добавить в корзину</button>
+                                                                <button type="button" onclick="addToCart(this, {{$product->id}}, $('.modal_add_to_cart form input').val())">В корзину</button>
                                                             </form>
                                                         </div>   
                                                     </div>     
