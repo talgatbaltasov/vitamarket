@@ -73,6 +73,9 @@
                                 <li class="menu-item-has-children">
                                     <a href="/contacts"> Контакты</a> 
                                 </li>
+                                <li class="menu-item-has-children">
+                                    <a href="/contacts">Вопросы и ответы</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -245,6 +248,9 @@
                                         <li>
                                             <a href="/contacts"> Контакты</a> 
                                         </li>
+                                        <li>
+                                            <a href="/contacts">Вопросы и ответы</a>
+                                        </li>
                                     </ul>  
                                 </nav> 
                             </div>
@@ -285,6 +291,7 @@
                                     <li><a href="/checkout">Оформить заказ</a></li>
                                     <li><a href="/contacts">Контакты</a></li>
                                     <li><a href="/payments-delivery">Доставка и оплата</a></li>
+                                    <li><a href="/contacts">Вопросы и ответы</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -309,6 +316,7 @@
                                     <li><a href="/contacts">Контакты</a></li>
                                     <li><a href="/cart">Корзина</a></li>
                                     <li><a href="/checkout">Оформить заказ</a></li>
+                                    <li><a href="/contacts">Вопросы и ответы</a></li>
                                 </ul>
                             </div>
                         </div>
