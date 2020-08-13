@@ -57,8 +57,10 @@
                             </div>
                             <div class="cart_submit">
                                 <button type="submit">обновить корзину</button>
-                                <a href="/" class="button">Продолжить покупку</a>
                             </div>      
+                            <div class="checkout_btn">
+                                <a href="/">Продолжить покупку</a>
+                            </div>
                         </div>
                     </div>
                 </div>
