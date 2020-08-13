@@ -407,7 +407,8 @@
 
         $(document).ready(function(){
             $('.search_container select').on('change', function(){
-                if($('.search_container select option:selected').val() == 0) {
+                console.log($('.search_container select option:selected').val())
+                if($('.search_container select option:selected').val() === 0) {
                     window.location.href = '/';
                 } else {
                     window.location.href = '/c/' + $('.search_container select option:selected').val();
