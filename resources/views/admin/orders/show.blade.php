@@ -5,6 +5,20 @@
     <div class="card">
         <div class="card-header">
             Заказ #{{$order->id}}
+            <ul class="nav float-right">
+                @if($order->order_status_id == 1)
+                    <li class="nav-item">
+                        <a href="/admin/brands/create" class="btn btn-primary">Отправлен</a>
+                    </li>
+                @elseif($order->order_status_id == 2)    
+                    <li class="nav-item">
+                        <a href="/admin/brands/create" class="btn btn-success">Доставлен</a>
+                    </li>
+                @endif
+                <li class="nav-item">
+                    <a href="/admin/brands/create" class="btn btn-danger">Отменен</a>
+                </li>
+            </ul>
         </div>
         <div class="card-body">
             <div class="row">
