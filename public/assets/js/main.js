@@ -444,9 +444,12 @@
        
     });
     
-    
+    $(window).click(function() {
+        $(".categories_title").removeClass('active');
+    });
     /*---categories slideToggle---*/
-    $(".categories_title").on("click", function() {
+    $(".categories_title").on("click", function(e) {
+        e.stopPropagation();
         $(this).toggleClass('active');
         $('.categories_menu_toggle').slideToggle('medium');
     }); 
