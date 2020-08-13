@@ -406,12 +406,12 @@
         }
 
         $(document).ready(function(){
-            $('.search_container .select_option').on('change', function(){
-                console.log($('.search_container .select_option option:selected').val())
-                if($('.search_container .select_option option:selected').val() === 0) {
+            $('#categori2').on('change', function(){
+                console.log($('#categori2 option:selected').val())
+                if($('#categori2 option:selected').val() === 0) {
                     window.location.href = '/';
                 } else {
-                    window.location.href = '/c/' + $('.search_container .select_option option:selected').val();
+                    window.location.href = '/c/' + $('#categori2 option:selected').val();
                 }
             })
         })
