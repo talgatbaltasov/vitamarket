@@ -385,7 +385,7 @@
 					_token:"<?=csrf_token()?>"
 				},
 				success:function(res) {
-					location.href = '/cart';
+					location.reload();
 				}
 			})
 		}
