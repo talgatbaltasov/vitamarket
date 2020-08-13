@@ -35,7 +35,7 @@
                     <div class="contact_message content">
                         <h3>Наши контакты</h3>    
                         <ul>
-                            <li><i class="fa fa-fax"></i>  Адрес : г Алматы, ул. Абая, 143. Офис 105</li>
+                            <li><i class="fa fa-fax"></i>  Адрес: проспект Абая 143, уг. Гагарина, офис 105</li>
                             <li><i class="fa fa-phone"></i> <a href="mailto:kzvitamarket@gmail.com">kzvitamarket@gmail.com</a></li>
                             <li><i class="fa fa-envelope-o"></i><a href="tel:+77078079777">+7 (707) 807-97-77</a></li>
                         </ul>             
