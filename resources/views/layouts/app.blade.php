@@ -219,7 +219,7 @@
                                              <select class="select_option" name="select" id="categori2">
                                                  <option selected value="0">Все категории</option>
                                                  @foreach($categories as $category)
-                                                     <option value="{{$category->id}}">{{$category->name}}</option>
+                                                     <option value="{{$category->slug}}">{{$category->name}}</option>
                                                  @endforeach
                                              </select>                        
                                          </div>
@@ -406,11 +406,11 @@
         }
 
         $(document).ready(function(){
-            $('#categori1').on('change', function(){
-                if($('#categori1 option:selected').val() == 0) {
+            $('.search_container select').on('change', function(){
+                if($('.search_container select option:selected').val() == 0) {
                     window.location.href = '/';
                 } else {
-                    window.location.href = '/c/' + $('#categori1 option:selected').val();
+                    window.location.href = '/c/' + $('.search_container select option:selected').val();
                 }
             })
         })
