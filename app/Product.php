@@ -10,6 +10,16 @@ class Product extends Model
 
     protected $dates = ['sale_end_at'];
 
+    public function getPriceAttribute()
+    {
+        return number_format($this->price, 0);
+    }
+
+    public function getSalePriceAttribute()
+    {
+        return number_format($this->sale_price, 0);
+    }
+
     public function getSaleRateAttribute()
     {
         return ceil(($this->price - $this->sale_price) * 100 / $this->price);
