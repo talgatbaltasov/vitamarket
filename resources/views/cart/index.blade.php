@@ -58,7 +58,7 @@
                             <div class="cart_submit">
                                 <button type="submit">обновить корзину</button>
                             </div>      
-                            <div class="checkout_btn">
+                            <div class="checkout_btn mb-3 mr-2">
                                 <a href="/">Продолжить покупку</a>
                             </div>
                         </div>
