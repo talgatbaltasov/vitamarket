@@ -3477,7 +3477,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .price_box {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 .price_box span {
   line-height: 16px;
@@ -3485,7 +3485,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .price_box span.old_price {
   text-decoration: line-through;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   margin-left: 5px;
 }
 .price_box span.current_price {
