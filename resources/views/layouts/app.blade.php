@@ -217,7 +217,7 @@
                                     <form action="#">
                                          <div class="hover_category">
                                              <select class="select_option" name="select" id="categori2">
-                                                 <option selected value="0">Все категории</option>
+                                                 <option value="0">Все категории</option>
                                                  @foreach($categories as $category)
                                                      <option value="{{$category->slug}}">{{$category->name}}</option>
                                                  @endforeach
