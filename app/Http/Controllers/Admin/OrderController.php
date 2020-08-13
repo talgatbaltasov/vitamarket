@@ -12,7 +12,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::join('order_statuses', 'order_statuses.id', '=', 'orders.order_status_id')->orderBy('order_statuses.id', 'desc')->get();
+        $orders = Order::join('order_statuses', 'order_statuses.id', '=', 'orders.order_status_id')->orderBy('order_statuses.id')->get();
     	return view('admin.orders.index', compact('orders'));
     }
     
