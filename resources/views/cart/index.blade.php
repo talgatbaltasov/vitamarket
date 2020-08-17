@@ -26,6 +26,9 @@
             <form action="#"> 
                 <div class="row">
                     <div class="col-12">
+                        <p>
+                            Для оформления заказа и доставки, свяжитесь с нашими специалисталистами по телефону/whatsapp: <a href="tel:+77078079777">+7 (707) 807-97-77</a>
+                        </p>
                         <div class="table_desc">
                             <div class="cart_page table-responsive">
                                 <table>

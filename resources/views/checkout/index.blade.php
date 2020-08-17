@@ -28,6 +28,9 @@
                     <div class="col-lg-6 col-md-6">
                         {!!Form::open(['url' => '/checkout'])!!}
                             <h3>Информация</h3>
+                            <p>
+                                Для оформления заказа и доставки, свяжитесь с нашими специалисталистами по телефону/whatsapp: <a href="tel:+77078079777">+7 (707) 807-97-77</a>
+                            </p>
                             <div class="form-group">
                                 {{Form::label('firstname', 'Имя')}}
                                 {{Form::text('firstname', null, ['class' => 'form-control', 'required'])}}
