@@ -85,6 +85,7 @@
                         </div>
 
                         <div class="offcanvas_footer">
+                            <span><a href="https://instagram.com/vitamarket.almaty"><img src="/assets/img/icon/instagram.png" alt=""></a></span>
                             <span><a href="mailto:kzvitamarket@gmail.com"><i class="fa fa-envelope-o"></i> kzvitamarket@gmail.com</a></span>
                         </div>
                     </div>
