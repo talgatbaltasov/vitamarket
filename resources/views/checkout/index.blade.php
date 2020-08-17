@@ -60,6 +60,7 @@
                                 {{Form::label('shipping_type_id', 'Вид доставки')}}
                                 {{Form::select('shipping_type_id', $shipping_types, null, ['required', 'class' => 'form-control'])}}
                             </div>
+                            <p class="shipping_description"></p>
                             <div class="form-group">
                                 {{Form::label('comment', 'Комментарии к заказу')}}
                                 {{Form::text('comment', null, ['class' => 'form-control'])}}
@@ -135,6 +136,7 @@
                 shipping_types.forEach(function(value, index) {
                     if(value.id == $('#shipping_type_id option:selected').val()) {
                         $('.shipping_price').html(value.price + ' тг.')
+                        $('.shipping_description').html(value.description)
                     }
                 })
             })
