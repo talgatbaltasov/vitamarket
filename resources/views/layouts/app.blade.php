@@ -76,6 +76,11 @@
                                 <li class="menu-item-has-children">
                                     <a href="/contacts">Вопросы и ответы</a>
                                 </li>
+                                @foreach($categories as $category)
+                                    <li class="menu-item-has-children">
+                                        <a href="/c/{{$category->slug}}">{{$category->name}}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
 
