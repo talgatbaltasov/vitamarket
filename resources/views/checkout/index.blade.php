@@ -135,7 +135,7 @@
             $('#shipping_type_id').on('change', function(){
                 shipping_types.forEach(function(value, index) {
                     if(value.id == $('#shipping_type_id option:selected').val()) {
-                        console.log(value);
+                        $('.shipping_price').html(value.price + ' тг.')
                     }
                 })
             })
