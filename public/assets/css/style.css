@@ -613,7 +613,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .offcanvas_main_menu li a {
   font-size: 14px;
   font-weight: 400;
-  text-transform: capitalize;
   display: block;
   padding-bottom: 10px;
   margin-bottom: 10px;
