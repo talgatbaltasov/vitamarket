@@ -24,6 +24,9 @@ class BrandController extends Controller
 
     public function store(Request $request)
     {
+        if(!$request->has('image')) {
+            return back()->withError('Выберите логотип');
+        }
         $filename = '/images/brands/'.$request->slug.'_'.time().'.'.$request->file('image')->extension();
         
         Image::make($request->file('image'))->save(public_path($filename));
