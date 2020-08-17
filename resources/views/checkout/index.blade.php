@@ -58,7 +58,7 @@
                             </div>
                             <div class="form-group">
                                 {{Form::label('shipping_type_id', 'Вид доставки')}}
-                                {{Form::select('shipping_type_id', $shipping_types, null, ['required', 'class' => 'form-control'])}}
+                                {{Form::select('shipping_type_id', $shipping_types, null, ['required', 'class' => 'form-control', 'placeholder' => 'Выбрать'])}}
                             </div>
                             <p class="shipping_description"></p>
                             <div class="form-group">
