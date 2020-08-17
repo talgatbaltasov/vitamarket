@@ -29,9 +29,10 @@ class CheckoutController extends Controller
         } else {
             $shipping_types = ShippingType::where('id', '!=', 1)->pluck('name', 'id');
         }
-        
 
-        return view('checkout.index', compact('cart', 'cities', 'shipping_types'));
+        $raw_shipping_types = ShippingType::all()->toJson();
+
+        return view('checkout.index', compact('cart', 'cities', 'shipping_types', 'raw_shipping_types'));
     }
 
     public function store(Request $request)

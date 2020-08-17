@@ -100,7 +100,7 @@
                                     </tr>
                                     <tr>
                                         <th>Доставка</th>
-                                        <td><strong>2000 тг.</strong></td>
+                                        <td><strong class="shipping_price">0 тг.</strong></td>
                                     </tr>
                                     <tr class="order_total">
                                         <th>Общее</th>
@@ -128,5 +128,12 @@
         function sendOrder() {
             $('#order-form').submit();
         }
+
+        $('document').ready(function(){
+            var shipping_types = {{$raw_shipping_types}}
+            $('#shipping_type_id').on('change', function(){
+
+            })
+        })
     </script>
 @endsection

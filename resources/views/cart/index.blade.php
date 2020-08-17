@@ -81,11 +81,6 @@
                                         @endif
                                     </p>
                                 </div>
-                                <div class="cart_subtotal ">
-                                    <p>Доставка</p>
-                                    <p class="cart_amount"><span>Стандарт:</span> 2000 тг</p>
-                                </div>
-                                <a href="#">Рассчитать стоимость доставки</a>
 
                                 <div class="cart_subtotal">
                                     <p>Общее</p>
