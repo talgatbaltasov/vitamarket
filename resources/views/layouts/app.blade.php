@@ -60,7 +60,7 @@
                             <a href="javascript:void(0)"><i class="icon-x"></i></a>  
                         </div>
                         <div class="call-support">
-                            <p>Наш телефон: <a href="tel:+77078079777">+7 (707) 807-97-77</a></p>
+                            <p>Также можете связаться со специалистом для оформления заказа по телефону/whatsapp: <a href="tel:+77078079777">+7 (707) 807-97-77</a></p>
                         </div>
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
