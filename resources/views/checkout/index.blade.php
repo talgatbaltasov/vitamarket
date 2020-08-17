@@ -131,6 +131,7 @@
 
         $('document').ready(function(){
             var shipping_types = {{$raw_shipping_types}}
+            console.log(shipping_types);
             $('#shipping_type_id').on('change', function(){
 
             })
