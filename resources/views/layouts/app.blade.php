@@ -90,6 +90,7 @@
                                     <img src="/assets/img/icon/instagram.png" alt="" width="20">
                                 </a>
                             </span>
+                            <br/>
                             <span><a href="mailto:kzvitamarket@gmail.com"><i class="fa fa-envelope-o"></i> kzvitamarket@gmail.com</a></span>
                         </div>
                     </div>
