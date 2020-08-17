@@ -133,7 +133,9 @@
             var shipping_types = {!!$raw_shipping_types!!}
             console.log(shipping_types);
             $('#shipping_type_id').on('change', function(){
-
+                shipping_types.forEach(function(value, index) {
+                    console.log(value);
+                })
             })
         })
     </script>
