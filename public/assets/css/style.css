@@ -6915,7 +6915,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #79a206;
   border: 0;
   color: #ffffff;
-  display: block;
+  display: inline-block;
   font-size: 12px;
   font-weight: 500;
   height: 38px;
