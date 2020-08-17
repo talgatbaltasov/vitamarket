@@ -24,15 +24,19 @@ class CheckoutController extends Controller
         $cart = $request->session()->has('cart') ? $request->session()->get('cart') : null;
         $cities = City::pluck('name', 'id');
 
-        if($cart->totalPrice > 15000) {
-            $shipping_types = ShippingType::pluck('name', 'id');
+        if(isset($cart->totalPrice)) {
+            if($cart->totalPrice > 15000) {
+                $shipping_types = ShippingType::pluck('name', 'id');
+            } else {
+                $shipping_types = ShippingType::where('id', '!=', 1)->pluck('name', 'id');
+            }
+
+            $raw_shipping_types = ShippingType::all()->toJson();
+
+            return view('checkout.index', compact('cart', 'cities', 'shipping_types', 'raw_shipping_types'));
         } else {
-            $shipping_types = ShippingType::where('id', '!=', 1)->pluck('name', 'id');
+            return redirect('/cart');
         }
-
-        $raw_shipping_types = ShippingType::all()->toJson();
-
-        return view('checkout.index', compact('cart', 'cities', 'shipping_types', 'raw_shipping_types'));
     }
 
     public function store(Request $request)
