@@ -21,7 +21,17 @@
                         <tr>
                             <td><a href="/admin/orders/{{$order->id}}">{{$order->id}}</a></td>
                             <td>{{$order->user->full_name}}</td>
-                            <td>{{$order->order_status->name}}</td>
+                            <td>
+                                @if($order->order_status_id == 1)
+                                    <span class="badge badge-primary">{{$order->order_status->name}}</span>
+                                @elseif($order->order_status_id == 2)
+                                    <span class="badge badge-success">{{$order->order_status->name}}</span>
+                                @elseif($order->order_status_id == 3)
+                                    <span class="badge badge-warning">{{$order->order_status->name}}</span>
+                                @else
+                                    <span class="badge badge-danger">{{$order->order_status->name}}</span>
+                                @endif
+                            </td>
                             <td>{{$order->created_at}}</td>
                         </tr>
                     @endforeach
