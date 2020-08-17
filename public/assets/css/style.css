@@ -3349,18 +3349,18 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 
-.single_product:hover .action_links {
+.single_product .action_links {
   opacity: 1;
   visibility: visible;
   bottom: 0;
 }
-.single_product:hover .action_links ul li a {
+.single_product .action_links ul li a {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
 }
-.single_product:hover .product_thumb a.secondary_img {
+.single_product .product_thumb a.secondary_img {
   opacity: 1;
   visibility: visible;
   -moz-transition: all 0.3s ease-in-out 0s;

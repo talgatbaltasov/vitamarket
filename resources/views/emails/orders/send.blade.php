@@ -7,11 +7,25 @@
         <td>Количество</td>
         <td>Цена</td>
     </tr>
+    @php
+        $total = 0;
+    @endphp
     @foreach($order->items as $item)
+        @php
+            $total += $item->quantity*$item->price;
+        @endphp
         <tr>
             <td>{{$item->product->name}}</td>
             <td>{{$item->quantity}}</td>
             <td>{{$item->price}} тг.</td>
         </tr>
     @endforeach
+    <tr>
+        <td colspan="2">Доставка</td>
+        <td>{{$order->shipping_type->price}} тг.</td>
+    </tr>
+    <tr>
+        <td colspan="2">Общее</td>
+        <td>{{$total + $order->shipping_type->price}} тг.</td>
+    </tr>
 </table>
