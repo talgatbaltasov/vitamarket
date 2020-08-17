@@ -134,7 +134,9 @@
             console.log(shipping_types);
             $('#shipping_type_id').on('change', function(){
                 shipping_types.forEach(function(value, index) {
-                    console.log(value);
+                    if(value.id == $('#shipping_type_id option:selected').val()) {
+                        console.log(value);
+                    }
                 })
             })
         })
