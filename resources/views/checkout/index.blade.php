@@ -131,7 +131,6 @@
 
         $('document').ready(function(){
             var shipping_types = {!!$raw_shipping_types!!}
-            console.log(shipping_types);
             $('#shipping_type_id').on('change', function(){
                 shipping_types.forEach(function(value, index) {
                     if(value.id == $('#shipping_type_id option:selected').val()) {
