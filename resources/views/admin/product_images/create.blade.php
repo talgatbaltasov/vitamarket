@@ -11,7 +11,7 @@
                         {{Form::hidden('product_id', $_GET['product_id'])}}
                         <div class="form-group">
                             {{Form::label('main_image', 'Главное фото')}}
-                            {{Form::file('main_image', null, ['class' => 'form-control',  'accept' => "image/png, image/jpeg"])}}
+                            {{Form::file('main_image', null, ['class' => 'form-control', 'accept' => "image/png, image/jpeg"])}}
                         </div>
                         <div class="form-group">
                             {{Form::label('image', 'Фото (можно выбрать несколько фото)')}}
