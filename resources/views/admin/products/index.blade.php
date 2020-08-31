@@ -18,6 +18,7 @@
                         <td>ID</td>
                         <td>Название</td>
                         <td>Статус</td>
+                        <td>В наличии?</td>
                         <td>Дата обновления</td>
                         <td>Действие</td>
                     </tr>
@@ -28,6 +29,7 @@
                         <td><a href="/admin/products/{{$product->id}}">{{$product->id}}</a></td>
                         <td>{{$product->name}}</td>
                         <td>{{$product->status->name_ru}}</td>
+                        <td>{{$product->in_stock == 1 ? 'Да' : 'Нет'}}</td>
                         <td>{{$product->updated_at}}</td>
                         <td>
                             <a href="/admin/products/{{$product->id}}/edit" class="btn btn-success">Редактировать</a>
