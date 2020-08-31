@@ -10,6 +10,13 @@ class Product extends Model
 
     protected $dates = ['sale_end_at'];
 
+    protected static function booted()
+    {
+        static::addGlobalScope('main_image', function (Builder $builder) {
+            $builder->has('main_image');
+        });
+    }
+
     public function getPriceAttribute($value)
     {
         return number_format($value, 0, '.', '');
