@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-md-12">
                     Пользователь: {{$order->user->full_name}}, {{$order->user->email}}<br/>
-                    Номер телефона: {{$order->address->phone_number}}<br/>
+                    Номер телефона: <a href="tel:{{$order->address->phone_number}}">{{$order->address->phone_number}}</a><br/>
                     Адрес: {{$order->address->street}} {{$order->address->street2}}, {{$order->address->city->name}}<br/>
                     Вид доставки: {{$order->shipping_type->name}}<br/>
                     Статус заказа: {{$order->order_status->name}}<br/>
