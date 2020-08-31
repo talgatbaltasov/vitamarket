@@ -10,6 +10,17 @@ use App\Brand;
 
 class CategoryController extends Controller
 {
+    public function all()
+    {
+        $products = Product::paginate(15);
+        $categories = Category::whereNull('parent_id')->orderBy('order')->get();
+        $bestsellers = Product::inRandomOrder()->take(5)->get();
+
+        $viewed = Product::inRandomOrder()->take(20)->get();
+
+    	return view('categories.all', compact('categories', 'bestsellers', 'products', 'viewed'));
+    }
+
     public function show($slug)
     {
         $category = Category::where('slug', $slug)->first();
