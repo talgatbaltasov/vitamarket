@@ -32,7 +32,13 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $product = Product::create($request->all());
+        $data = $request->all();
+        if($request->has('in_stock')) { 
+            $data['in_stock'] = 1;
+        } else {
+            $data['in_stock'] = 0;
+        }
+        $product = Product::create($data);
         
         return redirect('/admin/product_images/create?product_id='.$product->id);
     }
@@ -48,7 +54,13 @@ class ProductController extends Controller
 
     public function update(Product $product, Request $request)
     {
-        $product->update($request->all());
+        $data = $request->all();
+        if($request->has('in_stock')) { 
+            $data['in_stock'] = 1;
+        } else {
+            $data['in_stock'] = 0;
+        }
+        $product->update($data);
 
         return redirect()->route('admin.products');
     }
