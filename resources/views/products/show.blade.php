@@ -56,6 +56,11 @@
                                 @else
                                     <span class="current_price">{{$product->price}} тг.</span>
                                 @endif
+                                @if($product->in_stock == 1)
+                                    <span class="current_price">В наличии</span>
+                                @else
+                                    <span class="current_price">Нет в наличии</span>
+                                @endif
                             </div>
                             <div class="product_desc">
                                 <p>{!!$product->description!!}</p>
