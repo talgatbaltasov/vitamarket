@@ -89,9 +89,8 @@
                         <div class="banner_thumb">
                             <a href="/c/tovary-vostochnoi-islamskoi-mediciny"><img src="/assets/img/bg/banner2.jpg" alt=""></a> 
                             <div class="banner_content">
-                                <h3>Популярные товары</h3>
-                                <h2>Plants <br> For Healthy</h2>
-                                <a href="/c/tovary-vostochnoi-islamskoi-mediciny">Посмотреть</a>
+                                <h3>Все товары</h3>
+                                <a href="/c/vse-tovary">Посмотреть</a>
                             </div>
                         </div>
                     </figure>
