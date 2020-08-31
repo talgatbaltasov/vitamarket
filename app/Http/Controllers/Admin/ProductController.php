@@ -62,7 +62,7 @@ class ProductController extends Controller
         }
         $product->update($data);
 
-        return redirect()->route('admin.products');
+        return redirect('/admin/products');
     }
 
     public function destroy(Product $product)
