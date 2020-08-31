@@ -78,8 +78,7 @@
                             <a href="/c/vitaminy-iherb"><img src="/assets/img/bg/banner1.jpg" alt=""></a> 
                             <div class="banner_content">
                                 <h3>Товары со скидкой</h3>
-                                <h2>Plants <br> For Interior</h2>
-                                <a href="/c/vitaminy-iherb">Посмотреть</a>
+                                <a href="/tovary-so-skidkoi">Посмотреть</a>
                             </div>
                         </div>
                     </figure>
@@ -90,7 +89,7 @@
                             <a href="/c/tovary-vostochnoi-islamskoi-mediciny"><img src="/assets/img/bg/banner2.jpg" alt=""></a> 
                             <div class="banner_content">
                                 <h3>Все товары</h3>
-                                <a href="/c/vse-tovary">Посмотреть</a>
+                                <a href="/vse-tovary">Посмотреть</a>
                             </div>
                         </div>
                     </figure>

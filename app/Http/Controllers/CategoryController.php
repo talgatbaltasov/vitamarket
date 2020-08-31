@@ -21,6 +21,17 @@ class CategoryController extends Controller
     	return view('categories.all', compact('categories', 'bestsellers', 'products', 'viewed'));
     }
 
+    public function saleProducts()
+    {
+        $products = Product::whereNotNull('sale_price')->paginate(15);
+        $categories = Category::whereNull('parent_id')->orderBy('order')->get();
+        $bestsellers = Product::has('main_image')->inRandomOrder()->take(5)->get();
+
+        $viewed = Product::has('main_image')->inRandomOrder()->take(20)->get();
+
+    	return view('categories.all', compact('categories', 'bestsellers', 'products', 'viewed'));
+    }
+
     public function show($slug)
     {
         $category = Category::where('slug', $slug)->first();
