@@ -125,7 +125,7 @@
             <div class="tab-content">
                 @foreach($categories as $category)
                     @php
-                        $products = $category->products()->has('main_image')->inRandomOrder()->get();
+                        $products = $category->products()->inRandomOrder()->get();
                     @endphp
                     <div class="tab-pane fade @if($loop->first) show active @endif" id="category{{$category->id}}" role="tabpanel">
                         <div class="row">

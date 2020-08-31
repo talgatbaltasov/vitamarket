@@ -20,7 +20,7 @@ class BrandController extends Controller
         $brand = Brand::where('slug', $slug)->first();
         $products = $brand->products()->paginate(15);
         $categories = Category::whereNull('parent_id')->orderBy('order')->get();
-        $bestsellers = Product::has('main_image')->inRandomOrder()->take(5)->get();
+        $bestsellers = Product::inRandomOrder()->take(5)->get();
 
         $viewed = Product::inRandomOrder()->take(20)->get();
 
