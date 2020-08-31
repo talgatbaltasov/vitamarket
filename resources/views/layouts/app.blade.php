@@ -208,6 +208,8 @@
                                 </div>
                                 <div class="categories_menu_toggle">
                                     <ul>
+                                        <li><a href="/vse-tovary"> Все товары</a></li>
+                                        <li><a href="/tovary-so-skidkoi"> Товары со скидкой</a></li>
                                         @foreach($categories as $category)
                                             @if($category->children->count() > 0)
                                                 <li class="menu_item_children"><a href="/c/{{$category->slug}}">{{$category->name}} <i class="fa fa-angle-right"></i></a>
