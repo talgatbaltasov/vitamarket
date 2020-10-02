@@ -273,7 +273,9 @@
                             <div class="call-support">
                                 <p>Наш телефон: <a href="tel:+77078079777">+7 (707) 807-97-77</a></p>
                             </div>
-                            <a href="javascript:void(0)"><i class="icon-shopping-bag"></i><span class="item_count">@if(isset($cart->items)) {{$cart->totalQty}} @else 0 @endif</span></a>
+                            <div>
+                                <a href="/cart"><i class="icon-shopping-bag"></i><span class="item_count">@if(isset($cart->items)) {{$cart->totalQty}} @else 0 @endif</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
