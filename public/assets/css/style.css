@@ -1649,6 +1649,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   position: fixed;
   min-width: 355px;
   height: 50%;
+  min-height: 400px;
   padding: 18px 28px 33px;
   background: #fff;
   z-index: 999;
