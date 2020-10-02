@@ -288,7 +288,7 @@
                                                     <a href="javascript:void(0)"><i class="icon-x"></i></a>
                                                 </div>
                                             </div>
-                                            <div style="overflow: scroll; height: 131px;">
+                                            <div style="overflow: scroll; height: 262px;">
                                                 @if(isset($cart->items) && count($cart->items) > 0)
                                                     @foreach($cart->items as $product)
                                                         <div class="cart_item">
