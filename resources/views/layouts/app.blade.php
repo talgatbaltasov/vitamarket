@@ -92,6 +92,7 @@
 
     <div class="mini_cart_wrapper_custom_mobile">
         Товар добавлен в корзину
+        <a href="/checkout" class="button">Оформить заказ</a>
     </div>
 
     <a href="https://api.whatsapp.com/send?phone=77078079777" style="position: fixed; z-index: 999; bottom: 150px; right: 15px;">
@@ -453,7 +454,7 @@
                         $('.mini_cart_wrapper_custom_mobile').addClass('active');
                         setTimeout(function(){
                             $('.mini_cart_wrapper_custom_mobile').removeClass('active')
-                        }, 2500)
+                        }, 10000)
                     }
 				}
 			})
