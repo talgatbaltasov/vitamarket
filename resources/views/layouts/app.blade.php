@@ -438,7 +438,9 @@
 				success:function(res) {
                     // window.location.href = '/cart';
                     $('.mini_cart_custom').addClass('active');
-                    setTimeout($('.mini_cart_custom').removeClass('active'), 5000)
+                    setTimeout(function(){
+                        $('.mini_cart_custom').removeClass('active')
+                    }, 5000)
 				}
 			})
 		}
