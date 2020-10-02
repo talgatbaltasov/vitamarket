@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="action_links">
                                                 <ul>
-                                                    <li class="add_to_cart"><a href="#" onclick="addToCart(this, {{$product->id}})" title="" data-original-title="В корзину"><i class="icon-shopping-bag"></i></a></li>  
+                                                    <li class="add_to_cart"><a href="javascript:void(0)" onclick="addToCart(this, {{$product->id}})" title="" data-original-title="В корзину"><i class="icon-shopping-bag"></i></a></li>  
                                                     <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="" data-original-title="Быстрый просмотр"> <i class="icon-eye"></i></a></li>
                                                 </ul>
                                             </div>
@@ -103,7 +103,7 @@
                                             </div>
                                             <div class="action_links list_action_right">
                                                 <ul>
-                                                    <li class="add_to_cart"><a href="#" title="" onclick='addToCart(this, {{$product->id}})' data-original-title="В корзину">В корзину</a></li>
+                                                    <li class="add_to_cart"><a href="javascript:void(0)" title="" onclick='addToCart(this, {{$product->id}})' data-original-title="В корзину">В корзину</a></li>
                                                 </ul>
                                             </div>
                                         </div>

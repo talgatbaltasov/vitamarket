@@ -147,7 +147,7 @@
                                                                 @endif
                                                                 <div class="action_links">
                                                                     <ul>
-                                                                        <li class="add_to_cart"><a href="#" onclick="addToCart(this, {{$product->id}})" title="В корзину"><i class="icon-shopping-bag"></i></a></li>  
+                                                                        <li class="add_to_cart"><a href="javascript:void(0)" onclick="addToCart(this, {{$product->id}})" title="В корзину"><i class="icon-shopping-bag"></i></a></li>  
                                                                         <li class="quick_button"><a href="#" data-toggle="modal" data-target="#product{{$product->id}}"  title="Быстрый просмотр"> <i class="icon-eye"></i></a></li>
                                                                     </ul>
                                                                 </div>

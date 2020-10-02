@@ -235,7 +235,7 @@
                                             </div><!-- /.box-content -->
                                             <div class="box-bottom">
                                                 <div class="btn-add-cart">
-                                                    <a title="" onclick='addToCart(this, {{$product->id}})'>
+                                                    <a title="" href="javascript:void(0)" onclick='addToCart(this, {{$product->id}})'>
                                                         <img src="/images/icons/add-cart.png" alt="">В КОРЗИНУ
                                                     </a>
                                                 </div>
@@ -276,7 +276,7 @@
                                                 <span class="sale">{{$product->price}} тг.</span>
                                             </div>
                                             <div class="btn-add-cart">
-                                                <a title="" onclick='addToCart(this, {{$product->id}})'>
+                                                <a title="" href="javascript:void(0)" onclick='addToCart(this, {{$product->id}})'>
                                                     <img src="/images/icons/add-cart.png" alt="">В КОРЗИНУ
                                                 </a>
                                             </div>
