@@ -129,7 +129,9 @@
                     @endphp
                     <div class="tab-pane fade @if($loop->first) show active @endif" id="category{{$category->id}}" role="tabpanel">
                         <div class="row">
-                            <a href="/{{$category->slug}}" class="button">Посмотреть все</a>
+                            <div class="offset-4 col-md-4 text-center">
+                                <a href="/{{$category->slug}}" class="button">Посмотреть все</a>
+                            </div>
                             <div class="product_carousel product_column4 owl-carousel">
                                 @for($i = 0; $i < 6; $i++)
                                     <div class="col-lg-3">
