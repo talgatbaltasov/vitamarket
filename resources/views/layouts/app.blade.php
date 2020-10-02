@@ -278,7 +278,7 @@
                                         <span class="item_count">@if(isset($cart->items)) {{$cart->totalQty}} @else 0 @endif</span>
                                     </a>
                                     <!--mini cart-->
-                                    <div class="mini_cart mini_cart_custom">
+                                    <div class="mini_cart_custom">
                                         <div class="cart_gallery">
                                             <div class="cart_close">
                                                 <div class="cart_text">
