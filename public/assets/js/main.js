@@ -590,6 +590,9 @@
         $('.mini_cart,.off_canvars_overlay').removeClass('active')
     });
 
+    $('.mini_cart_wrapper_custom > a').on('click', function(){
+        $('.mini_cart_custom,.off_canvars_overlay').addClass('active')
+    });
     
     /*---canvas menu activation---*/
     $('.canvas_open').on('click', function(){
