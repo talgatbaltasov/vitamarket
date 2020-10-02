@@ -288,16 +288,13 @@
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="col-lg-2 col-md-4">
                         <div class="widgets_container contact_us">
                             <h3>Время работы</h3>
                             <p><span>Понедельник - Пятница:</span> 10:00 - 20:00</p>
                             <p><span>Суббота:</span> 10:00 - 18:00</p>
                             <p><span>Воскресенье:</span> выходной</p>
-                        </div>          
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6">
-                        <div class="widgets_container widget_menu">
+
                             <h3>Информация</h3>
                             <div class="footer_menu">
                                 <ul>
@@ -321,7 +318,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-5">
+                    <div class="col-lg-7 col-md-5">
                         <div class="widgets_container widget_menu">
                             <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/70000001045157133/center/76.892612,43.239186/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a><div class="dg-widget-link"><a href="http://2gis.kz/almaty/center/76.892612,43.239186/zoom/16/routeTab/rsType/bus/to/76.892612,43.239186╎Vitamarket, магазин здоровья?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Vitamarket, магазин здоровья</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":470,"height":400,"borderColor":"#a3a3a3","pos":{"lat":43.239186,"lon":76.892612,"zoom":16},"opt":{"city":"almaty"},"org":[{"id":"70000001045157133"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
                         </div>
