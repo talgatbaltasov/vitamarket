@@ -38,6 +38,58 @@
 </head>
 <body>
 
+    <!--mini cart-->
+    <div class="mini_cart_wrapper_custom">
+        <div class="mini_cart_custom">
+            <div class="cart_gallery">
+                <div class="cart_close">
+                    <div class="cart_text">
+                        <h3>Корзина</h3>
+                    </div>
+                    <div class="mini_cart_close">
+                        <a href="javascript:void(0)"><i class="icon-x"></i></a>
+                    </div>
+                </div>
+                <div style="overflow: scroll; height: 262px;">
+                    @if(isset($cart->items) && count($cart->items) > 0)
+                        @foreach($cart->items as $product)
+                            <div class="cart_item">
+                                <div class="cart_img">
+                                    <a href="#"><img src="{{$product['main_image']}}" alt=""></a>
+                                </div>
+                                <div class="cart_info">
+                                    <a href="#">{{$product['item']['name']}}</a>
+                                    <p>{{$product['qty']}} x <span> {{$product['item']['price']}} тг. </span></p>    
+                                </div>
+                                <div class="cart_remove">
+                                    <a href="#" onclick='removeCartItem({{$product["item"]["id"]}})'><i class="icon-x"></i></a>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+            <div class="mini_cart_table">
+                <div class="cart_table_border">
+                    <div class="cart_total">
+                        <span>Общее:</span>
+                        <span class="price">@if(isset($cart->items)) {{$cart->totalPrice}} @else 0 @endif тг.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mini_cart_footer">
+            <div class="cart_button">
+                    <a href="/cart"><i class="fa fa-shopping-cart"></i> Посмотреть корзину</a>
+                </div>
+                <div class="cart_button">
+                    <a class="active" href="/checkout"><i class="fa fa-sign-in"></i> Заказать</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--mini cart end-->
+
     <a href="https://api.whatsapp.com/send?phone=77078079777" style="position: fixed; z-index: 999; bottom: 150px; right: 15px;">
         <img src="/assets/img/icon/whatsapp.png" alt="" width="70">
     </a>
@@ -271,57 +323,8 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="call-support">
-                                <p class="mini_cart_wrapper_custom">
+                                <p>
                                     Наш телефон: <a href="tel:+77078079777">+7 (707) 807-97-77</a>
-                                    <!--mini cart-->
-                                    <div class="mini_cart_custom">
-                                        <div class="cart_gallery">
-                                            <div class="cart_close">
-                                                <div class="cart_text">
-                                                    <h3>Корзина</h3>
-                                                </div>
-                                                <div class="mini_cart_close">
-                                                    <a href="javascript:void(0)"><i class="icon-x"></i></a>
-                                                </div>
-                                            </div>
-                                            <div style="overflow: scroll; height: 262px;">
-                                                @if(isset($cart->items) && count($cart->items) > 0)
-                                                    @foreach($cart->items as $product)
-                                                        <div class="cart_item">
-                                                            <div class="cart_img">
-                                                                <a href="#"><img src="{{$product['main_image']}}" alt=""></a>
-                                                            </div>
-                                                            <div class="cart_info">
-                                                                <a href="#">{{$product['item']['name']}}</a>
-                                                                <p>{{$product['qty']}} x <span> {{$product['item']['price']}} тг. </span></p>    
-                                                            </div>
-                                                            <div class="cart_remove">
-                                                                <a href="#" onclick='removeCartItem({{$product["item"]["id"]}})'><i class="icon-x"></i></a>
-                                                            </div>
-                                                        </div>
-                                                    @endforeach
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="mini_cart_table">
-                                            <div class="cart_table_border">
-                                                <div class="cart_total">
-                                                    <span>Общее:</span>
-                                                    <span class="price">@if(isset($cart->items)) {{$cart->totalPrice}} @else 0 @endif тг.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mini_cart_footer">
-                                           <div class="cart_button">
-                                                <a href="/cart"><i class="fa fa-shopping-cart"></i> Посмотреть корзину</a>
-                                            </div>
-                                            <div class="cart_button">
-                                                <a class="active" href="/checkout"><i class="fa fa-sign-in"></i> Заказать</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <!--mini cart end-->
                                 </p>
                             </div>
                         </div>
