@@ -440,7 +440,7 @@
                     $('.mini_cart_custom').addClass('active');
                     setTimeout(function(){
                         $('.mini_cart_custom').removeClass('active')
-                    }, 3000)
+                    }, 2000)
 				}
 			})
 		}
