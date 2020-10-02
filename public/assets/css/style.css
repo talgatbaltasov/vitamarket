@@ -1644,6 +1644,30 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 
+.mini_cart_custom {
+  position: fixed;
+  min-width: 355px;
+  height: 100%;
+  padding: 18px 28px 33px;
+  background: #fff;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  transition: .5s;
+  transform: translateX(100%);
+}
+.mini_cart_custom.active {
+  transform: translateX(0);
+  transition: .5s;
+}
+@media only screen and (max-width: 767px) {
+  .mini_cart_custom {
+    min-width: 300px;
+    height: 100%;
+    padding: 18px 18px 33px;
+  }
+}
+
 .cart_img {
   width: 90px;
   margin-right: 10px;
