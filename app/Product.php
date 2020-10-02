@@ -13,9 +13,9 @@ class Product extends Model
 
     protected static function booted()
     {
-        static::addGlobalScope('main_image', function (Builder $builder) {
-            $builder->has('main_image');
-        });
+        // static::addGlobalScope('main_image', function (Builder $builder) {
+        //     $builder->has('main_image');
+        // });
     }
 
     public function getPriceAttribute($value)
