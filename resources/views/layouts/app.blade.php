@@ -91,7 +91,7 @@
     <!--mini cart end-->
 
     <div class="mini_cart_wrapper_custom_mobile">
-        Товар добавлен в корзину
+        Товар добавлен в корзину<br/>
         <a href="/checkout" class="button">Оформить заказ</a>
     </div>
 
