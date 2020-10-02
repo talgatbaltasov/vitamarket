@@ -90,6 +90,10 @@
     </div>
     <!--mini cart end-->
 
+    <div class="mini_cart_wrapper_custom_mobile">
+        Товар добавлен в корзину
+    </div>
+
     <a href="https://api.whatsapp.com/send?phone=77078079777" style="position: fixed; z-index: 999; bottom: 150px; right: 15px;">
         <img src="/assets/img/icon/whatsapp.png" alt="" width="70">
     </a>
@@ -440,10 +444,17 @@
 				},
 				success:function(res) {
                     // window.location.href = '/cart';
-                    $('.mini_cart_custom').addClass('active');
-                    setTimeout(function(){
-                        $('.mini_cart_custom').removeClass('active')
-                    }, 2500)
+                    if($(window).width() > 767) {
+                        $('.mini_cart_custom').addClass('active');
+                        setTimeout(function(){
+                            $('.mini_cart_custom').removeClass('active')
+                        }, 2500)
+                    } else {
+                        $('.mini_cart_wrapper_custom_mobile').addClass('active');
+                        setTimeout(function(){
+                            $('.mini_cart_wrapper_custom_mobile').removeClass('active')
+                        }, 2500)
+                    }
 				}
 			})
 		}

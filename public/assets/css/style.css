@@ -1670,6 +1670,23 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 
+.mini_cart_wrapper_custom_mobile {
+  position: fixed;
+  min-width: 355px;
+  height: 20px;
+  padding: 18px 28px 33px;
+  background: #fff;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  transition: .5s;
+  transform: translateX(100%);
+}
+.mini_cart_wrapper_custom_mobile.active {
+  transform: translateX(0);
+  transition: .5s;
+}
+
 .cart_img {
   width: 90px;
   margin-right: 10px;
