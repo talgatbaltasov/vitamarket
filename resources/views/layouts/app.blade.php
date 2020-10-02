@@ -288,22 +288,24 @@
                                                     <a href="javascript:void(0)"><i class="icon-x"></i></a>
                                                 </div>
                                             </div>
-                                            @if(isset($cart->items) && count($cart->items) > 0)
-                                                @foreach($cart->items as $product)
-                                                    <div class="cart_item">
-                                                        <div class="cart_img">
-                                                            <a href="#"><img src="{{$product['main_image']}}" alt=""></a>
+                                            <div style="overflow: y; height: 131px;">
+                                                @if(isset($cart->items) && count($cart->items) > 0)
+                                                    @foreach($cart->items as $product)
+                                                        <div class="cart_item">
+                                                            <div class="cart_img">
+                                                                <a href="#"><img src="{{$product['main_image']}}" alt=""></a>
+                                                            </div>
+                                                            <div class="cart_info">
+                                                                <a href="#">{{$product['item']['name']}}</a>
+                                                                <p>{{$product['qty']}} x <span> {{$product['item']['price']}} тг. </span></p>    
+                                                            </div>
+                                                            <div class="cart_remove">
+                                                                <a href="#" onclick='removeCartItem({{$product["item"]["id"]}})'><i class="icon-x"></i></a>
+                                                            </div>
                                                         </div>
-                                                        <div class="cart_info">
-                                                            <a href="#">{{$product['item']['name']}}</a>
-                                                            <p>{{$product['qty']}} x <span> {{$product['item']['price']}} тг. </span></p>    
-                                                        </div>
-                                                        <div class="cart_remove">
-                                                            <a href="#" onclick='removeCartItem({{$product["item"]["id"]}})'><i class="icon-x"></i></a>
-                                                        </div>
-                                                    </div>
-                                                @endforeach
-                                            @endif
+                                                    @endforeach
+                                                @endif
+                                            </div>
                                         </div>
                                         <div class="mini_cart_table">
                                             <div class="cart_table_border">
