@@ -38,7 +38,10 @@
                             <li><i class="fa fa-fax"></i>  Адрес: проспект Абая 143, уг. Гагарина, офис 105</li>
                             <li><i class="fa fa-phone"></i> <a href="mailto:kzvitamarket@gmail.com">kzvitamarket@gmail.com</a></li>
                             <li><i class="fa fa-envelope-o"></i><a href="tel:+77078079777">+7 (707) 807-97-77</a></li>
-                        </ul>             
+                        </ul>
+                        <div>
+                            <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/70000001045157133/center/76.892612,43.239186/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a><div class="dg-widget-link"><a href="http://2gis.kz/almaty/center/76.892612,43.239186/zoom/16/routeTab/rsType/bus/to/76.892612,43.239186╎Vitamarket, магазин здоровья?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Vitamarket, магазин здоровья</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":43.239186,"lon":76.892612,"zoom":16},"opt":{"city":"almaty"},"org":[{"id":"70000001045157133"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+                        </div>
                     </div> 
                 </div>
                 <div class="col-lg-6 col-md-12">
