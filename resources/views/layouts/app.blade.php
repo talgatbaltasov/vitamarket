@@ -273,10 +273,6 @@
                             <div class="call-support">
                                 <p class="mini_cart_wrapper_custom">
                                     Наш телефон: <a href="tel:+77078079777">+7 (707) 807-97-77</a>
-                                    <a href="javascript:void(0)" style="font-size: 24px; margin-left: 20px;">
-                                        <i class="icon-shopping-bag"></i>
-                                        <span class="item_count">@if(isset($cart->items)) {{$cart->totalQty}} @else 0 @endif</span>
-                                    </a>
                                     <!--mini cart-->
                                     <div class="mini_cart_custom">
                                         <div class="cart_gallery">
@@ -440,7 +436,8 @@
 					_token:"<?=csrf_token()?>"
 				},
 				success:function(res) {
-					window.location.href = '/cart';
+                    // window.location.href = '/cart';
+                    $('.mini_cart_custom').addClass('active')
 				}
 			})
 		}

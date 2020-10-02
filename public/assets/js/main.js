@@ -588,11 +588,7 @@
     
     $('.mini_cart_close,.off_canvars_overlay').on('click', function(){
         $('.mini_cart,.off_canvars_overlay').removeClass('active')
-        $('.mini_cart_custom,.off_canvars_overlay').removeClass('active')
-    });
-
-    $('.mini_cart_wrapper_custom > a').on('click', function(){
-        $('.mini_cart_custom,.off_canvars_overlay').addClass('active')
+        $('.mini_cart_custom').removeClass('active')
     });
     
     /*---canvas menu activation---*/
