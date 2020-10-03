@@ -17,7 +17,7 @@ class ProductImageController extends Controller
 
     public function store(Request $request)
     {
-        $product = Product::find($request->product_id);
+        $product = Product::withoutGlobalScopes()->where('id', $request->product_id)->first();
 
         if($request->has('main_image')) {
             $filename = '/images/products/'.$product->slug.'_'.time().'.'.$request->file('main_image')->extension();
