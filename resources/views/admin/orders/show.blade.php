@@ -4,8 +4,18 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            Заказ #{{$order->id}}
-            <ul class="nav float-right">
+            <div class="row">
+                <div class="col-md-6">
+                    Заказ
+                </div>
+                <div class="col-md-6">
+                    {{$order->created_at}}
+                </div>
+                <div class="col-md-12">
+                    <span class="rounded-circle bg-success"></span>{{$order->order_status->name}} #{{$order->id}}
+                </div>
+            </div>
+            {{-- <ul class="nav float-right">
                 @if($order->order_status_id == 1)
                     <li class="nav-item mr-3">
                         <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-primary">Отправлен</a>
@@ -18,7 +28,7 @@
                 <li class="nav-item">
                     <a href="/admin/orders/{{$order->id}}/order-status/4" class="btn btn-danger">Отменен</a>
                 </li>
-            </ul>
+            </ul> --}}
         </div>
         <div class="card-body">
             <div class="row">
