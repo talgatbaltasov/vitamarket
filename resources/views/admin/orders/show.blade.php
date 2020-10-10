@@ -12,7 +12,7 @@
                     {{$order->created_at}}
                 </div>
                 <div class="col-12">
-                    <span style="width: 20px; height: 20px;" class="d-inline-block rounded-circle bg-success"></span>{{$order->order_status->name}} #{{$order->id}}
+                    <span style="width: 10px; height: 10px;" class="d-inline-block rounded-circle bg-success"></span>{{$order->order_status->name}} #{{$order->id}}
                 </div>
             </div>
             {{-- <ul class="nav float-right">
