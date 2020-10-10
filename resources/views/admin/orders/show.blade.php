@@ -41,11 +41,13 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-12">
-                    <p class="text-muted">Клиент</p>
-                    <p>{{$order->user->full_name}}, {{$order->user->email}}</p>
+                    <p class="small text-muted mb-0">Клиент</p>
+                    <p>
+                        {{$order->user->full_name}}<br/> 
+                        {{$order->user->email}}<br/>
+                        {{$order->address->phone_number}}<br/>
+                    </p>
                 </div>
-                    
-                    Номер телефона: <a href="tel:{{$order->address->phone_number}}">{{$order->address->phone_number}}</a><br/>
                     Адрес: {{$order->address->street}} {{$order->address->street2}}, {{$order->address->city->name}}<br/>
                     Вид доставки: {{$order->shipping_type->name}}<br/>
                     Статус заказа: {{$order->order_status->name}}<br/>
