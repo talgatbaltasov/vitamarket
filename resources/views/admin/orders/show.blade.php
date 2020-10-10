@@ -91,15 +91,19 @@
                     <div class="col-3">
                         <img src="{{$item->product->main_image->image}}" width="100" alt="">
                     </div>
-                    <div class="col-9">
+                    <div class="col-9 small">
                         <p class="mb-0">{{$item->product->name}}</p>
                         <p class="text-muted">
                             <i class="fa fa-clock"></i> В наличии<br/>
                             <i class="fa fa-tag"></i> {{$item->price}} тг. x {{$item->quantity}} (шт.)
                         </p>
-                        <p>{{$item->quantity * $item->price}} тг.</p>
+                        <p class="h3">{{$item->quantity * $item->price}} тг.</p>
                     </div>
                 @endforeach
+                {{-- <tr>
+                    <td colspan="4" class="text-right">Итого:</td>
+                    <td>{{$total}} тг.</td>
+                </tr> --}}
             </div>
         </div>
     </div>
