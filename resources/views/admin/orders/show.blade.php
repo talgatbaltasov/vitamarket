@@ -1,6 +1,13 @@
 @extends('layouts.admin')
 
 @section('content')
+@if($order->order_status_id == 1)
+    @php $class_text = 'success'; @endphp
+@elseif($order->order_status_id == 2)    
+    @php $class_text = 'primary'; @endphp
+@else
+    @php $class_text = 'danger'; @endphp
+@endif
 <div class="container">
     <div class="card">
         <div class="card-header">
@@ -12,7 +19,8 @@
                     {{$order->created_at}}
                 </div>
                 <div class="col-12">
-                    <span style="width: 10px; height: 10px;" class="d-inline-block rounded-circle bg-success"></span>{{$order->order_status->name}} #{{$order->id}}
+                    <span style="width: 10px; height: 10px;" class="mr-1 d-inline-block rounded-circle bg-{{$class_text}}"></span>
+                    {{$order->order_status->name}} #{{$order->id}}
                 </div>
             </div>
             {{-- <ul class="nav float-right">
