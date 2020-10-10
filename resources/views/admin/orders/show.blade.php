@@ -5,14 +5,14 @@
     <div class="card">
         <div class="card-header">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-6">
                     Заказ
                 </div>
-                <div class="col-md-6">
+                <div class="col-6">
                     {{$order->created_at}}
                 </div>
-                <div class="col-md-12">
-                    <span class="rounded-circle bg-success"></span>{{$order->order_status->name}} #{{$order->id}}
+                <div class="col-12">
+                    <span style="width: 20px; height: 20px;" class="d-inline-block rounded-circle bg-success"></span>{{$order->order_status->name}} #{{$order->id}}
                 </div>
             </div>
             {{-- <ul class="nav float-right">
