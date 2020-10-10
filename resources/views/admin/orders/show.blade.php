@@ -41,7 +41,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-2 h2 text-center">
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-user-o"></i>
                 </div>
                 <div class="col-10">
                     <p class="small text-muted mb-0">Клиент</p>
@@ -49,6 +49,18 @@
                         {{$order->user->full_name}}<br/> 
                         {{$order->user->email}}<br/>
                         {{$order->address->phone_number}}<br/>
+                    </p>
+                </div>
+                <div class="col-2 h2 text-center">
+                    <i class="fa fa-truck"></i>
+                </div>
+                <div class="col-10">
+                    <p class="small text-muted mb-0">Способ доставки</p>
+                    <p>
+                        {{$order->shipping_type->name}}<br/>
+                        {{$order->address->city->name}}<br/>
+                        {{$order->address->street}}<br/> 
+                        {{$order->address->street2}}<br/>
                     </p>
                 </div>
                     Адрес: {{$order->address->street}} {{$order->address->street2}}, {{$order->address->city->name}}<br/>
