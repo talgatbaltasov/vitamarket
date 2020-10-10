@@ -97,7 +97,7 @@
                             <i class="fa fa-clock"></i> В наличии<br/>
                             <i class="fa fa-tag"></i> {{$item->price}} тг. x {{$item->quantity}} (шт.)
                         </p>
-                        <p class="h3">{{$item->quantity * $item->price}} тг.</p>
+                        <p class="h5">{{$item->quantity * $item->price}} тг.</p>
                     </div>
                 @endforeach
                 {{-- <tr>
