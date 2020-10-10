@@ -85,21 +85,21 @@
             @endphp
             <div class="row">
                 @foreach($order->items as $item)
+                    @php
+                        $total += $item->quantity * $item->price;
+                    @endphp
                     <div class="col-3">
                         <img src="{{$item->product->main_image->image}}" width="100" alt="">
                     </div>
                     <div class="col-9">
                         <p class="mb-0">{{$item->product->name}}</p>
-                        <p class="mb-0 text-muted">
+                        <p class="text-muted">
                             <i class="fa fa-clock"></i> В наличии<br/>
                             <i class="fa fa-tag"></i> {{$item->price}} тг. x {{$item->quantity}} (шт.)
                         </p>
+                        <p>{{$item->quantity * $item->price}} тг.</p>
                     </div>
                 @endforeach
-                <tr>
-                    <td colspan="4" class="text-right">Итого:</td>
-                    <td>{{$total}} тг.</td>
-                </tr>
             </div>
         </div>
     </div>
