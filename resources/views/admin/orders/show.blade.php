@@ -15,7 +15,7 @@
                 <div class="col-6">
                     Заказ
                 </div>
-                <div class="col-6">
+                <div class="col-6 text-right">
                     {{$order->created_at}}
                 </div>
                 <div class="col-12">
@@ -40,8 +40,11 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-md-12">
-                    Пользователь: {{$order->user->full_name}}, {{$order->user->email}}<br/>
+                <div class="col-12">
+                    <p class="text-muted">Клиент</p>
+                    <p>{{$order->user->full_name}}, {{$order->user->email}}</p>
+                </div>
+                    
                     Номер телефона: <a href="tel:{{$order->address->phone_number}}">{{$order->address->phone_number}}</a><br/>
                     Адрес: {{$order->address->street}} {{$order->address->street2}}, {{$order->address->city->name}}<br/>
                     Вид доставки: {{$order->shipping_type->name}}<br/>
