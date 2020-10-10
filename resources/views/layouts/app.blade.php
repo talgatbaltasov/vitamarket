@@ -132,7 +132,7 @@
                         <div class="offcanvas_footer">
                             <span>
                                 <a href="https://instagram.com/vitamarket.almaty">
-                                    <img src="/assets/img/icon/instagram.png" alt="" width="20">
+                                    <img src="/assets/img/icon/instagram.png" alt="" width="100">
                                 </a>
                             </span>
                             <br/>
