@@ -41,7 +41,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-2 h2 text-center">
-                    <i class="fa fa-user-o"></i>
+                    <i class="fa fa-user"></i>
                 </div>
                 <div class="col-10">
                     <p class="small text-muted mb-0">Клиент</p>
@@ -52,7 +52,7 @@
                     </p>
                 </div>
                 <div class="col-2 h2 text-center">
-                    <i class="fa fa-truck-o"></i>
+                    <i class="fa fa-truck"></i>
                 </div>
                 <div class="col-10">
                     <p class="small text-muted mb-0">Способ доставки</p>
@@ -63,10 +63,14 @@
                         {{$order->address->street2}}<br/>
                     </p>
                 </div>
-                    Адрес: {{$order->address->street}} {{$order->address->street2}}, {{$order->address->city->name}}<br/>
-                    Вид доставки: {{$order->shipping_type->name}}<br/>
-                    Статус заказа: {{$order->order_status->name}}<br/>
-                    Комментарии к заказу: {{$order->comment}}<br/>
+                <div class="col-2 h2 text-center">
+                    <i class="fa fa-comment"></i>
+                </div>
+                <div class="col-10">
+                    <p class="small text-muted mb-0">Примечание</p>
+                    <p>
+                        {{$order->comment}}
+                    </p>
                 </div>
             </div>
             <table class="table table-striped">
