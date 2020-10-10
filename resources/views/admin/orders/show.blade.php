@@ -52,14 +52,14 @@
                     </p>
                 </div>
                 <div class="col-2 h2 text-center">
-                    <i class="fa fa-truck"></i>
+                    <i class="fa fa-truck-o"></i>
                 </div>
                 <div class="col-10">
                     <p class="small text-muted mb-0">Способ доставки</p>
                     <p>
-                        {{$order->shipping_type->name}}<br/>
-                        {{$order->address->city->name}}<br/>
-                        {{$order->address->street}}<br/> 
+                        {{$order->shipping_type->name}}, 
+                        {{$order->address->city->name}}, 
+                        {{$order->address->street}}, 
                         {{$order->address->street2}}<br/>
                     </p>
                 </div>
