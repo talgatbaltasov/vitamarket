@@ -86,7 +86,7 @@
             <div class="row">
                 @foreach($order->items as $item)
                     <div class="col-3">
-                        <img src="{{$item->product->main_image->image}}" alt="">
+                        <img src="{{$item->product->main_image->image}}" width="100" alt="">
                     </div>
                     <div class="col-9">
                         <p class="mb-0">{{$item->product->name}}</p>
