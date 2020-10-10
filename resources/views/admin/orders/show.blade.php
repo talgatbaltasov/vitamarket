@@ -40,7 +40,10 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-12">
+                <div class="col-2">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="col-10">
                     <p class="small text-muted mb-0">Клиент</p>
                     <p>
                         {{$order->user->full_name}}<br/> 
