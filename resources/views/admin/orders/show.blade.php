@@ -9,7 +9,7 @@
     @php $class_text = 'danger'; @endphp
 @endif
 <div class="container">
-    <div class="card">
+    <div class="card mb-3">
         <div class="card-header">
             <div class="row">
                 <div class="col-6">
