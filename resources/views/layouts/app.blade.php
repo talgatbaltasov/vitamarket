@@ -121,18 +121,6 @@
                         </div>
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
-                                <li class="menu-item-has-children active">
-                                    <a href="/">Главная</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="/payments-delivery">Доставка и оплата</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="/contacts"> Контакты</a> 
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="/contacts">Вопросы и ответы</a>
-                                </li>
                                 @foreach($categories as $category)
                                     <li class="menu-item-has-children">
                                         <a href="/c/{{$category->slug}}">{{$category->name}}</a>
