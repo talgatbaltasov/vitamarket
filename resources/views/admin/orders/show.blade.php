@@ -73,34 +73,34 @@
                     </p>
                 </div>
             </div>
-            <table class="table table-striped">
-                <tr>
-                    <td>ID</td>
-                    <td>Товар</td>
-                    <td>Количество</td>
-                    <td>Цена за 1шт</td>
-                    <td>Общее</td>
-                </tr>
-                @php
-                    $total = 0;
-                @endphp
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Товары в заказе
+        </div>
+        <div class="card-body">
+            @php
+                $total = 0;
+            @endphp
+            <div class="row">
                 @foreach($order->items as $item)
-                    @php
-                        $total += $item->quantity * $item->price;
-                    @endphp
-                    <tr>
-                        <td>{{$item->id}}</td>
-                        <td><a href="/p/{{$item->product->slug}}">{{$item->product->name}}</a></td>
-                        <td>{{$item->quantity}}</td>
-                        <td>{{$item->price}} тг.</td>
-                        <td>{{$item->quantity * $item->price}} тг.</td>
-                    </tr>
+                    <div class="col-3">
+                        <img src="{{$item->product->main_image->image}}" alt="">
+                    </div>
+                    <div class="col-9">
+                        <p class="mb-0">{{$item->product->name}}</p>
+                        <p class="mb-0 text-muted">
+                            <i class="fa fa-clock"></i> В наличии<br/>
+                            <i class="fa fa-tag"></i> {{$item->price}} тг. x {{$item->quantity}} (шт.)
+                        </p>
+                    </div>
                 @endforeach
                 <tr>
                     <td colspan="4" class="text-right">Итого:</td>
                     <td>{{$total}} тг.</td>
                 </tr>
-            </table>
+            </div>
         </div>
     </div>
 </div>
