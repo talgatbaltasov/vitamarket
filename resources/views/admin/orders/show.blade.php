@@ -40,7 +40,7 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-2">
+                <div class="col-2 h2 text-center">
                     <i class="fa fa-user"></i>
                 </div>
                 <div class="col-10">
