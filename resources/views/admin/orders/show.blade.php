@@ -144,9 +144,9 @@
                 </button>
             </div>
             <div class="modal-body">
-                <a href="/admin/orders/{{$order->id}}/order-status/2"><i class="fa fa-arrow-down"></i> Принят</a>
-                <a href="/admin/orders/{{$order->id}}/order-status/3"><i class="fa fa-check"></i> Выполнен</a>
-                <a href="/admin/orders/{{$order->id}}/order-status/4"><i class="fa fa-times"></i> Отменен</a>
+                <a href="/admin/orders/{{$order->id}}/order-status/2" class="d-block"><i class="fa fa-arrow-down"></i> Принят</a>
+                <a href="/admin/orders/{{$order->id}}/order-status/3" class="d-block"><i class="fa fa-check"></i> Выполнен</a>
+                <a href="/admin/orders/{{$order->id}}/order-status/4" class="d-block"><i class="fa fa-times"></i> Отменен</a>
             </div>
         </div>
     </div>
