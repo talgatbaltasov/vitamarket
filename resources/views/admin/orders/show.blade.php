@@ -123,13 +123,30 @@
                     </li>
                 </ul> --}}
                 <div class="col-6">
-                    <button class="btn btn-block btn-success">Действия</button>
+                    <button class="btn btn-block btn-success" data-toggle="modal" data-target="#actionModal">Действия</button>
                 </div>
                 <div class="col-6">
                     @if($order->order_status_id == 1)
                         <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-block btn-primary">Обработать</a>
                     @endif
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Смена статуса</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <a href="/admin/orders/{{$order->id}}/order-status/2"><i class="fa fa-arrow-down"></i> Принят</a>
+                <a href="/admin/orders/{{$order->id}}/order-status/3"><i class="fa fa-check"></i> Выполнен</a>
+                <a href="/admin/orders/{{$order->id}}/order-status/4"><i class="fa fa-times"></i> Отменен</a>
             </div>
         </div>
     </div>
