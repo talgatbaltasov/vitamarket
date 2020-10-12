@@ -103,9 +103,9 @@
             </div>
             <div class="row">
                 <div class="col-6">Сумма доставки:</div>
-                <div class="col-6">{{$order->shipping_type->price}} тг.</div>
+                <div class="col-6 text-right">{{$order->shipping_type->price}} тг.</div>
                 <div class="col-6">Всего к оплате:</div>
-                <div class="col-6">{{$total}} тг.</div>
+                <div class="col-6 text-right">{{$total}} тг.</div>
             </div>
         </div>
     </div>
