@@ -87,7 +87,7 @@
                 @php
                     $total += $item->quantity * $item->price;
                 @endphp
-                <div class="row py-3">
+                <div class="row py-3 border-bottom">
                     <div class="col-3">
                         <img src="{{$item->product->main_image->image}}" width="100" alt="">
                     </div>
