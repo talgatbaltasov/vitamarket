@@ -123,11 +123,11 @@
                     </li>
                 </ul> --}}
                 <div class="col-6">
-                    <button class="btn btn-default">Действия</button>
+                    <button class="btn btn-block btn-default">Действия</button>
                 </div>
                 <div class="col-6">
                     @if($order->order_status_id == 1)
-                        <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-primary">Обработать</a>
+                        <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-block btn-primary">Обработать</a>
                     @endif
                 </div>
             </div>
