@@ -111,11 +111,11 @@
                 {{-- <ul class="nav float-right">
                     @if($order->order_status_id == 1)
                         <li class="nav-item mr-3">
-                            <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-primary">Отправлен</a>
+                            <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-primary">Обработан</a>
                         </li>
                     @elseif($order->order_status_id == 2)    
                         <li class="nav-item mr-3">
-                            <a href="/admin/orders/{{$order->id}}/order-status/3" class="btn btn-success">Доставлен</a>
+                            <a href="/admin/orders/{{$order->id}}/order-status/3" class="btn btn-success">Выполнен</a>
                         </li>
                     @endif
                     <li class="nav-item">
