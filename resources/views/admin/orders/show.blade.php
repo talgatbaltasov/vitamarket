@@ -101,7 +101,7 @@
                     </div>
                 </div>
             @endforeach
-            <div class="row">
+            <div class="row py-3">
                 <div class="col-6">Сумма доставки:</div>
                 <div class="col-6 text-right">{{$order->shipping_type->price}} тг.</div>
                 <div class="col-6">Всего к оплате:</div>
