@@ -107,6 +107,30 @@
                 <div class="col-6">Всего к оплате:</div>
                 <div class="col-6 text-right">{{$total}} тг.</div>
             </div>
+            <div class="row">
+                {{-- <ul class="nav float-right">
+                    @if($order->order_status_id == 1)
+                        <li class="nav-item mr-3">
+                            <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-primary">Отправлен</a>
+                        </li>
+                    @elseif($order->order_status_id == 2)    
+                        <li class="nav-item mr-3">
+                            <a href="/admin/orders/{{$order->id}}/order-status/3" class="btn btn-success">Доставлен</a>
+                        </li>
+                    @endif
+                    <li class="nav-item">
+                        <a href="/admin/orders/{{$order->id}}/order-status/4" class="btn btn-danger">Отменен</a>
+                    </li>
+                </ul> --}}
+                <div class="col-6">
+                    <button class="btn btn-default">Действия</button>
+                </div>
+                <div class="col-6">
+                    @if($order->order_status_id == 1)
+                        <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-primary">Обработать</a>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
 </div>
