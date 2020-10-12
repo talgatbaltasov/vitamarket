@@ -102,10 +102,10 @@
                 @endforeach
             </div>
             <div class="row">
-                <div class="col-md-6">Сумма доставки:</div>
-                <div class="col-md-6">{{$order->shipping_type->price}} тг.</div>
-                <div class="col-md-6">Всего к оплате:</div>
-                <div class="col-md-6">{{$total}} тг.</div>
+                <div class="col-6">Сумма доставки:</div>
+                <div class="col-6">{{$order->shipping_type->price}} тг.</div>
+                <div class="col-6">Всего к оплате:</div>
+                <div class="col-6">{{$total}} тг.</div>
             </div>
         </div>
     </div>
