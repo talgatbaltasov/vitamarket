@@ -100,10 +100,12 @@
                         <p class="h5">{{$item->quantity * $item->price}} тг.</p>
                     </div>
                 @endforeach
-                {{-- <tr>
-                    <td colspan="4" class="text-right">Итого:</td>
-                    <td>{{$total}} тг.</td>
-                </tr> --}}
+            </div>
+            <div class="row">
+                <div class="col-md-6">Сумма доставки:</div>
+                <div class="col-md-6">{{$order->shipping_type->price}} тг.</div>
+                <div class="col-md-6">Всего к оплате:</div>
+                <div class="col-md-6">{{$total}} тг.</div>
             </div>
         </div>
     </div>
