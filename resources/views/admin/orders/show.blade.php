@@ -83,11 +83,11 @@
             @php
                 $total = 0;
             @endphp
-            <div class="row">
-                @foreach($order->items as $item)
-                    @php
-                        $total += $item->quantity * $item->price;
-                    @endphp
+            @foreach($order->items as $item)
+                @php
+                    $total += $item->quantity * $item->price;
+                @endphp
+                <div class="row py-3">
                     <div class="col-3">
                         <img src="{{$item->product->main_image->image}}" width="100" alt="">
                     </div>
@@ -99,8 +99,8 @@
                         </p>
                         <p class="h5">{{$item->quantity * $item->price}} тг.</p>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
             <div class="row">
                 <div class="col-6">Сумма доставки:</div>
                 <div class="col-6 text-right">{{$order->shipping_type->price}} тг.</div>
