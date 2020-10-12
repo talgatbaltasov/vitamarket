@@ -123,7 +123,7 @@
                     </li>
                 </ul> --}}
                 <div class="col-6">
-                    <button class="btn btn-block btn-default">Действия</button>
+                    <button class="btn btn-block btn-success">Действия</button>
                 </div>
                 <div class="col-6">
                     @if($order->order_status_id == 1)
