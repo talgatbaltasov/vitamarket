@@ -54,7 +54,7 @@ class BannerController extends Controller
         return redirect('/admin/banners');
     }
 
-    public function delete(Banner $banner)
+    public function destroy(Banner $banner)
     {
         $banner->delete();
         return redirect('/admin/banners');
