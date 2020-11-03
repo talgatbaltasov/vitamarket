@@ -127,7 +127,7 @@
                 </div>
                 <div class="col-6">
                     @if($order->order_status_id == 1)
-                        <a href="/admin/orders/{{$order->id}}/order-status/2" class="btn btn-block btn-primary">Обработать</a>
+                        <a href="/admin/orders/{{$order->id}}/order-status/3" class="btn btn-block btn-primary">Выполнен</a>
                     @endif
                 </div>
             </div>
