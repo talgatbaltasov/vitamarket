@@ -17,6 +17,11 @@ class ComposerServiceProvider extends ServiceProvider
             'layouts.app',
             'App\Http\ViewComposers\CategoryComposer'
         );
+
+        view()->composer(
+            'layouts.admin',
+            'App\Http\ViewComposers\NewOrderComposer'
+        );
     }
 
     /**

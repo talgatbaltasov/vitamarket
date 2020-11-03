@@ -64,7 +64,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin/orders">
                                         Заказы
-                                        <span>{{$categories->count()}}</span>
+                                        <span>{{$new_orders}}</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
