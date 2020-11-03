@@ -169,6 +169,7 @@
                                        </div>
                                         <div class="search_box">
                                             <input placeholder="Поиск..." type="text" name="search" onkeyup="customSearch()">
+                                            <div class="search_result"></div>
                                             <button type="submit"><i class="icon-search"></i></button>
                                         </div>
                                     </form>
@@ -285,6 +286,7 @@
                                         </div>
                                         <div class="search_box">
                                             <input placeholder="Поиск..." type="text" name="search" onkeyup="customSearch()">
+                                            <div class="search_result"></div>
                                             <button type="submit"><i class="icon-search"></i></button>
                                         </div>
                                      </form>
@@ -476,12 +478,11 @@
             console.log($('.search_box input').val())
             $.get('/search/get-variants?search='+$('.search_box input').val()).then(function(data){
                 console.log(data)
-                var html = '<div>';
+                var html = '';
                 data.forEach(function(value, key) {
                     html += '<li><a href="/search?select=0&search=' + value.name + '">' + value.name + '</a></li>'
                 });
-                html += '</div>';
-                $('.search_box input').after(html)
+                $('.search_result').html(html)
             }).catch(function(data){
                 console.log(data)
             });
