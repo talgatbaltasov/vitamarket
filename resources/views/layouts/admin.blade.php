@@ -64,7 +64,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin/orders">
                                         Заказы
-                                        <span class="badge badge-danger">{{$new_orders}}</span>
+                                        @if($new_orders > 0)
+                                            <span class="badge badge-danger">{{$new_orders}}</span>
+                                        @endif
                                     </a>
                                 </li>
                                 <li class="nav-item">
