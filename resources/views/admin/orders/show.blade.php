@@ -126,7 +126,7 @@
                     <button class="btn btn-block btn-success" data-toggle="modal" data-target="#actionModal">Действия</button>
                 </div>
                 <div class="col-6">
-                    @if($order->order_status_id == 1)
+                    @if(in_array($order->order_status_id, [1,2]))
                         <a href="/admin/orders/{{$order->id}}/order-status/3" class="btn btn-block btn-primary">Выполнен</a>
                     @endif
                 </div>
