@@ -129,7 +129,7 @@
                     @endphp
                     <div class="tab-pane fade @if($loop->first) show active @endif" id="category{{$category->id}}" role="tabpanel">
                         <div class="row">
-                            <div class="offset-md-4 col-md-4 offset-sm-2 col-sm-8 text-center">
+                            <div class="offset-md-4 col-md-4 offset-sm-2 col-sm-8 text-center mb-5">
                                 <a href="/c/{{$category->slug}}" class="button">Посмотреть все</a>
                             </div>
                             <div class="product_carousel product_column4 owl-carousel">
