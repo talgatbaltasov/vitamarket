@@ -25,7 +25,7 @@ class OrderController extends Controller
     {
         if($order_status->id == 2) {
             Mail::send(
-                'emails.orders.send',
+                'emails.orders.processing',
                 ['order' => $order],
                 function ($message) use($order) {
                     $message->from('kzvitamarket@gmail.com')
