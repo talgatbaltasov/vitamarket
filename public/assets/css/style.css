@@ -1198,7 +1198,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   display: none;
 }
 .header_mobile_number a {
-  font-size: 12px;
+  font-size: 14px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .search_container {
