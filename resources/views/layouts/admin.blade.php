@@ -64,7 +64,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin/orders">
                                         Заказы
-                                        <span>{{$new_orders}}</span>
+                                        <span class="badge badge-danger">{{$new_orders}}</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
