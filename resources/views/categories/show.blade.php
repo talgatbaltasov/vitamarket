@@ -25,13 +25,13 @@
     <div class="shop_area shop_fullwidth mb-100">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 mb-4">
                     <div class="product_tab_btn">
                         <ul class="nav" role="tablist">
-                            @foreach($categories as $category)
+                            @foreach($categories as $c)
                                 <li>
-                                    <a @if($loop->first) class="active" @endif href="/c/{{$category->slug}}"> 
-                                        {{$category->name}}
+                                    <a @if($c->slug == $category->slug) class="active" @endif href="/c/{{$c->slug}}"> 
+                                        {{$c->name}}
                                     </a>
                                 </li>
                             @endforeach
