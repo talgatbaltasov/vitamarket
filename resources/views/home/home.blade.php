@@ -150,8 +150,7 @@
                                                                 @endif
                                                                 <div class="action_links">
                                                                     <ul>
-                                                                        <li class="add_to_cart"><a href="javascript:void(0)" onclick="addToCart(this, {{$product->id}})" title="В корзину"><i class="icon-shopping-bag"></i></a></li>  
-                                                                        <li class="quick_button"><a href="#" data-toggle="modal" data-target="#product{{$product->id}}"  title="Быстрый просмотр"> <i class="icon-eye"></i></a></li>
+                                                                        <li class="add_to_cart"><a href="javascript:void(0)" onclick="addToCart(this, {{$product->id}})" title="В корзину"><i class="icon-shopping-bag"></i></a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -316,79 +315,4 @@
         </div>
     </section>
     <!--blog area end-->
-
-    @foreach($categories as $category)
-        @for($i = 0; $i < 6; $i++)
-            @for($j = 0; $j < 2; $j++)
-                @if(isset($category->products[2*$i + $j]))
-                    @php $product = $category->products[2*$i + $j]; @endphp
-                    <!-- modal area start-->
-                    <div class="modal fade" id="product{{$product->id}}" tabindex="-1" role="dialog"  aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true"><i class="icon-x"></i></span>
-                                </button>
-                                <div class="modal_body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-5 col-md-5 col-sm-12">
-                                                <div class="modal_tab">  
-                                                    <div class="tab-content product-details-large">
-                                                        @foreach($product->product_images as $pi)
-                                                            <div class="tab-pane fade @if($loop->first) show active @endif" id="product_images{{$pi->id}}" role="tabpanel">
-                                                                <div class="modal_tab_img">
-                                                                    <a href="#"><img src="{{$pi->image}}" alt=""></a>    
-                                                                </div>
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                    <div class="modal_tab_button">    
-                                                        <ul class="nav product_navactive owl-carousel" role="tablist">
-                                                            @foreach($product->product_images as $pi)
-                                                                <li>
-                                                                    <a class="nav-link @if($loop->first) active @endif" data-toggle="tab" href="#product_images{{$pi->id}}" role="tab" aria-controls="product_images{{$pi->id}}" aria-selected="false"><img src="{{$pi->image}}" alt=""></a>
-                                                                </li>
-                                                            @endforeach
-                                                        </ul>
-                                                    </div>    
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-7 col-md-7 col-sm-12">
-                                                <div class="modal_right">
-                                                    <div class="modal_title mb-10">
-                                                        <h2>{{$product->name}}</h2> 
-                                                    </div>
-                                                    <div class="modal_price mb-10">
-                                                        @if($product->sale_price > 0)
-                                                            <span class="new_price">{{$product->sale_price}} тг.</span>
-                                                            <span class="old_price" >{{$product->price}} тг.</span>    
-                                                        @else
-                                                            <span class="new_price">{{$product->price}} тг.</span>
-                                                        @endif
-                                                    </div>
-                                                    <div class="modal_description mb-15">
-                                                        {!!$product->description!!}
-                                                    </div> 
-                                                    <div class="variants_selects">
-                                                        <div class="modal_add_to_cart">
-                                                            <form action="#">
-                                                                <input min="1" max="100" step="1" value="1" type="number">
-                                                                <button type="button" onclick="addToCart(this, {{$product->id}}, $('.modal_add_to_cart form input').val())">В корзину</button>
-                                                            </form>
-                                                        </div>   
-                                                    </div>     
-                                                </div>    
-                                            </div>    
-                                        </div>     
-                                    </div>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>
-                    <!-- modal area end-->
-                @endif
-            @endfor
-        @endfor
-    @endforeach
 @endsection
