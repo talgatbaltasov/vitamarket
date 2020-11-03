@@ -476,6 +476,12 @@
             console.log($('.search_box input').val())
             $.get('/search/get-variants?search='+$('.search_box input').val()).then(function(data){
                 console.log(data)
+                var html = '<div>';
+                data.forEach(function(value, key) {
+                    html += '<li><a href="/search?select=0&search=' + value.name + '">' + value.name + '</a></li>'
+                });
+                html += '</div>';
+                $('.search_box input').after(html)
             }).catch(function(data){
                 console.log(data)
             });
