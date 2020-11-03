@@ -2271,7 +2271,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-size: 14px;
   line-height: 26px;
 }
-.call-support p a:hover {
+.call-support p a {
   color: #79a206;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
