@@ -40,7 +40,7 @@
                     <div class="tab-content">
                         @foreach($categories as $category)
                             @php
-                                $products = $category->products()->inRandomOrder()->get();
+                                $category_products = $category->products()->inRandomOrder()->get();
                             @endphp
                             <div class="tab-pane fade @if($loop->first) show active @endif" id="category{{$category->id}}" role="tabpanel">
                                 <div class="row">
@@ -52,8 +52,8 @@
                                             <div class="col-lg-3">
                                                 <div class="product_items">
                                                     @for($j = 0; $j < 2; $j++)
-                                                        @if(isset($products[2*$i + $j]))
-                                                            @php $product = $products[2*$i + $j]; @endphp
+                                                        @if(isset($category_products[2*$i + $j]))
+                                                            @php $product = $category_products[2*$i + $j]; @endphp
                                                             <article class="single_product">
                                                                 <figure>
                                                                     <div class="product_thumb">
