@@ -31,7 +31,7 @@ class OrderController extends Controller
                     $message->from('kzvitamarket@gmail.com')
                         ->to($order->user->email)
                         ->bcc('talgat.baltasov@gmail.com')
-                        ->subject('Ваш заказ #'.$order->id.' отправлен');
+                        ->subject('Ваш заказ #'.$order->id.' принят в обработку');
                 }
             );
         }
