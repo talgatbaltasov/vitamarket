@@ -110,7 +110,7 @@
                                         <th>Общее</th>
                                         <td>
                                             @if(isset($cart->items))
-                                                <strong>{{$cart->totalPrice + 2000}} тг.</strong>
+                                                <strong>{{$cart->totalPrice}} тг.</strong>
                                             @else
                                                 0 тг.
                                             @endif
