@@ -22,7 +22,7 @@
     </div>
     <!--breadcrumbs area end-->
     <!--shop  area start-->
-    <div class="shop_area shop_fullwidth mt-100 mb-100">
+    <div class="shop_area shop_fullwidth mb-100">
         <div class="container">
             <div class="row">
                 <div class="col-12">
