@@ -10739,3 +10739,15 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /*privacy policy css end*/
 
 /*# sourceMappingURL=style.css.map */
+
+.search_result {
+  position: absolute;
+  background: #fff;
+  height: 200px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.search_result li {
+  list-style: none;
+}
