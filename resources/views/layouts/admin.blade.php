@@ -67,6 +67,9 @@
                                         @if($new_orders > 0)
                                             <span class="badge badge-danger">{{$new_orders}}</span>
                                         @endif
+                                        @if($processing_orders > 0)
+                                            <span class="badge badge-success">{{$processing_orders}}</span>
+                                        @endif
                                     </a>
                                 </li>
                                 <li class="nav-item">

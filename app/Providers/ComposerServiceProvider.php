@@ -20,7 +20,7 @@ class ComposerServiceProvider extends ServiceProvider
 
         view()->composer(
             'layouts.admin',
-            'App\Http\ViewComposers\NewOrderComposer'
+            'App\Http\ViewComposers\OrdersCountComposer'
         );
     }
 
