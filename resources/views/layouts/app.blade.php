@@ -168,8 +168,8 @@
                                             </select>
                                        </div>
                                         <div class="search_box">
-                                            <input placeholder="Поиск..." type="text" name="search">
-                                             <button type="submit"><i class="icon-search"></i></button>
+                                            <input placeholder="Поиск..." type="text" name="search" onkeyup="search()">
+                                            <button type="submit"><i class="icon-search"></i></button>
                                         </div>
                                     </form>
                                 </div>
@@ -285,7 +285,7 @@
                                              </select>                        
                                          </div>
                                          <div class="search_box">
-                                             <input placeholder="Поиск..." type="text" name="search">
+                                             <input placeholder="Поиск..." type="text" name="search" onkeyup="search()">
                                               <button type="submit"><i class="icon-search"></i></button>
                                          </div>
                                      </form>
@@ -472,6 +472,11 @@
                 }
             })
         })
+
+        function search()
+        {
+            console.log($('.search_box input').val())
+        }
 	</script>
 </body>
 </html>
