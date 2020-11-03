@@ -75,10 +75,10 @@
                 <div class="col-lg-6 col-md-6">
                     <figure class="single_banner">
                         <div class="banner_thumb">
-                            <a href="/c/vitaminy-iherb"><img src="/assets/img/bg/banner1.jpg" alt=""></a> 
+                            <a href="/c/tovary-vostochnoi-islamskoi-mediciny"><img src="/assets/img/bg/banner2.jpg" alt=""></a> 
                             <div class="banner_content">
-                                <h3>Товары со скидкой</h3>
-                                <a href="/tovary-so-skidkoi">Посмотреть</a>
+                                <h3>Все товары</h3>
+                                <a href="/vse-tovary">Посмотреть</a>
                             </div>
                         </div>
                     </figure>
@@ -86,10 +86,10 @@
                 <div class="col-lg-6 col-md-6">
                     <figure class="single_banner">
                         <div class="banner_thumb">
-                            <a href="/c/tovary-vostochnoi-islamskoi-mediciny"><img src="/assets/img/bg/banner2.jpg" alt=""></a> 
+                            <a href="/c/vitaminy-iherb"><img src="/assets/img/bg/banner1.jpg" alt=""></a> 
                             <div class="banner_content">
-                                <h3>Все товары</h3>
-                                <a href="/vse-tovary">Посмотреть</a>
+                                <h3>Товары со скидкой</h3>
+                                <a href="/tovary-so-skidkoi">Посмотреть</a>
                             </div>
                         </div>
                     </figure>
