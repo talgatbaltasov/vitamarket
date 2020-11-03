@@ -34,6 +34,17 @@ class OrderController extends Controller
                         ->subject('Ваш заказ #'.$order->id.' принят в обработку');
                 }
             );
+        } elseif($order_status->id == 3) {
+            Mail::send(
+                'emails.orders.send',
+                ['order' => $order],
+                function ($message) use($order) {
+                    $message->from('kzvitamarket@gmail.com')
+                        ->to($order->user->email)
+                        ->bcc('talgat.baltasov@gmail.com')
+                        ->subject('Ваш заказ #'.$order->id.' отправлен');
+                }
+            );
         }
 
         $order->order_status_id = $order_status->id;
