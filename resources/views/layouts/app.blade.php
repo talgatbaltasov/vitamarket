@@ -434,6 +434,7 @@
 				},
 				success:function(res) {
                     $('.cart_product_list').append('<div class="cart_item"><div class="cart_img"><a href="#"><img src="' + res.product.main_image.image + '" alt=""></a></div><div class="cart_info"><a href="#">' + res.product.name + '</a><p>1 x <span> ' + res.product.price + ' тг. </span></p></div><div class="cart_remove"><a href="#" onclick=\'removeCartItem(' + res.product.id + ')\'><i class="icon-x"></i></a></div></div>');
+                    $('.item_count').html(parseInt($('.item_count').html()) + 1)
                     // window.location.href = '/cart';
                     if($(window).width() > 767) {
                         $('.mini_cart_custom').addClass('active');
