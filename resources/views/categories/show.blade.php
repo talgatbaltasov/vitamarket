@@ -26,6 +26,74 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <div class="product_tab_btn">
+                        <ul class="nav" role="tablist">
+                            @foreach($categories as $category)
+                                <li>
+                                    <a @if($loop->first) class="active" @endif data-toggle="tab" href="#category{{$category->id}}" role="tab" aria-controls="category{{$category->id}}" aria-selected="true"> 
+                                        {{$category->name}}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        @foreach($categories as $category)
+                            @php
+                                $products = $category->products()->inRandomOrder()->get();
+                            @endphp
+                            <div class="tab-pane fade @if($loop->first) show active @endif" id="category{{$category->id}}" role="tabpanel">
+                                <div class="row">
+                                    <div class="offset-md-4 col-md-4 offset-sm-2 col-sm-8 text-center mb-5">
+                                        <a href="/c/{{$category->slug}}" class="button">Посмотреть все</a>
+                                    </div>
+                                    <div class="product_carousel product_column4 owl-carousel">
+                                        @for($i = 0; $i < 6; $i++)
+                                            <div class="col-lg-3">
+                                                <div class="product_items">
+                                                    @for($j = 0; $j < 2; $j++)
+                                                        @if(isset($products[2*$i + $j]))
+                                                            @php $product = $products[2*$i + $j]; @endphp
+                                                            <article class="single_product">
+                                                                <figure>
+                                                                    <div class="product_thumb">
+                                                                        <a class="primary_img" href="/p/{{$product->slug}}"><img src="{{$product->main_image->image}}" alt=""></a>
+                                                                        @if($product->sale_price > 0) 
+                                                                            <div class="label_product">
+                                                                                <span class="label_sale">-{{$product->sale_rate}}%</span>
+                                                                            </div>
+                                                                        @endif
+                                                                        <div class="action_links">
+                                                                            <ul>
+                                                                                <li class="add_to_cart"><a href="javascript:void(0)" onclick="addToCart(this, {{$product->id}})" title="В корзину"><i class="icon-shopping-bag"></i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <figcaption class="product_content">
+                                                                        <h4 class="product_name"><a href="/p/{{$product->slug}}">{{$product->name}}</a></h4>
+                                                                        <div class="price_box">
+                                                                            @if($product->sale_price > 0) 
+                                                                                <span class="current_price">{{$product->sale_price}} тг.</span>
+                                                                                <span class="old_price">{{$product->price}} тг.</span>
+                                                                            @else
+                                                                                <span class="current_price">{{$product->price}} тг.</span>
+                                                                            @endif
+                                                                        </div>
+                                                                    </figcaption>
+                                                                </figure>
+                                                            </article>
+                                                        @endif
+                                                    @endfor
+                                                </div>
+                                            </div> 
+                                        @endfor
+                                    </div> 
+                                </div>   
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col-12">
                     <!--shop wrapper start-->
                     <!--shop toolbar start-->
                     <div class="shop_toolbar_wrapper">
