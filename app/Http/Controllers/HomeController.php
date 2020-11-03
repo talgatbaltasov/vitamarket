@@ -35,6 +35,12 @@ class HomeController extends Controller
         return view('home.search', compact('products'));
     }
 
+    public function getVariants(Request $request)
+    {
+        $products = Product::where('name', 'like', '%'.$request->search.'%')->take(20)->get();
+        return response()->json($products);
+    }
+
     public function serviceCenter()
     {
         return view('home.service-center');

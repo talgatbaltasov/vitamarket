@@ -229,7 +229,6 @@
                                                 <div class="cart_button">
                                                     <a class="active" href="/checkout"><i class="fa fa-sign-in"></i> Заказать</a>
                                                 </div>
-
                                             </div>
                                         </div>
                                         <!--mini cart end-->
@@ -276,18 +275,18 @@
                                 </div>
                                 <div class="search_container search_container_mobile mt-3">
                                     <form action="/search" method="GET">
-                                         <div class="hover_category">
-                                             <select class="select_option" name="select" id="categori2">
-                                                 <option value="0">Все категории</option>
-                                                 @foreach($categories as $category)
-                                                     <option value="{{$category->slug}}">{{$category->name}}</option>
-                                                 @endforeach
-                                             </select>                        
-                                         </div>
-                                         <div class="search_box">
-                                             <input placeholder="Поиск..." type="text" name="search" onkeyup="customSearch()">
-                                              <button type="submit"><i class="icon-search"></i></button>
-                                         </div>
+                                        <div class="hover_category">
+                                            <select class="select_option" name="select" id="categori2">
+                                                <option value="0">Все категории</option>
+                                                @foreach($categories as $category)
+                                                    <option value="{{$category->slug}}">{{$category->name}}</option>
+                                                @endforeach
+                                            </select>                        
+                                        </div>
+                                        <div class="search_box">
+                                            <input placeholder="Поиск..." type="text" name="search" onkeyup="customSearch()">
+                                            <button type="submit"><i class="icon-search"></i></button>
+                                        </div>
                                      </form>
                                  </div>
                             </div>
@@ -473,9 +472,13 @@
             })
         })
 
-        function customSearch()
-        {
+        function customSearch() {
             console.log($('.search_box input').val())
+            $.get('/search/get-variants?search='+$('.search_box input').val()).then(function(data){
+                console.log(data)
+            }).catch(function(data){
+                console.log(data)
+            });
         }
 	</script>
 </body>
