@@ -443,7 +443,7 @@
                         $('.mini_cart_wrapper_custom_mobile').addClass('active');
                         setTimeout(function(){
                             $('.mini_cart_wrapper_custom_mobile').removeClass('active')
-                        }, 10000)
+                        }, 5000)
                     }
 				}
 			})
