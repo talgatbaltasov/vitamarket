@@ -441,7 +441,7 @@
                         $('.mini_cart_custom').addClass('active');
                         setTimeout(function(){
                             $('.mini_cart_custom').removeClass('active')
-                        }, 2500)
+                        }, 4000)
                     } else {
                         $('.mini_cart_wrapper_custom_mobile').addClass('active');
                         setTimeout(function(){
