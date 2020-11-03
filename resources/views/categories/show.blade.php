@@ -30,23 +30,12 @@
                         <ul class="nav" role="tablist">
                             @foreach($categories as $category)
                                 <li>
-                                    <a @if($loop->first) class="active" @endif data-toggle="tab" href="#category{{$category->id}}" role="tab" aria-controls="category{{$category->id}}" aria-selected="true"> 
+                                    <a @if($loop->first) class="active" @endif href="/c/{{$category->slug}}"> 
                                         {{$category->name}}
                                     </a>
                                 </li>
                             @endforeach
                         </ul>
-                    </div>
-                    <div class="tab-content">
-                        @foreach($categories as $category)
-                            <div class="tab-pane fade @if($loop->first) show active @endif" id="category{{$category->id}}" role="tabpanel">
-                                <div class="row">
-                                    <div class="offset-md-4 col-md-4 offset-sm-2 col-sm-8 text-center mb-5">
-                                        <a href="/c/{{$category->slug}}" class="button">Посмотреть все</a>
-                                    </div>
-                                </div>   
-                            </div>
-                        @endforeach
                     </div>
                 </div>
                 <div class="col-12">
