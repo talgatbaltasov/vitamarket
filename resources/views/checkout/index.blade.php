@@ -140,6 +140,8 @@
                     if(value.id == $('#shipping_type_id option:selected').val()) {
                         $('.shipping_price').html(value.price + ' тг.')
                         $('.shipping_description').html(value.description)
+
+                        $('.order_total td').last().html({{$cart->totalPrice}} + value.price + ' тг.')
                     }
                 })
             })
