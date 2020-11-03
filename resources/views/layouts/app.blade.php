@@ -50,7 +50,7 @@
                         <a href="javascript:void(0)"><i class="icon-x"></i></a>
                     </div>
                 </div>
-                <div style="overflow: scroll; height: 262px;">
+                <div style="overflow: scroll; height: 262px;" class="cart_product_list">
                     @if(isset($cart->items) && count($cart->items) > 0)
                         @foreach($cart->items as $product)
                             <div class="cart_item">
@@ -433,6 +433,7 @@
 					_token:"<?=csrf_token()?>"
 				},
 				success:function(res) {
+                    $('.cart_product_list').append('<div class="cart_item"><div class="cart_img"><a href="#"><img src="' + res.product.main_image.image + '" alt=""></a></div><div class="cart_info"><a href="#">' + res.product.name + '</a><p>1 x <span> ' + res.product.price + ' тг. </span></p></div><div class="cart_remove"><a href="#" onclick=\'removeCartItem(' + res.product.id + ')\'><i class="icon-x"></i></a></div></div>');
                     // window.location.href = '/cart';
                     if($(window).width() > 767) {
                         $('.mini_cart_custom').addClass('active');
