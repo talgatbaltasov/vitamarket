@@ -34,7 +34,7 @@
     
     <!--modernizr min js here-->
     <script src="/assets/js/modernizr-3.7.1.min.js"></script>
-
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-182413449-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-182413449-1'); </script>
 </head>
 <body>
 
