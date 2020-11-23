@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $product->category ? ((($product->category->parent) ? $product->category->parent->name.' ' : '').$product->category->name.' '.$product->name.' → купить в Алматы и Казахстане в "Vitamarket" | цены и отзывы') ? '')
+@section('title', $product->category ? ((($product->category->parent) ? $product->category->parent->name.' ' : '').$product->category->name.' '.$product->name.' → купить в Алматы и Казахстане в "Vitamarket" | цены и отзывы') : '')
 @section('description', '★ Vitamarket ★ Доставка '.$product->name.' по Алматы и регионам Казахстана ➤ Круглосуточно 24/7 ☎ +7 707 807 97 77')
 
 @section('content')
