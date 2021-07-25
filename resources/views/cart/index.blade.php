@@ -50,7 +50,12 @@
                                                     <td class="product_thumb"><a href="#"><img src="{{$item['main_image']}}" alt=""></a></td>
                                                     <td class="product_name"><a href="#">{{$item['item']['name']}}</a></td>
                                                     <td class="product-price">{{$item['item']['price']}} тг.</td>
-                                                    <td class="product_quantity"><label>Количество</label> <input min="1" max="100" value="{{$item['qty']}}" type="number" name="quantity"></td>
+                                                    <td class="product_quantity">
+                                                        <label>Количество</label> 
+                                                        {{$item['qty']}}
+                                                        <span onclick="incrementCartItem({{$item['item']['id']}}">+</span>
+                                                        <span onclick="decrementCartItem({{$item['item']['id']}}">-</span>
+                                                    </td>
                                                     <td class="product_total">{{$item['item']['price'] * $item['qty']}} тг.</td>
                                                 </tr>
                                             @endforeach
