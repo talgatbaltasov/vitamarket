@@ -53,8 +53,8 @@
                                                     <td class="product_quantity">
                                                         <label>Количество</label> 
                                                         {{$item['qty']}}
-                                                        <span onclick="incrementCartItem({{$item['item']['id']}}">+</span>
-                                                        <span onclick="decrementCartItem({{$item['item']['id']}}">-</span>
+                                                        <span onclick="incrementCartItem({{$item['item']['id']}})">+</span>
+                                                        <span onclick="decrementCartItem({{$item['item']['id']}})">-</span>
                                                     </td>
                                                     <td class="product_total">{{$item['item']['price'] * $item['qty']}} тг.</td>
                                                 </tr>
