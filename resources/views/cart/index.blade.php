@@ -145,7 +145,7 @@
         }
 
         function incrementCartItem(id){
-            $j.ajax({
+            $.ajax({
 				url: '/cart/incrementCartItem',
 				method: 'POST',
                 data: {
@@ -159,7 +159,7 @@
         }
 
         function decrementCartItem(id){
-            $j.ajax({
+            $.ajax({
 				url: '/cart/decrementCartItem',
 				method: 'POST',
                 data: {
