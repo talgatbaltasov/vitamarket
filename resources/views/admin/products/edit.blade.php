@@ -49,7 +49,7 @@
                             {{Form::select('status_id', $statuses, null, ['class' => 'form-control', 'required'])}}
                         </div>
                         <div class="form-group">
-                            {{Form::checkbox('in_stock', 1, true)}}
+                            {{Form::checkbox('in_stock', 1, $product->in_stock)}}
                             {{Form::label('in_stock', 'В наличии?')}}
                         </div>
                         <button class="btn btn-success">Сохранить</button>
