@@ -55,7 +55,7 @@ class ProductController extends Controller
     public function update(Product $product, Request $request)
     {
         $data = $request->all();
-        if($request->has('in_stock')) { 
+        if($request->has('in_stock') && $request->in_stock == 1) { 
             $data['in_stock'] = 1;
         } else {
             $data['in_stock'] = 0;
