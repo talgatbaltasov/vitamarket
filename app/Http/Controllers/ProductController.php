@@ -10,8 +10,8 @@ class ProductController extends Controller
 {
     public function show($slug)
     {
-        $product = Product::where('slug', $slug)->first();
-        $viewed = Product::inRandomOrder()->take(20)->get();
+        $product = Product::where('in_stock', 1)->where('slug', $slug)->first();
+        $viewed = Product::where('in_stock', 1)->inRandomOrder()->take(20)->get();
     	return view('products.show', compact('product', 'viewed'));
     }
 }

@@ -17,6 +17,7 @@ class HomeController extends Controller
     {
         $categories = Category::whereNull('parent_id')->orderBy('order')->get();
         $sale_products = Product::where('status_id', 1)
+                            ->where('in_stock', 1)
                             ->whereNotNull('sale_price')
                             ->where('sale_end_at', '>', Carbon::now())
                             ->inRandomOrder()
@@ -39,7 +40,7 @@ class HomeController extends Controller
 
     public function getVariants(Request $request)
     {
-        $products = Product::where('name', 'like', '%'.$request->search.'%')->take(20)->get();
+        $products = Product::where('in_stock', 1)->where('name', 'like', '%'.$request->search.'%')->take(20)->get();
         return response()->json($products);
     }
 

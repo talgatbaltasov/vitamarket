@@ -20,9 +20,9 @@ class BrandController extends Controller
         $brand = Brand::where('slug', $slug)->first();
         $products = $brand->products()->paginate(15);
         $categories = Category::whereNull('parent_id')->orderBy('order')->get();
-        $bestsellers = Product::inRandomOrder()->take(5)->get();
+        $bestsellers = Product::where('in_stock', 1)->inRandomOrder()->take(5)->get();
 
-        $viewed = Product::inRandomOrder()->take(20)->get();
+        $viewed = Product::where('in_stock', 1)->inRandomOrder()->take(20)->get();
 
     	return view('brands.view', compact('brand', 'categories', 'bestsellers', 'products', 'viewed'));
     }

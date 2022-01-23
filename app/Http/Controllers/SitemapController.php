@@ -14,7 +14,7 @@ class SitemapController extends Controller
     {
         $brands = Brand::where('status', 1)->get();
         $categories = Category::all();
-        $products = Product::where('status', 1)->get();
+        $products = Product::where('in_stock', 1)->where('status', 1)->get();
         return view('sitemap.index', compact('brands', 'categories', 'products'));
     }
 }
