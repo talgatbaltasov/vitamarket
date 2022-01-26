@@ -108,7 +108,7 @@
                     </div>
 
                     <div class="shop_toolbar t_bottom">
-                        {{$products->links()}}
+                        {{$products->append(Request::except('page'))->links()}}
                     </div>
                     <!--shop toolbar end-->
                     <!--shop wrapper end-->
